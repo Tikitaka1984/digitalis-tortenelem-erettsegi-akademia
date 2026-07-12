@@ -8,7 +8,7 @@ import json
 import shutil
 import sys
 import zipfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_H5P = ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p"
@@ -34,12 +34,27 @@ def sha256(path: Path) -> str:
 
 
 def safe_extract(archive: zipfile.ZipFile, destination: Path) -> None:
+    """Extract portably while rejecting traversal paths.
+
+    Lumi packages created on Windows may contain backslashes in ZIP member
+    names. ZIP formally uses forward slashes, so normalize those separators
+    explicitly before extracting on Linux-based GitHub Actions runners.
+    """
     root = destination.resolve()
     for member in archive.infolist():
-        target = (destination / member.filename).resolve()
+        normalized = member.filename.replace("\\", "/")
+        parts = PurePosixPath(normalized).parts
+        if not parts or normalized.startswith("/") or ".." in parts:
+            fail(f"Tiltott útvonal a H5P csomagban: {member.filename}")
+        target = (destination / Path(*parts)).resolve()
         if root not in target.parents and target != root:
             fail(f"Tiltott útvonal a H5P csomagban: {member.filename}")
-    archive.extractall(destination)
+        if member.is_dir() or normalized.endswith("/"):
+            target.mkdir(parents=True, exist_ok=True)
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with archive.open(member) as source, target.open("wb") as output:
+            shutil.copyfileobj(source, output)
 
 
 def validate_h5p_tree(path: Path) -> None:
