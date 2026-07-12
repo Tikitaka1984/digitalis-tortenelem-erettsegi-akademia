@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#13253a">
+    <meta name="description" content="Az Athéni demokrácia interaktív H5P-tananyaga.">
+    <title>Athéni demokrácia · Digitális Történelem Érettségi Akadémia</title>
+    <link rel="stylesheet" href="./assets/app.css">
+    <link rel="stylesheet" href="./player/styles/h5p.css">
+  </head>
+  <body class="player-page">
+    <a class="skip-link" href="#h5p-container">Ugrás a tananyaghoz</a>
+    <header class="player-header">
+      <a class="back-link" href="./" aria-label="Vissza a kezdőlapra">← Kezdőlap</a>
+      <div>
+        <p class="player-kicker">Digitális Történelem Érettségi Akadémia</p>
+        <h1>Athéni demokrácia</h1>
+      </div>
+    </header>
+
+    <main class="player-main">
+      <div id="loading-state" class="system-state" role="status" aria-live="polite">
+        <span class="spinner" aria-hidden="true"></span>
+        <p>A tananyag betöltése…</p>
+      </div>
+      <div id="error-state" class="system-state error-state" role="alert" hidden>
+        <h2>A tananyag most nem tölthető be</h2>
+        <p>Az oldal vagy valamelyik szükséges fájl nem érhető el. Ellenőrizd az internetkapcsolatot, majd próbáld újra.</p>
+        <button id="retry-load" class="primary-button" type="button">Újrapróbálás</button>
+      </div>
+      <div id="h5p-container" class="h5p-host" tabindex="-1" aria-label="Athéni demokrácia interaktív tananyag"></div>
+    </main>
+
+    <noscript><p class="noscript">A tananyag használatához engedélyezni kell a JavaScriptet.</p></noscript>
+    <script src="./player/main.bundle.js" charset="UTF-8"></script>
+    <script src="./assets/player.js"></script>
+    <script src="./assets/register-sw.js" defer></script>
+  </body>
+</html>
