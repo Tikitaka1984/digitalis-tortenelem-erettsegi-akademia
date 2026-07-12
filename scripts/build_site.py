@@ -1,0 +1,107 @@
+#!/usr/bin/env python3
+"""Build the static GitHub Pages artifact without modifying the source H5P."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import shutil
+import sys
+import zipfile
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+SOURCE_H5P = ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p"
+SITE_SOURCE = ROOT / "site"
+PLAYER_SOURCE = ROOT / "node_modules" / "h5p-standalone" / "dist"
+OUTPUT = ROOT / "_site"
+H5P_OUTPUT = OUTPUT / "h5p" / "atheni-demokracia"
+
+EXPECTED_SHA256 = "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4adc7f"
+EXPECTED_PAGES = 30
+
+
+def fail(message: str) -> None:
+    raise SystemExit(f"BUILD ERROR: {message}")
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def safe_extract(archive: zipfile.ZipFile, destination: Path) -> None:
+    root = destination.resolve()
+    for member in archive.infolist():
+        target = (destination / member.filename).resolve()
+        if root not in target.parents and target != root:
+            fail(f"Tiltott útvonal a H5P csomagban: {member.filename}")
+    archive.extractall(destination)
+
+
+def validate_h5p_tree(path: Path) -> None:
+    manifest_path = path / "h5p.json"
+    content_path = path / "content" / "content.json"
+    if not manifest_path.is_file() or not content_path.is_file():
+        fail("A csomagból hiányzik a h5p.json vagy a content/content.json.")
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    content = json.loads(content_path.read_text(encoding="utf-8"))
+    if manifest.get("mainLibrary") != "H5P.InteractiveBook":
+        fail("A forrás nem H5P Interactive Book.")
+    chapters = content.get("chapters")
+    if not isinstance(chapters, list) or len(chapters) != EXPECTED_PAGES:
+        fail(f"A projekt oldalszáma nem {EXPECTED_PAGES}.")
+
+    missing = []
+    for dependency in manifest.get("preloadedDependencies", []):
+        folder = f"{dependency['machineName']}-{dependency['majorVersion']}.{dependency['minorVersion']}"
+        if not (path / folder / "library.json").is_file():
+            missing.append(folder)
+    if missing:
+        fail("Hiányzó H5P-könyvtárak: " + ", ".join(missing))
+
+
+def main() -> None:
+    if not SOURCE_H5P.is_file():
+        fail(f"Nem található a forráscsomag: {SOURCE_H5P.relative_to(ROOT)}")
+    if sha256(SOURCE_H5P) != EXPECTED_SHA256:
+        fail("A H5P SHA-256 ellenőrzőösszege eltér; a tananyag megváltozott.")
+    if not PLAYER_SOURCE.is_dir():
+        fail("A h5p-standalone runtime nincs telepítve. Futtasd: npm install")
+
+    if OUTPUT.exists():
+        shutil.rmtree(OUTPUT)
+    shutil.copytree(SITE_SOURCE, OUTPUT)
+    shutil.copytree(PLAYER_SOURCE, OUTPUT / "player")
+    H5P_OUTPUT.mkdir(parents=True)
+
+    with zipfile.ZipFile(SOURCE_H5P) as archive:
+        bad_file = archive.testzip()
+        if bad_file:
+            fail(f"Sérült fájl a H5P csomagban: {bad_file}")
+        safe_extract(archive, H5P_OUTPUT)
+
+    validate_h5p_tree(H5P_OUTPUT)
+    (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
+    (OUTPUT / "build-info.json").write_text(
+        json.dumps(
+            {
+                "content": SOURCE_H5P.name,
+                "sha256": EXPECTED_SHA256,
+                "pages": EXPECTED_PAGES,
+                "runtime": "h5p-standalone@3.8.0",
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    print(f"Built {OUTPUT} ({EXPECTED_PAGES} H5P pages, SHA-256 verified).")
+
+
+if __name__ == "__main__":
+    main()
