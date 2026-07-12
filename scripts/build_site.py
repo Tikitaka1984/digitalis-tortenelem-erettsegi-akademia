@@ -21,6 +21,8 @@ H5P_OUTPUT = OUTPUT / "h5p" / "atheni-demokracia"
 EXPECTED_SHA256 = "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4adc7f"
 EXPECTED_LIBRARIES_SHA256 = "fc72aa0b6abb4e7aac3f396182725a26b135d3f24942091517d82a8c2c382a75"
 EXPECTED_PAGES = 30
+SORT_PARAGRAPHS_SOURCE_SHA256 = "d80ca762ab322cd199dbae363a6bd13a613b77511c881124799373eeadf46bf3"
+SORT_PARAGRAPHS_PATCHED_SHA256 = "3cb22ffcbe008f0eec8e94f70617c0d24c8df03ec0fdeaa0dc1efbd3ace4acbc"
 
 
 def fail(message: str) -> None:
@@ -83,6 +85,27 @@ def validate_h5p_tree(path: Path) -> None:
         fail("Hiányzó H5P-könyvtárak: " + ", ".join(missing))
 
 
+def apply_runtime_compatibility(path: Path) -> None:
+    """Apply a narrowly scoped player compatibility fix outside the source H5P.
+
+    Sort Paragraphs 0.11 asks its not-yet-created content object whether an
+    answer exists while the Interactive Book eagerly initializes chapters.
+    Lumi loads this differently, but the standalone player exposes the null
+    access. Guard only that lookup and verify both file versions by SHA-256.
+    """
+    target = path / "H5P.SortParagraphs-0.11" / "dist" / "h5p-sort-paragraphs.js"
+    if not target.is_file() or sha256(target) != SORT_PARAGRAPHS_SOURCE_SHA256:
+        fail("A Sort Paragraphs kompatibilitási javítás forrása hiányzik vagy ismeretlen verziójú.")
+    old = b"o.getAnswerGiven=function(){return this.content.isAnswerGiven()}"
+    new = b"o.getAnswerGiven=function(){return!!this.content&&this.content.isAnswerGiven()}"
+    data = target.read_bytes()
+    if data.count(old) != 1:
+        fail("A Sort Paragraphs kompatibilitási javítás nem alkalmazható egyértelműen.")
+    target.write_bytes(data.replace(old, new))
+    if sha256(target) != SORT_PARAGRAPHS_PATCHED_SHA256:
+        fail("A Sort Paragraphs kompatibilitási javítás ellenőrzése sikertelen.")
+
+
 def main() -> None:
     if not SOURCE_H5P.is_file():
         fail(f"Nem található a forráscsomag: {SOURCE_H5P.relative_to(ROOT)}")
@@ -114,6 +137,7 @@ def main() -> None:
             fail(f"Sérült fájl a kiegészítő médiakönyvtárakban: {bad_file}")
         safe_extract(archive, H5P_OUTPUT)
 
+    apply_runtime_compatibility(H5P_OUTPUT)
     validate_h5p_tree(H5P_OUTPUT)
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUTPUT / "build-info.json").write_text(

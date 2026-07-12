@@ -6,6 +6,8 @@ A változatlan `.h5p` fájl build-időben kibontott telepítési példányát a 
 
 A Lumi export két dinamikus médiakönyvtárat (`H5P.Audio-1.5`, `H5P.Video-1.6`) az alkalmazásszintű könyvtártárból használ, ezért ezeket a futtatókörnyezet külön, SHA-256-tal rögzített csomagból teszi a kibontott könyv mellé. Ez nem változtatja meg a forrás `.h5p` csomagot.
 
+A `H5P.SortParagraphs-0.11` és a standalone player inicializálási sorrendjének ismert eltérését a build egy SHA-256-tal rögzített, egysoros null-őrrel kezeli. A javítás csak a generált webes artifact könyvtárkódjára vonatkozik; a változatlan forráscsomag továbbra is az integritás alapja.
+
 ## Miért nem közvetlen `.h5p`?
 
 A `.h5p` ZIP-csomag, nem önálló HTML-dokumentum. A böngésző nem oldja fel magától a H5P könyvtárfüggőségeket és nem inicializálja a H5P Core-t.
