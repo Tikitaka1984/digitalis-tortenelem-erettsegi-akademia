@@ -12,7 +12,7 @@ A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatá
 2. biztonságosan kibontja a csomagot a generált `_site` könyvtárba;
 3. ellenőrzi a H5P manifestet, a 30 oldalt és a deklarált könyvtárakat;
 4. melléteszi a Lumi alkalmazásszintű tárából származó, ellenőrzőösszeggel rögzített dinamikus média-könyvtárakat (`H5P.Audio-1.5`, `H5P.Video-1.6`);
-5. bemásolja a rögzített `h5p-standalone@3.8.0` runtime-ot;
+5. bemásolja a rögzített `h5p-standalone@3.8.2` runtime-ot;
 6. statikus és böngészős teszteket futtat;
 7. a kész `_site` könyvtárat GitHub Pages-re telepíti.
 

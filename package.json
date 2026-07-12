@@ -10,7 +10,7 @@
     "test": "playwright test"
   },
   "dependencies": {
-    "h5p-standalone": "3.8.0"
+    "h5p-standalone": "3.8.2"
   },
   "devDependencies": {
     "@playwright/test": "1.53.2"

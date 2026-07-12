@@ -122,7 +122,7 @@ def main() -> None:
                 "content": SOURCE_H5P.name,
                 "sha256": EXPECTED_SHA256,
                 "pages": EXPECTED_PAGES,
-                "runtime": "h5p-standalone@3.8.0",
+                "runtime": "h5p-standalone@3.8.2",
             },
             ensure_ascii=False,
             indent=2,

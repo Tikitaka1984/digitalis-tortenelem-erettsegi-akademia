@@ -2,7 +2,7 @@
 
 ## Döntés
 
-A változatlan `.h5p` fájl build-időben kibontott telepítési példányát a `h5p-standalone@3.8.0` statikus runtime jeleníti meg GitHub Pages-en.
+A változatlan `.h5p` fájl build-időben kibontott telepítési példányát a `h5p-standalone@3.8.2` statikus runtime jeleníti meg GitHub Pages-en.
 
 A Lumi export két dinamikus médiakönyvtárat (`H5P.Audio-1.5`, `H5P.Video-1.6`) az alkalmazásszintű könyvtártárból használ, ezért ezeket a futtatókörnyezet külön, SHA-256-tal rögzített csomagból teszi a kibontott könyv mellé. Ez nem változtatja meg a forrás `.h5p` csomagot.
 
@@ -26,7 +26,7 @@ flowchart LR
   B --> C["Biztonságos build-időbeli kibontás"]
   C --> D["Statikus H5P könyvtárfa"]
   G["Rögzített Lumi média-könyvtárak"] --> D
-  E["h5p-standalone 3.8.0"] --> F["GitHub Pages artifact"]
+  E["h5p-standalone 3.8.2"] --> F["GitHub Pages artifact"]
   D --> F
   G["Nyitóoldal és hibakezelés"] --> F
 ```
