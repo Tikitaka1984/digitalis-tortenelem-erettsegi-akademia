@@ -13,8 +13,11 @@ test('a H5P Interactive Book betöltődik és 30 oldalas', async ({ page }) => {
   const errors = [];
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('./learn.html');
+  await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
   await expect(page.locator('#error-state')).toBeHidden();
-  const book = page.locator('#h5p-container .h5p-interactive-book');
+  const iframe = page.locator('iframe.h5p-iframe').first();
+  await expect(iframe).toBeVisible();
+  const book = iframe.contentFrame().locator('.h5p-interactive-book');
   await expect(book).toBeVisible({ timeout: 45_000 });
   await expect(book.getByText('Ki döntött Athénban – és ki maradt kívül?')).toBeVisible();
   expect(errors).toEqual([]);
@@ -23,7 +26,8 @@ test('a H5P Interactive Book betöltődik és 30 oldalas', async ({ page }) => {
 test('a mobilnézet nem okoz vízszintes túlcsordulást', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'Csak a mobilprojektben fut.');
   await page.goto('./learn.html');
-  await expect(page.locator('#h5p-container .h5p-interactive-book')).toBeVisible({ timeout: 45_000 });
+  await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
+  await expect(page.locator('iframe.h5p-iframe').first()).toBeVisible();
   const hasOverflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);
   expect(hasOverflow).toBe(false);
 });

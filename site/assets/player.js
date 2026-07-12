@@ -11,12 +11,14 @@
     loading.hidden = true;
     container.replaceChildren();
     error.hidden = false;
+    container.dataset.state = 'error';
   };
 
   const loadContent = async () => {
     loading.hidden = false;
     error.hidden = true;
     container.replaceChildren();
+    container.dataset.state = 'loading';
 
     if (!window.H5PStandalone || typeof window.H5PStandalone.H5P !== 'function') {
       showError(new Error('A H5P runtime nem érhető el.'));
@@ -39,6 +41,7 @@
         reportingIsEnabled: true
       });
       loading.hidden = true;
+      container.dataset.state = 'ready';
       container.focus({ preventScroll: true });
     } catch (reason) {
       showError(reason);
