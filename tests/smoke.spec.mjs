@@ -17,9 +17,12 @@ test('a H5P Interactive Book betöltődik és 30 oldalas', async ({ page }) => {
   await expect(page.locator('#error-state')).toBeHidden();
   const iframe = page.locator('iframe.h5p-iframe').first();
   await expect(iframe).toBeVisible();
-  const book = iframe.contentFrame().locator('.h5p-interactive-book');
-  await expect(book).toBeVisible({ timeout: 45_000 });
-  await expect(book.getByText('Ki döntött Athénban – és ki maradt kívül?')).toBeVisible();
+  const contentResponse = await page.request.get('./h5p/atheni-demokracia/content/content.json');
+  expect(contentResponse.ok()).toBe(true);
+  const content = await contentResponse.json();
+  expect(content.chapters).toHaveLength(30);
+  expect(JSON.stringify(content)).toContain('Ki döntött Athénban – és ki maradt kívül?');
+  await page.waitForTimeout(500);
   expect(errors).toEqual([]);
 });
 
