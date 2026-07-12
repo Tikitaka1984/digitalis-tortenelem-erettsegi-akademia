@@ -12,12 +12,14 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_H5P = ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p"
+SUPPLEMENTAL_LIBRARIES = ROOT / "runtime-libraries" / "lumi-media-libraries.zip"
 SITE_SOURCE = ROOT / "site"
 PLAYER_SOURCE = ROOT / "node_modules" / "h5p-standalone" / "dist"
 OUTPUT = ROOT / "_site"
 H5P_OUTPUT = OUTPUT / "h5p" / "atheni-demokracia"
 
 EXPECTED_SHA256 = "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4adc7f"
+EXPECTED_LIBRARIES_SHA256 = "fc72aa0b6abb4e7aac3f396182725a26b135d3f24942091517d82a8c2c382a75"
 EXPECTED_PAGES = 30
 
 
@@ -72,7 +74,8 @@ def validate_h5p_tree(path: Path) -> None:
         fail(f"A projekt oldalszáma nem {EXPECTED_PAGES}.")
 
     missing = []
-    for dependency in manifest.get("preloadedDependencies", []):
+    dependencies = manifest.get("preloadedDependencies", []) + manifest.get("dynamicDependencies", [])
+    for dependency in dependencies:
         folder = f"{dependency['machineName']}-{dependency['majorVersion']}.{dependency['minorVersion']}"
         if not (path / folder / "library.json").is_file():
             missing.append(folder)
@@ -85,6 +88,8 @@ def main() -> None:
         fail(f"Nem található a forráscsomag: {SOURCE_H5P.relative_to(ROOT)}")
     if sha256(SOURCE_H5P) != EXPECTED_SHA256:
         fail("A H5P SHA-256 ellenőrzőösszege eltér; a tananyag megváltozott.")
+    if not SUPPLEMENTAL_LIBRARIES.is_file() or sha256(SUPPLEMENTAL_LIBRARIES) != EXPECTED_LIBRARIES_SHA256:
+        fail("A kiegészítő Lumi médiakönyvtárak hiányoznak vagy megváltoztak.")
     if not PLAYER_SOURCE.is_dir():
         fail("A h5p-standalone runtime nincs telepítve. Futtasd: npm install")
 
@@ -98,6 +103,15 @@ def main() -> None:
         bad_file = archive.testzip()
         if bad_file:
             fail(f"Sérült fájl a H5P csomagban: {bad_file}")
+        safe_extract(archive, H5P_OUTPUT)
+
+    # Lumi keeps a few dynamic media libraries in its application-level
+    # library store instead of embedding them in every exported H5P package.
+    # Supply exact copies alongside the extracted package without changing it.
+    with zipfile.ZipFile(SUPPLEMENTAL_LIBRARIES) as archive:
+        bad_file = archive.testzip()
+        if bad_file:
+            fail(f"Sérült fájl a kiegészítő médiakönyvtárakban: {bad_file}")
         safe_extract(archive, H5P_OUTPUT)
 
     validate_h5p_tree(H5P_OUTPUT)

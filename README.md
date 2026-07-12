@@ -11,9 +11,10 @@ A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatá
 1. SHA-256 ellenőrzéssel igazolja, hogy a forráscsomag nem változott;
 2. biztonságosan kibontja a csomagot a generált `_site` könyvtárba;
 3. ellenőrzi a H5P manifestet, a 30 oldalt és a deklarált könyvtárakat;
-4. bemásolja a rögzített `h5p-standalone@3.8.0` runtime-ot;
-5. statikus és böngészős teszteket futtat;
-6. a kész `_site` könyvtárat GitHub Pages-re telepíti.
+4. melléteszi a Lumi alkalmazásszintű tárából származó, ellenőrzőösszeggel rögzített dinamikus média-könyvtárakat (`H5P.Audio-1.5`, `H5P.Video-1.6`);
+5. bemásolja a rögzített `h5p-standalone@3.8.0` runtime-ot;
+6. statikus és böngészős teszteket futtat;
+7. a kész `_site` könyvtárat GitHub Pages-re telepíti.
 
 A H5P tananyag tartalmát a build **nem módosítja**. A kibontott fájlok kizárólag a webes telepítési artifact részei.
 
@@ -47,6 +48,8 @@ Az `learn.html` a standalone lejátszót relatív útvonalakkal inicializálja, 
 ├── .github/workflows/pages.yml
 ├── content/
 │   └── digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p
+├── runtime-libraries/
+│   └── lumi-media-libraries.zip
 ├── scripts/
 │   ├── build_site.py
 │   └── verify-build.mjs
