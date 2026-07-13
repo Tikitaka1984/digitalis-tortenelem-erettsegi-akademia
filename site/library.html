@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="hu" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f5ef">
+    <meta name="description" content="Interaktív történelemérettségi tananyagok digitális könyvtára.">
+    <title>Tananyagok · Digitális Történelem Érettségi Akadémia</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/app.css">
+    <script src="./assets/app.js" defer></script>
+  </head>
+  <body class="library-page">
+    <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="./" aria-label="Digitális Történelem Érettségi Akadémia – kezdőlap"><img class="brand-mark" src="./assets/logo-mark.svg" alt="" width="38" height="38"><span><strong>Történelem</strong><small>Érettségi Akadémia</small></span></a>
+        <button class="icon-button mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle><span class="sr-only">Menü megnyitása</span><span aria-hidden="true">☰</span></button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Fő navigáció" data-nav><a href="./">Kezdőlap</a><a class="is-active" href="./library.html" aria-current="page">Tananyagok</a><a href="./#hogyan-mukodik">Hogyan működik?</a><a href="./#gyik">GYIK</a></nav>
+        <div class="nav-actions"><button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Sötét mód bekapcsolása"><span class="theme-icon" aria-hidden="true">◐</span></button><a class="button button-small button-primary nav-cta" href="./learn.html">Folytatás</a></div>
+      </div>
+    </header>
+
+    <main id="main" class="library-main section-shell">
+      <nav class="breadcrumb" aria-label="Morzsamenü"><a href="./">Kezdőlap</a><span aria-hidden="true">/</span><span aria-current="page">Tananyagok</span></nav>
+      <section class="library-hero">
+        <div><p class="eyebrow">Digitális könyvtár</p><h1>Építs biztos történelmi tudást.</h1><p>Válassz korszakot, majd haladj végig a fogalmaktól az érettségi feladatokig vezető interaktív tanulási útvonalon.</p></div>
+        <div class="library-count"><strong>1</strong><span>elérhető modul</span><small>50+ tervezett tananyag</small></div>
+      </section>
+
+      <section class="library-toolbar" aria-label="Tananyagok szűrése">
+        <label class="search-box"><span class="sr-only">Tananyag keresése</span><span aria-hidden="true">⌕</span><input type="search" placeholder="Keress témakörre vagy korszakra…" data-library-search></label>
+        <div class="filter-chips" role="group" aria-label="Korszak szűrő"><button class="chip is-selected" type="button" data-filter="all" aria-pressed="true">Összes</button><button class="chip" type="button" data-filter="okor" aria-pressed="false">Ókor</button><button class="chip" type="button" data-filter="kozepkor" aria-pressed="false">Középkor</button><button class="chip" type="button" data-filter="ujkor" aria-pressed="false">Újkor</button><button class="chip" type="button" data-filter="magyar" aria-pressed="false">Magyar történelem</button></div>
+      </section>
+
+      <section aria-labelledby="available-title">
+        <div class="section-heading"><div><p class="eyebrow">Tanulási útvonalak</p><h2 id="available-title">Felfedezhető tananyagok</h2></div><span class="result-count" aria-live="polite" data-result-count>1 elérhető</span></div>
+        <div class="lesson-grid" data-library-grid>
+          <article class="lesson-card lesson-card-live" data-library-item data-era="okor" data-search="athéni demokrácia ókor periklész kleiszthenész polisz">
+            <a class="lesson-card-link" href="./learn.html" aria-label="Athéni demokrácia tananyag megnyitása"><span class="sr-only">Tananyag megnyitása</span></a>
+            <div class="lesson-art lesson-art-athens"><span class="badge badge-live">Elérhető</span><strong>ΔΗΜΟΣ</strong><small>Kr. e. 5. század</small></div>
+            <div class="lesson-card-body"><div class="card-meta"><span>Ókor</span><span>01</span></div><h3>Athéni demokrácia</h3><p>A reformok, az államszervezet és a polgárjog korlátai.</p><div class="lesson-stats"><span>30 oldal</span><span>35–45 perc</span><span>Középszint</span></div><div class="lesson-card-action">Tananyag indítása <span aria-hidden="true">→</span></div></div>
+          </article>
+          <article class="lesson-card is-coming" data-library-item data-era="okor" data-search="római köztársaság ókor"><div class="lesson-art lesson-art-rome"><span class="badge">Hamarosan</span><strong>SPQR</strong><small>Római köztársaság</small></div><div class="lesson-card-body"><div class="card-meta"><span>Ókor</span><span>02</span></div><h3>A római köztársaság</h3><p>Társadalom, intézmények és a köztársaság válsága.</p><div class="lesson-stats"><span>Tervezés alatt</span></div></div></article>
+          <article class="lesson-card is-coming" data-library-item data-era="kozepkor magyar" data-search="magyar államalapítás középkor szent istván"><div class="lesson-art lesson-art-hungary"><span class="badge">Hamarosan</span><strong>1000</strong><small>Magyar államalapítás</small></div><div class="lesson-card-body"><div class="card-meta"><span>Magyar középkor</span><span>03</span></div><h3>Az államalapítás</h3><p>Géza fejedelem, Szent István és a keresztény királyság.</p><div class="lesson-stats"><span>Tervezés alatt</span></div></div></article>
+        </div>
+        <div class="empty-state" data-empty-state hidden><div class="feature-icon">⌕</div><h3>Nincs ilyen tananyag</h3><p>Próbálj másik keresőkifejezést vagy válassz másik korszakot.</p><button class="button button-ghost" type="button" data-clear-filters>Szűrők törlése</button></div>
+      </section>
+
+      <section class="roadmap-strip"><div><span class="badge">Fejlesztési irány</span><h2>50+ modulból álló könyvtár épül</h2><p>A következő tananyagok egységes pedagógiai és vizuális rendszerben készülnek.</p></div><div class="era-list" aria-label="Tervezett korszakok"><span>Ókor</span><span>Középkor</span><span>Kora újkor</span><span>Újkor</span><span>Magyar történelem</span><span>Egyetemes történelem</span></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="section-shell footer-bottom"><span>© 2026 Digitális Történelem Érettségi Akadémia</span><a href="./">Vissza a kezdőlapra</a></div></footer>
+    <script src="./assets/register-sw.js" defer></script>
+  </body>
+</html>
+
