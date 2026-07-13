@@ -161,6 +161,7 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .trust-list li { display: flex; align-items: center; gap: .35rem; }
 .trust-list li span { color: var(--success); font-weight: 800; }
 .hero-product { position: relative; padding: 1.3rem 0 1.7rem; }
+.hero-product { contain: layout paint; }
 .product-window { position: relative; z-index: 2; overflow: hidden; min-height: 490px; border: 1px solid color-mix(in srgb, var(--line) 75%, transparent); border-radius: var(--radius-xl); background: var(--surface); box-shadow: var(--shadow-lg); transform: perspective(1200px) rotateY(-2deg) rotateX(1deg); }
 .window-bar { min-height: 2.7rem; padding: 0 1rem; display: flex; align-items: center; gap: .38rem; border-bottom: 1px solid var(--line); background: var(--surface-subtle); }
 .window-bar span { width: .58rem; height: .58rem; border-radius: 50%; background: var(--line-strong); }
@@ -366,6 +367,15 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .reveal { opacity: 1; }
 .reveal-delay, .reveal-delay-2 { animation-delay: 0s; }
 
+/* Keep below-the-fold sections out of the initial rendering path. */
+.metrics-band,
+.content-section,
+.cta-section,
+.site-footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 720px;
+}
+
 /* Responsive */
 @media (max-width: 1050px) {
   .hero-section { grid-template-columns: 1fr; }
@@ -453,4 +463,3 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
   .button, .icon-button, .chip, .lesson-card, .feature-card, .step-card { border: 1px solid ButtonText; }
   .status-dot, .eyebrow-dot, .progress-track span { forced-color-adjust: none; }
 }
-
