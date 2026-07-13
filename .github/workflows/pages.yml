@@ -46,6 +46,7 @@ jobs:
         run: |
           python3 -m http.server 4173 -d _site >/tmp/dtea-http.log 2>&1 &
           npx lighthouse http://127.0.0.1:4173/ \
+            --preset=desktop \
             --chrome-flags="--headless --no-sandbox" \
             --only-categories=performance,accessibility,best-practices,seo \
             --output=json \
@@ -90,4 +91,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-

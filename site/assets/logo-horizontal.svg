@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="72" viewBox="0 0 320 72" role="img" aria-labelledby="title desc">
+  <title id="title">Digitális Történelem Érettségi Akadémia</title>
+  <desc id="desc">Zöld embléma klasszikus épülettel és az akadémia neve.</desc>
+  <rect x="4" y="4" width="64" height="64" rx="18" fill="#264f3d"/>
+  <path d="M16 27 36 15l20 12v4H16zm5 8h5v17h-5zm12 0h6v17h-6zm13 0h5v17h-5zM16 55h40v5H16z" fill="#f7f5ef"/>
+  <rect x="19" y="27" width="34" height="4" rx="2" fill="#d5ff65"/>
+  <text x="84" y="31" fill="#172018" font-family="Segoe UI,Arial,sans-serif" font-size="19" font-weight="750">Történelem</text>
+  <text x="84" y="51" fill="#617066" font-family="Segoe UI,Arial,sans-serif" font-size="13">Érettségi Akadémia</text>
+</svg>
+

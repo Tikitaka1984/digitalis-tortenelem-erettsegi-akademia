@@ -12,6 +12,12 @@
 
 ![Nyitóoldal mobilnézet](./landing-mobile.png)
 
+## Sötét mód – asztali és mobilnézet
+
+![Sötét mód asztali nézet](./landing-dark-desktop.png)
+
+![Sötét mód mobilnézet](./landing-dark-mobile.png)
+
 ## Tananyagkeret – asztali és mobilnézet
 
 A helyi képeken a tananyagkeret hibaállapota látható, mert a korlátozott helyi környezetben nem volt letölthető a teljes H5P runtime. A Pull Request GitHub Actions futása a valódi `h5p-standalone` csomaggal ellenőrzi az interaktív könyvet.
