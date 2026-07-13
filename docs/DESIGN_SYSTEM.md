@@ -38,6 +38,17 @@ Lekerekítések: 10, 16, 24 és 32 px.
 - interakció: accordion, kereső, szűrőchipek, sötét mód és fókusz mód;
 - tanulás: kurzusoldalsáv, kurzusadatok, célok, progress bar és lapozó.
 
+### Kiegészítő komponensek
+
+- `.section-header`: cím, leírás és opcionális művelet egységes szekciófejléce;
+- `.alert`, `.alert-warning`, `.alert-error`: ikon + szöveg alapú állapotközlés, amely nem kizárólag színre támaszkodik;
+- `.tooltip[data-tooltip]`: rövid, billentyűzetfókusszal is megjelenő súgó;
+- natív `<dialog class="modal">`: akadálymentes modális ablak `.modal-header`, `.modal-body` és `.modal-footer` részekkel;
+- `.skeleton`: betöltési helyőrző; csökkentett mozgás esetén az animáció automatikusan kikapcsol;
+- `.loading-state`: központosított betöltési állapot szöveggel és opcionális spinnerrel.
+
+A modális ablakhoz natív `showModal()` és `close()` használata javasolt. A nyitás után a fókusz kerüljön a párbeszédablak első műveletére, bezáráskor pedig térjen vissza a nyitógombra.
+
 ## Reszponzív töréspontok
 
 - 1050 px: kétoszlopos tartalmak összevonása;
