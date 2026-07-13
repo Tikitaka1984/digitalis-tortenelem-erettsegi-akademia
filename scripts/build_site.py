@@ -22,7 +22,7 @@ EXPECTED_SHA256 = "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4ad
 EXPECTED_LIBRARIES_SHA256 = "fc72aa0b6abb4e7aac3f396182725a26b135d3f24942091517d82a8c2c382a75"
 EXPECTED_PAGES = 30
 SORT_PARAGRAPHS_SOURCE_SHA256 = "d80ca762ab322cd199dbae363a6bd13a613b77511c881124799373eeadf46bf3"
-SORT_PARAGRAPHS_PATCHED_SHA256 = "3cb22ffcbe008f0eec8e94f70617c0d24c8df03ec0fdeaa0dc1efbd3ace4acbc"
+SORT_PARAGRAPHS_PATCHED_SHA256 = "c685200e429a3832014b38e654ece7894171ecc90c7b9ad5bdff8b28ab78fa21"
 
 
 def fail(message: str) -> None:
@@ -91,7 +91,8 @@ def apply_runtime_compatibility(path: Path) -> None:
     Sort Paragraphs 0.11 asks its not-yet-created content object whether an
     answer exists while the Interactive Book eagerly initializes chapters.
     Lumi loads this differently, but the standalone player exposes the null
-    access. Guard only that lookup and verify both file versions by SHA-256.
+    access. Guard those two lifecycle lookups and verify both file versions
+    by SHA-256.
     """
     target = path / "H5P.SortParagraphs-0.11" / "dist" / "h5p-sort-paragraphs.js"
     if not target.is_file() or sha256(target) != SORT_PARAGRAPHS_SOURCE_SHA256:
@@ -101,7 +102,13 @@ def apply_runtime_compatibility(path: Path) -> None:
     data = target.read_bytes()
     if data.count(old) != 1:
         fail("A Sort Paragraphs kompatibilitási javítás nem alkalmazható egyértelműen.")
-    target.write_bytes(data.replace(old, new))
+    data = data.replace(old, new)
+
+    old_state = b"this.getAnswerGiven()||this.previousState.order"
+    new_state = b"this.getAnswerGiven()||this.previousState?.order"
+    if data.count(old_state) != 2:
+        fail("A Sort Paragraphs állapotkezelési javítása nem alkalmazható egyértelműen.")
+    target.write_bytes(data.replace(old_state, new_state))
     if sha256(target) != SORT_PARAGRAPHS_PATCHED_SHA256:
         fail("A Sort Paragraphs kompatibilitási javítás ellenőrzése sikertelen.")
 
@@ -158,3 +165,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
