@@ -1,47 +1,170 @@
 <!doctype html>
-<html lang="hu">
+<html lang="hu" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#13253a">
-    <meta name="description" content="Interaktív érettségi felkészítő tananyag az athéni demokráciáról.">
+    <meta name="theme-color" content="#f7f5ef">
+    <meta name="description" content="Modern, interaktív történelemérettségi-felkészítő tananyagok egy helyen.">
+    <meta property="og:title" content="Digitális Történelem Érettségi Akadémia">
+    <meta property="og:description" content="Tanulj rendszerben. Gyakorolj interaktívan. Érkezz felkészülten az érettségire.">
     <title>Digitális Történelem Érettségi Akadémia</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/app.css">
+    <script src="./assets/app.js" defer></script>
   </head>
   <body class="landing-page">
     <a class="skip-link" href="#main">Ugrás a tartalomhoz</a>
-    <header class="site-header" aria-label="Webhely fejléc">
-      <a class="brand" href="./">Digitális Történelem Érettségi Akadémia</a>
-      <span class="status-badge">Interaktív tananyag</span>
+    <header class="site-header" data-header>
+      <div class="nav-shell">
+        <a class="brand" href="./" aria-label="Digitális Történelem Érettségi Akadémia – kezdőlap">
+          <img class="brand-mark" src="./assets/logo-mark.svg" alt="" width="38" height="38">
+          <span><strong>Történelem</strong><small>Érettségi Akadémia</small></span>
+        </a>
+        <button class="icon-button mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+          <span class="sr-only">Menü megnyitása</span><span aria-hidden="true">☰</span>
+        </button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Fő navigáció" data-nav>
+          <a class="is-active" href="./" aria-current="page">Kezdőlap</a>
+          <a href="./library.html">Tananyagok</a>
+          <a href="#hogyan-mukodik">Hogyan működik?</a>
+          <a href="#gyik">GYIK</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Sötét mód bekapcsolása">
+            <span class="theme-icon" aria-hidden="true">◐</span>
+          </button>
+          <a class="button button-small button-primary nav-cta" href="./library.html">Tanulás indítása</a>
+        </div>
+      </div>
     </header>
 
-    <main id="main" class="hero-shell">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Történelemérettségi · Ókor</p>
-          <h1 id="hero-title">Athéni demokrácia</h1>
-          <p class="lead">Fedezd fel, hogyan alakult ki és hogyan működött Athén közvetlen demokráciája, majd ellenőrizd tudásodat interaktív feladatokkal.</p>
+    <main id="main">
+      <section class="hero-section section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span> Érettségi felkészülés, újragondolva</div>
+          <h1 id="hero-title">A történelem nem évszámok sora. <em>Összefüggések rendszere.</em></h1>
+          <p class="hero-lead">Tanulj átlátható leckékből, gyakorolj interaktív feladatokkal, és építs olyan tudást, amelyet az érettségin valóban használni tudsz.</p>
           <div class="hero-actions">
-            <a class="primary-button" href="./learn.html">Tananyag indítása</a>
-            <span class="duration" aria-label="Becsült tanulási idő">30 oldal · önálló tempó</span>
+            <a class="button button-primary button-large" href="./learn.html">Athéni demokrácia indítása <span aria-hidden="true">→</span></a>
+            <a class="button button-ghost button-large" href="./library.html">Tananyagok böngészése</a>
           </div>
+          <ul class="trust-list" aria-label="A platform fő előnyei">
+            <li><span aria-hidden="true">✓</span> 30 interaktív oldal</li>
+            <li><span aria-hidden="true">✓</span> Mobilbarát</li>
+            <li><span aria-hidden="true">✓</span> Ingyenes pilot</li>
+          </ul>
         </div>
-        <div class="hero-visual" role="img" aria-label="Stilizált ókori görög oszlopcsarnok és demokratikus gyűlés">
-          <div class="sun-disc"></div>
-          <div class="temple" aria-hidden="true">
-            <span></span><span></span><span></span><span></span><span></span>
+        <div class="hero-product reveal reveal-delay" aria-label="Tananyag-előnézet">
+          <div class="product-window">
+            <div class="window-bar" aria-hidden="true"><span></span><span></span><span></span><small>academy/history/athen</small></div>
+            <div class="product-content">
+              <aside class="product-sidebar" aria-hidden="true">
+                <img src="./assets/logo-mark.svg" alt="" width="32" height="32">
+                <i class="active"></i><i></i><i></i><i></i><i></i>
+              </aside>
+              <div class="product-lesson">
+                <span class="chip chip-accent">Ókor · 01</span>
+                <p class="micro-label">Interaktív könyv</p>
+                <h2>Az athéni demokrácia</h2>
+                <p>Hogyan lett egy görög polisz a közvetlen demokrácia mintája?</p>
+                <div class="mini-timeline" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b></div>
+                <div class="lesson-preview-card">
+                  <span class="lesson-icon">Δ</span>
+                  <div><strong>Kleiszthenész reformjai</strong><small>phülék · bulé · osztrakiszmosz</small></div>
+                  <span>12 / 30</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-card floating-progress"><span>Haladás</span><strong>40%</strong><i><b></b></i></div>
+          <div class="floating-card floating-score"><span aria-hidden="true">✦</span><div><strong>Stabil alapok</strong><small>12 oldal teljesítve</small></div></div>
+        </div>
+      </section>
+
+      <section class="metrics-band" aria-label="Platformstatisztikák">
+        <div class="section-shell metrics-grid">
+          <div><strong>30</strong><span>interaktív oldal</span></div>
+          <div><strong>25+</strong><span>önellenőrző feladat</span></div>
+          <div><strong>100%</strong><span>mobilbarát élmény</span></div>
+          <div><strong>1</strong><span>elkészült pilot modul</span></div>
+        </div>
+      </section>
+
+      <section class="content-section section-shell" id="tananyagok">
+        <div class="section-heading reveal">
+          <div><p class="eyebrow">Kiemelt tananyag</p><h2>Innen érdemes kezdened</h2></div>
+          <a class="text-link" href="./library.html">Teljes könyvtár <span aria-hidden="true">→</span></a>
+        </div>
+        <article class="featured-course reveal">
+          <div class="course-art" aria-hidden="true">
+            <span class="course-era">Kr. e. 5. század</span>
+            <div class="greek-grid"></div>
+            <strong>ΔΗΜΟΣ</strong>
+          </div>
+          <div class="course-body">
+            <div class="card-meta"><span class="badge badge-live">Elérhető</span><span>Ókor</span><span>Középszint</span></div>
+            <h3>Az athéni demokrácia</h3>
+            <p>A polisz világától Periklész koráig: reformok, intézmények, társadalmi korlátok és érettségi típusú feladatok egyetlen tanulási útvonalon.</p>
+            <div class="course-facts">
+              <span><b>30</b> oldal</span><span><b>35–45</b> perc</span><span><b>25+</b> feladat</span>
+            </div>
+            <a class="button button-primary" href="./learn.html">Tananyag megnyitása <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section soft-section" id="hogyan-mukodik">
+        <div class="section-shell">
+          <div class="section-heading centered reveal"><div><p class="eyebrow">Tanulási rendszer</p><h2>Egy biztos út a megértéstől a vizsgáig</h2><p>Nem passzív olvasás. Minden lépés egy konkrét érettségi készséget épít.</p></div></div>
+          <div class="steps-grid">
+            <article class="step-card reveal"><span>01</span><div class="feature-icon">◎</div><h3>Értsd meg</h3><p>Rövid, fókuszált magyarázatokkal lásd át az okokat és következményeket.</p></article>
+            <article class="step-card reveal reveal-delay"><span>02</span><div class="feature-icon">⌁</div><h3>Kapcsold össze</h3><p>Idővonalak, személyek és intézmények teszik rendszerré a részleteket.</p></article>
+            <article class="step-card reveal reveal-delay-2"><span>03</span><div class="feature-icon">✓</div><h3>Ellenőrizd</h3><p>Azonnali visszajelzést kapsz, így pontosan látod, mit kell még átismételned.</p></article>
           </div>
         </div>
       </section>
 
-      <section class="feature-grid" aria-label="A tananyag fő jellemzői">
-        <article><strong>Érettségi fókusz</strong><span>Fogalmak, személyek, kronológia és intézmények.</span></article>
-        <article><strong>Interaktív gyakorlás</strong><span>Kérdések, párosítások és azonnali visszajelzések.</span></article>
-        <article><strong>Minden eszközön</strong><span>Asztali gépen, tableten és mobiltelefonon.</span></article>
+      <section class="content-section section-shell">
+        <div class="split-heading reveal">
+          <div><p class="eyebrow">Miért más?</p><h2>A tanuló figyelmére tervezve</h2></div>
+          <p>A platform minden döntése azt szolgálja, hogy kevesebb legyen a zaj, világosabbak legyenek az összefüggések, és magabiztosabban haladj.</p>
+        </div>
+        <div class="benefit-grid">
+          <article class="feature-card feature-card-large reveal"><div class="abstract-map" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Vizuális tanulási útvonal</h3><p>Mindig tudod, hol jársz, mi következik, és mely témák kapcsolódnak egymáshoz.</p></article>
+          <article class="feature-card reveal"><div class="feature-icon">↗</div><h3>Érettségi fókusz</h3><p>A fogalmak, források és tipikus hibák közvetlenül a vizsgafeladatokra készítenek.</p></article>
+          <article class="feature-card reveal"><div class="feature-icon">◫</div><h3>Bármilyen eszközön</h3><p>Telefonon, tableten és számítógépen is ugyanaz a rendezett tanulási élmény vár.</p></article>
+          <article class="feature-card reveal"><div class="feature-icon">⚡</div><h3>Azonnali visszajelzés</h3><p>A gyakorlófeladatok nemcsak értékelnek, hanem meg is mutatják a helyes gondolatmenetet.</p></article>
+        </div>
+      </section>
+
+      <section class="content-section soft-section" id="gyik">
+        <div class="section-shell faq-layout">
+          <div class="faq-intro reveal"><p class="eyebrow">Gyakori kérdések</p><h2>Mielőtt elkezded</h2><p>Rövid válaszok a platform használatáról és a tanulási folyamatról.</p><a class="text-link" href="./library.html">Nézd meg a könyvtárat <span aria-hidden="true">→</span></a></div>
+          <div class="faq-list">
+            <details class="accordion" open><summary>Ingyenesen használható a tananyag?<span aria-hidden="true">+</span></summary><p>Igen. Az Athéni demokrácia pilot modul regisztráció nélkül, ingyenesen elérhető.</p></details>
+            <details class="accordion"><summary>Elmenti a rendszer a haladásomat?<span aria-hidden="true">+</span></summary><p>Az aktuális böngészőben a H5P megőrzi a munkamenet egyes állapotait, de központi tanulói fiók és tanári riport a pilotban még nincs.</p></details>
+            <details class="accordion"><summary>Telefonon is megoldhatók a feladatok?<span aria-hidden="true">+</span></summary><p>Igen. A felület és a tananyag mobilra optimalizált, de az összetettebb feladatokhoz a nagyobb képernyő kényelmesebb lehet.</p></details>
+            <details class="accordion"><summary>Milyen szintű érettségire készít fel?<span aria-hidden="true">+</span></summary><p>Az alaptananyag elsősorban középszintű felkészülést támogat; az emelt szintű kiegészítéseket a tananyag külön jelöli.</p></details>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section section-shell reveal">
+        <div><p class="eyebrow">Készen állsz?</p><h2>Kezdd el az első tanulási útvonalat.</h2><p>Az athéni demokrácia 30 interaktív oldalán végigvezetünk a megértéstől az önellenőrzésig.</p></div>
+        <a class="button button-inverse button-large" href="./learn.html">Tananyag indítása <span aria-hidden="true">→</span></a>
       </section>
     </main>
 
-    <footer class="site-footer">Digitális Történelem Érettségi Akadémia · Pilot kiadás</footer>
+    <footer class="site-footer">
+      <div class="section-shell footer-grid">
+        <div class="footer-brand"><a class="brand" href="./"><img class="brand-mark" src="./assets/logo-mark.svg" alt="" width="38" height="38"><span><strong>Történelem</strong><small>Érettségi Akadémia</small></span></a><p>Interaktív, átlátható történelemérettségi-felkészítés.</p></div>
+        <div><strong>Platform</strong><a href="./library.html">Tananyagok</a><a href="#hogyan-mukodik">Módszertan</a><a href="#gyik">GYIK</a></div>
+        <div><strong>Témakörök</strong><a href="./library.html?era=okor">Ókor</a><a href="./library.html?era=kozepkor">Középkor</a><a href="./library.html?era=ujkor">Újkor</a></div>
+        <div><strong>Projekt</strong><a href="https://github.com/Tikitaka1984/digitalis-tortenelem-erettsegi-akademia">GitHub</a><span>Pilot v1.0</span></div>
+      </div>
+      <div class="section-shell footer-bottom"><span>© 2026 Digitális Történelem Érettségi Akadémia</span><span>Tanulásra tervezve.</span></div>
+    </footer>
     <script src="./assets/register-sw.js" defer></script>
   </body>
 </html>
+
