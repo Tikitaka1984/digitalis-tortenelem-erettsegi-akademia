@@ -10,7 +10,7 @@
 - prémium, több szakaszos landing page;
 - skálázható digitális könyvtár kereséssel és korszak-szűréssel;
 - tanulási munkatér bal oldali metaadat- és célpanellel;
-- sötét mód helyi beállításmegőrzéssel;
+- sötét mód helyi beállításmegőrzéssel és rendszerpreferencia-támogatással;
 - fókusz mód a H5P-tananyaghoz;
 - progress bar, morzsamenü, kurzuslapozó és állapotkomponensek;
 - mobil navigáció és reszponzív kártyarendszer;
@@ -23,6 +23,13 @@
 - a tananyag betöltési, hiba- és navigációs környezete;
 - a README platform- és designrendszer-dokumentációja.
 
+## Ellenőrzési bizonyítékok
+
+- világos és sötét asztali nézet;
+- világos és sötét mobilnézet;
+- automatizált H5P-integritás-, navigációs és akadálymentességi ellenőrzések;
+- Lighthouse teljesítmény-, akadálymentesség-, best practices- és SEO-kapuk.
+
 ## Változatlan
 
 - a forrás `.h5p` csomag;
@@ -30,4 +37,3 @@
 - minden kérdés, válasz, pontozás és H5P-metaadat;
 - a H5P standalone runtime verziója és a build integritás-ellenőrzése;
 - a GitHub Pages / GitHub Actions publikálási architektúra.
-
