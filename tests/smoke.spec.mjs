@@ -11,11 +11,14 @@ const expectNoHorizontalOverflow = async (page) => {
   expect(hasOverflow).toBe(false);
 };
 
-test('a prémium nyitóoldal, navigáció és CTA működik', async ({ page }) => {
+test('a prémium nyitóoldal, navigáció és CTA működik', async ({ page, isMobile }) => {
   const errors = collectPageErrors(page);
   await page.goto('./');
   await expect(page.getByRole('heading', { name: /A történelem nem évszámok sora/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /Athéni demokrácia indítása/ })).toHaveAttribute('href', './learn.html');
+  if (isMobile) {
+    await page.getByRole('button', { name: 'Menü megnyitása' }).click();
+  }
   await expect(page.getByRole('navigation', { name: 'Fő navigáció' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Innen érdemes kezdened' })).toBeVisible();
   await expectNoHorizontalOverflow(page);
@@ -63,7 +66,7 @@ test('a H5P Interactive Book betöltődik és 30 oldalas', async ({ page }) => {
 
 test('a tananyag fókusz módja működik', async ({ page }) => {
   await page.goto('./learn.html');
-  const toggle = page.getByRole('button', { name: 'Fókusz mód bekapcsolása' });
+  const toggle = page.locator('[data-focus-toggle]');
   await toggle.click();
   await expect(page.locator('body')).toHaveClass(/is-focus-mode/);
   await expect(page.locator('.course-sidebar')).toBeHidden();
