@@ -42,6 +42,25 @@ jobs:
       - name: Run desktop and mobile smoke tests
         run: npm test
 
+      - name: Run Lighthouse quality gate
+        run: |
+          python3 -m http.server 4173 -d _site >/tmp/dtea-http.log 2>&1 &
+          npx lighthouse http://127.0.0.1:4173/ \
+            --chrome-flags="--headless --no-sandbox" \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=json \
+            --output-path=lighthouse-report.json \
+            --quiet
+          npm run lighthouse:check -- lighthouse-report.json
+
+      - name: Upload Lighthouse report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report
+          path: lighthouse-report.json
+          retention-days: 14
+
       - name: Upload Playwright report on failure
         if: failure()
         uses: actions/upload-artifact@v4
@@ -71,3 +90,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
