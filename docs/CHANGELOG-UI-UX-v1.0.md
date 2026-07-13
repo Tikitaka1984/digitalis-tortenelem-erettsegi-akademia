@@ -3,6 +3,8 @@
 ## Hozzáadva
 
 - teljes Design System v1.0 tokenrendszerrel;
+- horizontális és monokróm logóvariációk;
+- dokumentált alert, tooltip, natív modal, skeleton, loading state és section header komponensek;
 - az elsődleges tartalom azonnali megjelenítése a Lighthouse LCP javításához; a hover- és fókusz-mikrointerakciók megmaradtak;
 - új logójel és favicon;
 - prémium, több szakaszos landing page;
