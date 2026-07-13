@@ -18,7 +18,7 @@ A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatá
 
 A H5P tananyag tartalmát a build **nem módosítja**. A kibontott fájlok kizárólag a webes telepítési artifact részei.
 
-A webes artifacton egy ellenőrzőösszeggel védett, egysoros kompatibilitási javítás fut a `H5P.SortParagraphs-0.11` könyvtáron. Ez kizárólag a standalone lejátszó korai inicializálásakor jelentkező null-hivatkozást védi ki; a feladat szövegét, válaszait, pontozását, metaadatait és a forrás `.h5p` csomagot nem érinti.
+A webes artifacton egy ellenőrzőösszeggel védett, szűken célzott kompatibilitási javítás fut a `H5P.SortParagraphs-0.11` könyvtáron. Ez kizárólag a standalone lejátszó korai inicializálásakor jelentkező két null-hivatkozást védi ki; a feladat szövegét, válaszait, pontozását, metaadatait és a forrás `.h5p` csomagot nem érinti.
 
 ## Architektúra
 
@@ -182,3 +182,4 @@ Ha a runtime vagy valamely szükséges tartalmi fájl nem tölthető be, a lejá
 ## Licencelés
 
 A webes runtime függősége, a `h5p-standalone`, MIT licencű. A H5P csomag belső tartalmainak és médiáinak jogi státuszát a tananyag saját Rights of Use és forrásadatai határozzák meg.
+
