@@ -3,6 +3,7 @@
 ## Hozzáadva
 
 - teljes Design System v1.0 tokenrendszerrel;
+- az elsődleges tartalom azonnali megjelenítése a Lighthouse LCP javításához; a hover- és fókusz-mikrointerakciók megmaradtak;
 - új logójel és favicon;
 - prémium, több szakaszos landing page;
 - skálázható digitális könyvtár kereséssel és korszak-szűréssel;
