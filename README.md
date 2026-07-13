@@ -4,6 +4,19 @@ Statikus, GitHub Pages-kompatibilis webes futtatókörnyezet a **Digitális Tör
 
 Az első publikált modul: **Athéni demokrácia**.
 
+## UI/UX Design System v1.0
+
+A platformfelület a tananyag tartalmától különálló, újrafelhasználható design systemre épül. A H5P-csomag, annak kérdései, pontozása, metaadatai és belső struktúrája változatlan marad.
+
+- `site/index.html` – márkaoldal, kiemelt tananyag, működési modell, előnyök és GYIK;
+- `site/library.html` – kereshető és korszak szerint szűrhető digitális könyvtár;
+- `site/learn.html` – tanulási keret oldalsávval, haladásjelzővel és fókusz móddal;
+- `site/assets/app.css` – szemantikus design tokenek, komponensek, reszponzív és sötét téma;
+- `site/assets/app.js` – témaváltás, mobilmenü, könyvtárszűrés és fókusz mód;
+- `docs/DESIGN_SYSTEM.md` – színek, tipográfia, térközök, komponensek és akadálymentességi szabályok.
+
+A felület három törésponttal optimalizált asztali, tablet- és mobilhasználatra. A billentyűzetfókusz, a szemantikus régiók, az ARIA-címkék, a csökkentett mozgás és a kontrasztos sötét mód a platformréteg része.
+
 ## Működési elv
 
 A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatározott szerkezetű ZIP-csomag, amely tartalmi JSON-t, médiafájlokat és H5P-könyvtárakat tartalmaz. A repository ezért a változatlan `.h5p` forráscsomagot tárolja, a GitHub Actions pedig minden buildnél:

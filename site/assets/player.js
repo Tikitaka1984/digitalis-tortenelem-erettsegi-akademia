@@ -5,6 +5,16 @@
   const loading = document.getElementById('loading-state');
   const error = document.getElementById('error-state');
   const retry = document.getElementById('retry-load');
+  const progress = document.querySelector('[data-course-progress]');
+  const progressLabel = document.querySelector('[data-progress-label]');
+  const progressKey = 'academy-athens-progress';
+
+  const setProgress = (value, label) => {
+    const safeValue = Math.max(0, Math.min(100, Number(value) || 0));
+    if (progress) progress.style.width = `${safeValue}%`;
+    if (progressLabel) progressLabel.textContent = label || `${safeValue}% teljesítve`;
+    localStorage.setItem(progressKey, String(safeValue));
+  };
 
   const showError = (reason) => {
     console.error('H5P betöltési hiba:', reason);
@@ -43,11 +53,25 @@
       loading.hidden = true;
       container.dataset.state = 'ready';
       container.focus({ preventScroll: true });
+      const storedProgress = Number(localStorage.getItem(progressKey));
+      setProgress(storedProgress > 0 ? storedProgress : 3, storedProgress > 0 ? `${storedProgress}% teljesítve` : 'Tananyag megnyitva');
     } catch (reason) {
       showError(reason);
     }
   };
 
   retry.addEventListener('click', loadContent);
+  window.addEventListener('message', (event) => {
+    if (!event.data || typeof event.data !== 'object') return;
+    const statement = event.data.statement || event.data;
+    const verb = statement?.verb?.id || statement?.verb || '';
+    if (typeof verb !== 'string') return;
+    if (verb.includes('completed') || verb.includes('passed')) setProgress(100, 'Tananyag teljesítve');
+    else if (verb.includes('answered') || verb.includes('progressed')) {
+      const current = Number(localStorage.getItem(progressKey)) || 3;
+      setProgress(Math.min(95, current + 3));
+    }
+  });
   loadContent();
 })();
+

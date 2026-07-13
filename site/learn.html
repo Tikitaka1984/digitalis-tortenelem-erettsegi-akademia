@@ -1,36 +1,44 @@
 <!doctype html>
-<html lang="hu">
+<html lang="hu" data-theme="light">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#13253a">
+    <meta name="theme-color" content="#f7f5ef">
     <meta name="description" content="Az Athéni demokrácia interaktív H5P-tananyaga.">
     <title>Athéni demokrácia · Digitális Történelem Érettségi Akadémia</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./assets/app.css">
     <link rel="stylesheet" href="./player/styles/h5p.css">
+    <script src="./assets/app.js" defer></script>
   </head>
   <body class="player-page">
     <a class="skip-link" href="#h5p-container">Ugrás a tananyaghoz</a>
-    <header class="player-header">
-      <a class="back-link" href="./" aria-label="Vissza a kezdőlapra">← Kezdőlap</a>
-      <div>
-        <p class="player-kicker">Digitális Történelem Érettségi Akadémia</p>
-        <h1>Athéni demokrácia</h1>
-      </div>
+    <header class="learning-header">
+      <a class="brand brand-compact" href="./" aria-label="Digitális Történelem Érettségi Akadémia – kezdőlap"><img class="brand-mark" src="./assets/logo-mark.svg" alt="" width="34" height="34"><span><strong>Történelem</strong><small>Érettségi Akadémia</small></span></a>
+      <div class="learning-header-title"><span>Ókor · 01</span><strong>Athéni demokrácia</strong></div>
+      <div class="learning-header-actions"><button class="icon-button" type="button" data-focus-toggle aria-pressed="false" aria-label="Fókusz mód bekapcsolása"><span aria-hidden="true">◫</span></button><button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Sötét mód bekapcsolása"><span class="theme-icon" aria-hidden="true">◐</span></button><a class="button button-small button-ghost" href="./library.html">Kilépés</a></div>
     </header>
 
-    <main class="player-main">
-      <div id="loading-state" class="system-state" role="status" aria-live="polite">
-        <span class="spinner" aria-hidden="true"></span>
-        <p>A tananyag betöltése…</p>
-      </div>
-      <div id="error-state" class="system-state error-state" role="alert" hidden>
-        <h2>A tananyag most nem tölthető be</h2>
-        <p>Az oldal vagy valamelyik szükséges fájl nem érhető el. Ellenőrizd az internetkapcsolatot, majd próbáld újra.</p>
-        <button id="retry-load" class="primary-button" type="button">Újrapróbálás</button>
-      </div>
-      <div id="h5p-container" class="h5p-host" tabindex="-1" aria-label="Athéni demokrácia interaktív tananyag"></div>
+    <div class="learning-progress" aria-label="Tananyag állapota"><div class="progress-track"><span data-course-progress style="width: 0%"></span></div><small data-progress-label>Tananyag megnyitva</small></div>
+
+    <main class="learning-layout" id="main">
+      <aside class="course-sidebar" aria-label="Tananyag információk">
+        <nav class="breadcrumb" aria-label="Morzsamenü"><a href="./library.html">Tananyagok</a><span aria-hidden="true">/</span><span aria-current="page">Athéni demokrácia</span></nav>
+        <div class="course-sidebar-heading"><span class="chip chip-accent">Interaktív könyv</span><h1>Athéni demokrácia</h1><p>Az athéni államszervezet és működése a demokrácia virágkorában</p></div>
+        <dl class="course-data"><div><dt>Időigény</dt><dd>35–45 perc</dd></div><div><dt>Nehézség</dt><dd>Közepes</dd></div><div><dt>Szint</dt><dd>Közép + emelt</dd></div><div><dt>Terjedelem</dt><dd>30 oldal</dd></div></dl>
+        <section class="objectives-card" aria-labelledby="objectives-title"><h2 id="objectives-title">Tanulási célok</h2><ul><li>A demokrácia kialakulásának áttekintése</li><li>A reformerek szerepének elkülönítése</li><li>Az államszervezet működésének megértése</li><li>Érettségi feladatok gyakorlása</li></ul></section>
+        <div class="tip-box"><span aria-hidden="true">✦</span><p><strong>Tanulási tipp</strong>Haladj sorrendben, és csak ellenőrzés után nézd meg a megoldásokat.</p></div>
+      </aside>
+
+      <section class="learning-stage" aria-label="Interaktív tananyag">
+        <div class="stage-toolbar"><div><span class="status-dot"></span><span>Interaktív tananyag</span></div><button class="text-button" type="button" data-scroll-top>Vissza az elejére ↑</button></div>
+        <div id="loading-state" class="system-state" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span><div><strong>A tananyag előkészítése</strong><p>A 30 oldalas interaktív könyv betöltése folyamatban…</p></div></div>
+        <div id="error-state" class="system-state error-state" role="alert" hidden><div class="feature-icon">!</div><h2>A tananyag most nem tölthető be</h2><p>Az oldal vagy valamelyik szükséges fájl nem érhető el. Ellenőrizd az internetkapcsolatot, majd próbáld újra.</p><button id="retry-load" class="button button-primary" type="button">Újrapróbálás</button></div>
+        <div id="h5p-container" class="h5p-host" tabindex="-1" aria-label="Athéni demokrácia interaktív tananyag"></div>
+      </section>
     </main>
+
+    <nav class="lesson-pager" aria-label="Tananyagok közötti navigáció"><a href="./library.html"><span aria-hidden="true">←</span><small>Vissza</small><strong>Digitális könyvtár</strong></a><div class="pager-status"><span>01 / 50+</span><small>Első pilot modul</small></div><span class="pager-disabled" aria-disabled="true"><small>Következő</small><strong>Római köztársaság</strong><span aria-hidden="true">→</span></span></nav>
 
     <noscript><p class="noscript">A tananyag használatához engedélyezni kell a JavaScriptet.</p></noscript>
     <script src="./player/main.bundle.js" charset="UTF-8"></script>
@@ -38,3 +46,4 @@
     <script src="./assets/register-sw.js" defer></script>
   </body>
 </html>
+

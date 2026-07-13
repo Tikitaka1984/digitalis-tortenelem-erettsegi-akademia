@@ -1,5 +1,9 @@
-const CACHE_NAME = 'dtea-atheni-demokracia-v2';
-const SHELL = ['./', './index.html', './learn.html', './assets/app.css', './assets/player.js'];
+const CACHE_NAME = 'dtea-shell-v3-design-system';
+const SHELL = [
+  './', './index.html', './library.html', './learn.html', './404.html',
+  './assets/app.css', './assets/app.js', './assets/logo-mark.svg',
+  './assets/favicon.svg', './assets/player.js', './assets/register-sw.js'
+];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(SHELL)));
@@ -29,3 +33,4 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
+
