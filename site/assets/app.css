@@ -287,7 +287,7 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .era-list span { padding: .7rem .85rem; border: 1px solid rgba(255,255,255,.18); border-radius: .65rem; background: rgba(255,255,255,.07); font-size: .8rem; }
 
 /* Learning workspace */
-.player-page { background: var(--canvas-soft); }
+.player-page { overflow-x: clip; background: var(--canvas-soft); }
 .learning-header { position: sticky; z-index: 60; top: 0; min-height: 4.35rem; padding-inline: 1.1rem; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 1rem; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 92%, transparent); backdrop-filter: blur(16px); }
 .learning-header-title { display: grid; justify-items: center; line-height: 1.2; }
 .learning-header-title span { color: var(--muted); font-size: .63rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
@@ -320,7 +320,7 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .stage-toolbar .text-button { font-size: .68rem; }
 .h5p-host { min-height: 72vh; overflow: hidden; border: 1px solid var(--line); border-radius: 0 0 var(--radius-md) var(--radius-md); background: #fff; box-shadow: var(--shadow-sm); }
 .h5p-host:empty { display: none; }
-.h5p-host iframe { width: 100%; display: block; border: 0; }
+.h5p-host iframe { width: 100% !important; max-width: 100% !important; display: block; border: 0; }
 .system-state { min-height: 55vh; padding: 2rem; display: grid; place-content: center; justify-items: center; gap: .8rem; border: 1px solid var(--line); border-radius: 0 0 var(--radius-md) var(--radius-md); background: var(--surface); text-align: center; }
 .system-state[hidden] { display: none; }
 .system-state strong { font-family: var(--font-display); }
