@@ -16,8 +16,8 @@ async function openChapter(book, title) {
   await button.first().evaluate((_, delay) => new Promise((resolve) => setTimeout(resolve, delay)), 500);
 }
 
-test('@visual-desktop Sprint 4.1 asztali vizuális bizonyítékok és feladatállapotok', async ({ page, isMobile }) => {
-  test.skip(isMobile, 'Az asztali képernyőképek csak a desktop projektben készülnek.');
+test('@visual-desktop Sprint 4.1 asztali vizuális bizonyítékok és feladatállapotok', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop-chromium', 'Az asztali képernyőképek csak a desktop projektben készülnek.');
   const book = await openBook(page);
 
   await expect(book.getByRole('img', { name: 'Stilizált atlanti térkép tengeri útvonalakkal és egy 15. századi karavellával.' })).toBeVisible();
@@ -52,8 +52,8 @@ test('@visual-desktop Sprint 4.1 asztali vizuális bizonyítékok és feladatál
   await page.locator('#h5p-container').screenshot({ path: `${screenshotDir}/08-final-test.png` });
 });
 
-test('@visual-mobile Sprint 4.1 mobil képernyőkép 390×844 méretben', async ({ page, isMobile }) => {
-  test.skip(!isMobile, 'A mobil képernyőkép csak a mobilprojektben készül.');
+test('@visual-mobile Sprint 4.1 mobil képernyőkép 390×844 méretben', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'mobile-chromium', 'A mobil képernyőkép csak a mobilprojektben készül.');
   const book = await openBook(page);
   await expect(book.getByRole('img', { name: 'Stilizált atlanti térkép tengeri útvonalakkal és egy 15. századi karavellával.' })).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1)).toBe(false);
