@@ -15,7 +15,7 @@ BANNED = (
     "Placeholder", "Accordion", "Multiple Choice", "Single Choice",
     "Kép- és hotspotterv", "Akadálymentes alternatíva", "VIZUÁLIS ELEM",
     "KÉSŐBB CSERÉLENDŐ", "Pontozás", "Helyes válasz", "Hibás válasz",
-    "Developer", "Teacher note",
+    "Developer", "Teacher note", "A tanár", "Tanári megjegyzés",
 )
 
 
