@@ -6,6 +6,7 @@ from __future__ import annotations
 import json
 import pathlib
 import re
+from html.parser import HTMLParser
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 BUILD = ROOT / "_site"
@@ -16,6 +17,25 @@ BANNED = (
     "KÉSŐBB CSERÉLENDŐ", "Pontozás", "Helyes válasz", "Hibás válasz",
     "Developer", "Teacher note",
 )
+
+
+class VisibleHTML(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.hidden_depth = 0
+        self.parts: list[str] = []
+
+    def handle_starttag(self, tag, attrs):
+        if tag in {"script", "style", "template"}:
+            self.hidden_depth += 1
+
+    def handle_endtag(self, tag):
+        if tag in {"script", "style", "template"} and self.hidden_depth:
+            self.hidden_depth -= 1
+
+    def handle_data(self, data):
+        if not self.hidden_depth:
+            self.parts.append(data)
 
 
 def visible_strings(value):
@@ -69,7 +89,9 @@ def main() -> None:
         if matches:
             failures.append(f"{module}: tiltott tanulói kifejezések: {', '.join(matches)}")
     for page in ("index.html", "library.html", "learn.html"):
-        text = (BUILD / page).read_text(encoding="utf-8")
+        parser = VisibleHTML()
+        parser.feed((BUILD / page).read_text(encoding="utf-8"))
+        text = "\n".join(parser.parts)
         matches = sorted({match.group(0) for match in pattern.finditer(text)}, key=str.casefold)
         if matches:
             failures.append(f"{page}: tiltott tanulói kifejezések: {', '.join(matches)}")
