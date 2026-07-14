@@ -1,3 +1,6 @@
+Exit code: 0
+Wall time: 1.6 seconds
+Output:
 #!/usr/bin/env python3
 """Fail CI when authoring notes leak into any published H5P learner view."""
 
@@ -38,41 +41,62 @@ class VisibleHTML(HTMLParser):
             self.parts.append(data)
 
 
-def visible_strings(value):
-    """Yield strings that can be visible before or while answering."""
+def scrub_blanks_solution(text: str) -> str:
+    """Remove H5P Blanks answer markup because it is hidden until checking."""
+    return re.sub(r"\*[^*]+\*", "______", text)
+
+
+def visible_entries(value, path="root"):
+    """Yield (JSON path, text) pairs that may actually appear to learners."""
     if isinstance(value, dict):
         library = value.get("library", "")
         params = value.get("params", {})
         if library.startswith("H5P.AdvancedText"):
-            yield params.get("text", "")
+            yield f"{path}.params.text", params.get("text", "")
         elif library.startswith("H5P.MultiChoice"):
-            yield params.get("question", "")
-            for answer in params.get("answers", []):
-                yield answer.get("text", "")
+            yield f"{path}.params.question", params.get("question", "")
+            for index, answer in enumerate(params.get("answers", [])):
+                yield f"{path}.params.answers[{index}].text", answer.get("text", "")
         elif library.startswith("H5P.TrueFalse"):
-            yield params.get("question", "")
+            yield f"{path}.params.question", params.get("question", "")
         elif library.startswith("H5P.Blanks"):
-            yield params.get("text", "")
-            yield from params.get("questions", [])
+            yield f"{path}.params.text", params.get("text", "")
+            for index, question in enumerate(params.get("questions", [])):
+                yield f"{path}.params.questions[{index}]", scrub_blanks_solution(question)
         elif library.startswith("H5P.SortParagraphs"):
-            yield params.get("taskDescription", "")
-            yield from params.get("paragraphs", [])
+            yield f"{path}.params.taskDescription", params.get("taskDescription", "")
+            for index, paragraph in enumerate(params.get("paragraphs", [])):
+                yield f"{path}.params.paragraphs[{index}]", paragraph
         elif library.startswith("H5P.Essay"):
-            yield params.get("taskDescription", "")
+            yield f"{path}.params.taskDescription", params.get("taskDescription", "")
         elif library.startswith("H5P.QuestionSet"):
-            yield params.get("introPage", {}).get("title", "")
-            yield params.get("introPage", {}).get("introduction", "")
+            intro = params.get("introPage", {})
+            yield f"{path}.params.introPage.title", intro.get("title", "")
+            yield f"{path}.params.introPage.introduction", intro.get("introduction", "")
         elif library.startswith("H5P.Dialogcards"):
-            yield params.get("title", "")
-            yield params.get("description", "")
-            for card in params.get("dialogs", []):
-                yield card.get("text", "")
-                yield card.get("answer", "")
-        for child in value.values():
-            yield from visible_strings(child)
+            yield f"{path}.params.title", params.get("title", "")
+            yield f"{path}.params.description", params.get("description", "")
+            for index, card in enumerate(params.get("dialogs", [])):
+                yield f"{path}.params.dialogs[{index}].text", card.get("text", "")
+                yield f"{path}.params.dialogs[{index}].answer", card.get("answer", "")
+        for key, child in value.items():
+            yield from visible_entries(child, f"{path}.{key}")
     elif isinstance(value, list):
-        for child in value:
-            yield from visible_strings(child)
+        for index, child in enumerate(value):
+            yield from visible_entries(child, f"{path}[{index}]")
+
+
+def matching_contexts(entries, pattern):
+    contexts = []
+    for path, value in entries:
+        if not value:
+            continue
+        text = str(value)
+        found = sorted({match.group(0) for match in pattern.finditer(text)}, key=str.casefold)
+        if found:
+            compact = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text)).strip()
+            contexts.append((path, found, compact[:180]))
+    return contexts
 
 
 def main() -> None:
@@ -84,10 +108,13 @@ def main() -> None:
     for content_path in roots:
         module = content_path.parents[1].name
         content = json.loads(content_path.read_text(encoding="utf-8"))
-        visible = "\n".join(str(item) for item in visible_strings(content) if item)
-        matches = sorted({match.group(0) for match in pattern.finditer(visible)}, key=str.casefold)
-        if matches:
-            failures.append(f"{module}: tiltott tanulói kifejezések: {', '.join(matches)}")
+        contexts = matching_contexts(visible_entries(content), pattern)
+        if contexts:
+            details = "; ".join(
+                f"{path}: {', '.join(matches)} [{snippet}]"
+                for path, matches, snippet in contexts
+            )
+            failures.append(f"{module}: {details}")
     for page in ("index.html", "library.html", "learn.html"):
         parser = VisibleHTML()
         parser.feed((BUILD / page).read_text(encoding="utf-8"))
@@ -102,3 +129,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
