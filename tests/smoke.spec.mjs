@@ -16,8 +16,9 @@ test('a prémium nyitóoldal, navigáció és CTA működik', async ({ page, isM
   await page.goto('./');
   await expect(page.getByRole('heading', { name: /A történelem nem évszámok sora/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /Athéni demokrácia indítása/ })).toHaveAttribute('href', './learn.html');
-  if (isMobile) {
-    await page.getByRole('button', { name: 'Menü megnyitása' }).click();
+  const menuButton = page.getByRole('button', { name: 'Menü megnyitása' });
+  if (isMobile && await menuButton.isVisible()) {
+    await menuButton.click();
   }
   await expect(page.getByRole('navigation', { name: 'Fő navigáció' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Válassz tanulási útvonalat' })).toBeVisible();
