@@ -7,6 +7,7 @@
 - Oldalszám: 30
 - SHA-256: `082a6f3eb2a43f6c9a433fbeca94d5fb43605bd57f10e110fbd0c9cdb8f74d3a`
 - A generátor determinisztikus: két egymást követő build azonos SHA-256 értéket ad.
+- A CI a ZIP-tömörítő platformkülönbségeitől független, normalizált tartalmi SHA-256 értéket ellenőriz: `2d0c88f73f32f098a90e0904ee5b7d476e660bf1d69cea09afac813fb55818db`.
 - Forrás: Master Script v1.0.2, Source Register v1.0.2 és Build Guide váz v1.0.2
 - Az Athéni demokrácia csomag tartalma nem módosult.
 - A Földrajzi felfedezések csomagot a CI reprodukálhatóan előállítja, majd 30 napos letölthető workflow artifactként is feltölti.
