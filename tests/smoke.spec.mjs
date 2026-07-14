@@ -77,9 +77,30 @@ test('a Földrajzi felfedezések H5P könyv betöltődik és 30 oldalas', async 
   expect(contentResponse.ok()).toBe(true);
   const content = await contentResponse.json();
   expect(content.chapters).toHaveLength(30);
+  expect(content.showCoverPage).toBe(false);
+  expect(content.behaviour.displaySummary).toBe(false);
   expect(JSON.stringify(content)).toContain('Egy felfedezés kinek jelentett lehetőséget');
+  const studentFacing = JSON.stringify(content.chapters.map((chapter) => chapter.params.content
+    .filter((item) => item.content.library === 'H5P.AdvancedText 1.1')
+    .map((item) => item.content.params.text)));
+  expect(studentFacing).not.toMatch(/Tanulói szöveg|Megjelenő szöveg|Akadálymentes alternatíva|VIZUÁLIS ELEM|KÉSŐBB CSERÉLENDŐ|PLACEHOLDER|Pontozás:|Helyes válasz:|Helyes visszajelzés:|Hibás visszajelzés:/i);
+  for (const asset of ['cover-atlantic-routes.webp', 'navigation-tools.svg', 'dias-route.svg', 'da-gama-route.svg', 'columbus-route.svg', 'tordesillas.svg', 'magellan-route.svg', 'route-overview.svg']) {
+    const assetResponse = await page.request.get(`./h5p/foldrajzi-felfedezesek/content/images/${asset}`);
+    expect(assetResponse.ok(), asset).toBe(true);
+  }
   await page.waitForTimeout(500);
   expect(errors).toEqual([]);
+});
+
+test('a Földrajzi felfedezések első oldala teljesen magyar és 30 oldalt jelez', async ({ page }) => {
+  await page.goto('./learn.html?module=foldrajzi-felfedezesek');
+  await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
+  const book = page.frameLocator('iframe.h5p-iframe');
+  await expect(book.getByRole('img', { name: 'Stilizált atlanti térkép tengeri útvonalakkal és egy 15. századi karavellával.' })).toBeVisible();
+  const visibleText = await book.locator('body').innerText();
+  expect(visibleText).toMatch(/1\s*\/\s*30/);
+  expect(visibleText).not.toMatch(/\b(Check|Retry|Submit|Previous|Next|Finish|Correct|Incorrect)\b|Show Solution|Your result|Summary & submit/i);
+  expect(visibleText).not.toMatch(/Tanulói szöveg|Megjelenő szöveg|Multiple Choice|Single Choice Set|Question Set|Accordion|VIZUÁLIS ELEM|KÉSŐBB CSERÉLENDŐ|PLACEHOLDER/i);
 });
 
 test('a tananyag fókusz módja működik', async ({ page }) => {
