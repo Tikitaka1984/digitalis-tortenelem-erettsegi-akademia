@@ -1,8 +1,8 @@
-const CACHE_NAME = 'dtea-shell-v4-two-modules';
+const CACHE_NAME = 'dtea-shell-v5-platform-1.1.0';
 const SHELL = [
   './', './index.html', './library.html', './learn.html', './404.html',
   './assets/app.css', './assets/app.js', './assets/logo-mark.svg',
-  './assets/favicon.svg', './assets/player.js', './assets/register-sw.js'
+  './assets/favicon.svg', './assets/player.js', './assets/register-sw.js', './data/modules.json'
 ];
 
 self.addEventListener('install', (event) => {
