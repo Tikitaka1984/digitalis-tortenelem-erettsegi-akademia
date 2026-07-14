@@ -419,7 +419,1366 @@ D) A térképek miatt nem volt többé szükség hajózási tapasztalatra.
 
 ### Tanulói szöveg
 
-Portugália az Atlanti-óceán partján feküdt, ezért kedvező helyzetből indíthatott tengeri vállalkozás…14803 tokens truncated…aximum 2; hibás opció jelölésekor az adott részpont nem jár, negatív pont nincs.  
+Portugália az Atlanti-óceán partján feküdt, ezért kedvező helyzetből indíthatott tengeri vállalkozásokat Afrika nyugati partjai mentén. A portugál uralkodói támogatás egyik fontos alakja Tengerész Henrik herceg volt. A 15. században portugál hajósok fokozatosan haladtak dél felé, szigeteket és partvidékeket értek el, kereskedelmi kapcsolatokat és támaszpontokat alakítottak ki.
+
+Stratégiájuk lényege az volt, hogy Afrika megkerülésével jussanak el az Indiai-óceánra és Indiába. Ez nem egyetlen út eredménye volt, hanem egymásra épülő expedícióké. A partvonal, a széljárás és a tengeri útvonalak egyre pontosabb ismerete készítette elő Dias és Vasco da Gama útját.
+
+### Accordion
+
+**Mi volt a cél?** Afrika megkerülésével közvetlen tengeri kapcsolat India irányába.  
+**Hogyan haladtak?** Lépésről lépésre feltérképezték Afrika nyugati és déli partvidékét, miközben kereskedelmi pontokat hoztak létre.  
+**Mi kellett hozzá?** Uralkodói támogatás, tőke, hajózási tudás és egymásra épülő tapasztalat.
+
+### Mini feladat
+
+**Kérdés:** Melyik útirány jellemezte a portugál stratégiát?  
+A) Nyugat felé az Atlanti-óceánon át Ázsiába  
+B) Afrika partjai mentén délre, majd az Indiai-óceán felé  
+C) Szárazföldön Európán és Ázsián át  
+D) Észak felé a Jeges-tengeren át  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A portugálok Afrika megkerülésével kerestek utat Indiába.” / „A portugál út fő iránya Afrika partjaihoz és az Indiai-óceánhoz kapcsolódott.”
+
+### Érettségi tipp
+
+Portugália és Spanyolország útkeresését mindig az irány alapján különítsd el: **Afrika megkerülése** és **nyugat felé hajózás**.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 148–149. oldal, „Portugál felfedezők”
+- SRC-02, 1–2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 7. oldal – Bartolomeu Dias útja
+
+**Cél:** C2–C3; egy előkészítő fordulópont jelentőségének felismerése.  
+**Elsődleges H5P:** Single Choice Set.  
+**Tartalék H5P:** Multiple Choice egyetlen helyes válasszal.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Bartolomeu Dias portugál hajós 1487–1488-as útján elérte és megkerülte Afrika déli csúcsának térségét. Ezzel bizonyította, hogy az Atlanti-óceán felől tengeri átjáró vezethet az Indiai-óceán irányába. Útja még nem teremtett közvetlen portugál kapcsolatot Indiával, de döntő lépés volt annak előkészítésében.
+
+Dias jelentősége ezért nem az, hogy ő érte el először Indiát, hanem az, hogy megmutatta Afrika megkerülésének lehetőségét. A következő expedíciók már erre a tapasztalatra építhettek.
+
+### Mini feladat
+
+**Kérdés:** Mi volt Dias útjának legfontosabb eredménye?  
+A) Elérte Amerikát.  
+B) Elsőként hajózta körül a Földet.  
+C) Igazolta, hogy Afrika déli része megkerülhető az Indiai-óceán felé.  
+D) Meghódította az Inka Birodalmat.  
+**Helyes:** C.  
+**Helyes visszajelzés:** „Helyes. Dias útja megnyitotta a lehetőséget a későbbi indiai tengeri kapcsolat előtt.”  
+**Hibás visszajelzés:** „Különítsd el az előkészítő utat az India elérésétől: Dias Afrika déli térségét kerülte meg.”
+
+### Gyakori hiba
+
+Dias és Vasco da Gama szerepének felcserélése. Dias az átjárás lehetőségét igazolta; Vasco da Gama jutott el tengeri úton Indiába.
+
+### Vizuális brief
+
+Afrika körvonalas térképe Dias útjának déli fordulópontjával. Placeholder: `TÉRKÉP – DIAS ÚTJA – KÉSŐBB CSERÉLENDŐ`.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „Portugál felfedezők”
+- SRC-02, 2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 8. oldal – Vasco da Gama útja
+
+**Cél:** C2–C3; a közvetlen tengeri kapcsolat jelentőségének megértése.  
+**Elsődleges H5P:** Image Hotspots, utána Single Choice Set.  
+**Tartalék H5P:** Accordion számozott útvonallal és Multiple Choice kérdéssel.  
+**Kockázat:** mobil- és billentyűzetes térképhasználat; a lineáris útvonallista kötelező.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Vasco da Gama 1497-ben indult el Portugáliából. Afrika megkerülése után az Indiai-óceánon átkelve 1498-ban elérte Indiát. Útja megvalósította a portugál törekvést: tengeri kapcsolat jött létre Európa és India között Afrika megkerülésével.
+
+Az új út lehetővé tette, hogy a portugálok közvetlenebbül kapcsolódjanak be az ázsiai kereskedelembe. A portugál jelenlét később kereskedelmi támaszpontokra és a tengeri útvonalak ellenőrzésére épült. Az út jelentősége gazdasági volt: az ázsiai áruk, különösen a fűszerek kereskedelmében nagyobb részesedést reméltek.
+
+### Hotspotok és lineáris alternatíva
+
+1. **Portugália:** az expedíció kiindulópontja.  
+2. **Afrika déli térsége:** a kontinens megkerülésének kulcspontja.  
+3. **Indiai-óceán:** az út utolsó nagy tengeri szakasza.  
+4. **India:** az 1498-ban elért célterület.
+
+### Mini feladat
+
+**Kérdés:** Miben különbözött Vasco da Gama eredménye Diasétól?  
+A) Da Gama nyugat felé hajózva érte el Amerikát.  
+B) Da Gama Afrika megkerülésével elérte Indiát.  
+C) Da Gama kötötte meg a tordesillasi szerződést.  
+D) Da Gama elsőként érte el Afrika déli részét.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. Dias előkészítette az útvonalat, Vasco da Gama pedig tengeri úton eljutott Indiába.” / „A két portugál út közötti különbséget az elért végpont mutatja.”
+
+### Érettségi tipp
+
+Kapcsold össze a személyt, az irányt és az eredményt: **Vasco da Gama – Afrika megkerülése – India**.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „Portugál felfedezők”
+- SRC-02, 2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 9. oldal – Kolumbusz és 1492
+
+**Cél:** C2–C3; 1492 és a nyugati út jelentőségének értelmezése.  
+**Elsődleges H5P:** Multiple Choice.  
+**Tartalék H5P:** Single Choice Set.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Kolumbusz Kristóf nyugat felé hajózva akart eljutni Ázsiába. Tervét a spanyol uralkodópár támogatta. 1492-ben átkelt az Atlanti-óceánon, és a Karib-tenger szigeteihez érkezett. Maga Kolumbusz úgy vélte, hogy Ázsia közelében jár, útja azonban az európaiak számára addig ismeretlen amerikai területek tartós felfedezésének és gyarmatosításának kezdetét jelentette.
+
+Az 1492-es év a történelmi korszakolásban is kiemelt: a magyar érettségi követelmények az újkor kezdetéhez kapcsolják. Kolumbusz nem lakatlan területre érkezett: a projektforrások amerikai őslakos társadalmakról és civilizációkról számolnak be. Történelmi jelentősége a tartós kontinensközi kapcsolat kialakulásában áll.
+
+### Mini feladat
+
+**Kérdés:** Melyik állítás pontos Kolumbusz 1492-es útjáról?  
+A) Tudatosan Amerika meghódítására indult.  
+B) Nyugat felé Ázsiát kereste, de a Karib-tenger térségébe érkezett.  
+C) Afrika megkerülésével jutott Indiába.  
+D) Egyetlen útján körülhajózta a Földet.  
+**Helyes:** B.  
+**Helyes visszajelzés:** „Helyes. Célja Ázsia elérése volt, útja mégis az amerikai térség tartós európai bekapcsolását indította el.”  
+**Hibás visszajelzés:** „Válaszd külön az eredeti célt és a ténylegesen elért térséget.”
+
+### Gyakori hiba
+
+Ne állítsd, hogy Kolumbusz tudta: új kontinenst ért el. Célja nyugati úton Ázsia elérése volt.
+
+### Vizuális brief
+
+Nyugat felé tartó útvonal Spanyolországtól a Karib-tengerig. Placeholder: `TÉRKÉP – KOLUMBUSZ 1492 – KÉSŐBB CSERÉLENDŐ`.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „Spanyol felfedezők”
+- SRC-02, 2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 10. oldal – A tordesillasi megállapodás
+
+**Cél:** C2–C4; a spanyol–portugál érdekszféra térbeli logikájának megértése.  
+**Elsődleges H5P:** Image Hotspots, utána Multiple Choice.  
+**Tartalék H5P:** Course Presentation szöveges térképmagyarázattal.  
+**Kockázat:** a választóvonal és a hotspotok mobilon túl sűrűk lehetnek; számozott szöveges alternatíva kötelező.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+A portugál és spanyol felfedezőutak versengést indítottak az újonnan elért területek és kereskedelmi lehetőségek fölött. A két hatalom 1494-ben Tordesillasban megállapodott egy választóvonalról. A vonaltól nyugatra eső, európaiak által újonnan elért területek spanyol, a keletre esők portugál érdekszférába kerültek.
+
+A megállapodás európai uralkodók szemszögéből osztotta fel a világot. Nem vette figyelembe az ott élő népek önrendelkezését, és más európai hatalmak sem tekintették véglegesnek. A vonal elhelyezkedése magyarázza, hogy a későbbi Brazília portugál, Amerika nagy része pedig spanyol gyarmati területté vált.
+
+### Kép- és hotspotterv
+
+Egyszerű Atlanti-térkép egy választóvonallal. Hotspot 1: spanyol érdekszféra nyugaton. Hotspot 2: portugál érdekszféra keleten. Hotspot 3: Brazília térsége a portugál oldalon. Szöveges alternatíva a kép alatt.
+
+### Mini feladat
+
+**Kérdés:** Mit szabályozott a tordesillasi megállapodás?  
+A) Az őslakos népek politikai jogait.  
+B) A spanyol és portugál érdekszférák elhatárolását.  
+C) A manufaktúrák munkarendjét.  
+D) A teljes európai kereskedelem adóit.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A megállapodás a két tengeri hatalom területi igényeit próbálta elhatárolni.” / „A szerződés nem az ott élő népek jogairól, hanem spanyol és portugál igényekről szólt.”
+
+### Érettségi tipp
+
+Térképen a választóvonalat mindig a két hatalom érdekszférájával és Brazília eltérő gyarmati helyzetével együtt értelmezd.
+
+### Média placeholder
+
+`TÉRKÉP – TORDESILLASI VÁLASZTÓVONAL – KÉSŐBB CSERÉLENDŐ`.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „A tordesillas-i szerződés”
+- SRC-05, 4. feladat, A forrás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 11. oldal – Magellán expedíciója
+
+**Cél:** C2–C3; a Föld első körülhajózásának folyamatként való értelmezése.  
+**Elsődleges H5P:** Timeline, utána Single Choice Set.  
+**Tartalék H5P:** Accordion időrendben rendezett panelekkel.  
+**Kockázat:** vízszintes idővonal mobilon és képernyőolvasóval nehézkes; a lineáris alternatíva kötelező.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Ferdinánd Magellán spanyol szolgálatban indított expedíciót 1519-ben. Nyugat felé hajózva Dél-Amerika déli részén átjárót keresett, majd a később Csendes-óceánnak nevezett hatalmas vízterületen haladt tovább. Magellán az út során életét vesztette, ezért személyesen nem hajózta körül a Földet.
+
+Az expedíció egyik hajója Elcano vezetésével később visszatért Spanyolországba. Így ez lett az első sikeresen befejezett Föld körüli hajóút. A projektforrások Magellán és Elcano szerepét egyértelműen összekapcsolják, de a visszatérés pontos évét ebben a forráscsomagban nem kezelik egységesen, ezért a tanulói szöveg nem rögzít külön befejezési évszámot.
+
+### Mini idővonal
+
+1. **1519:** indulás Spanyolországból.  
+2. **Dél-Amerika déli átjárója:** út a Csendes-óceán felé.  
+3. **Magellán halála:** a vezető nem fejezi be az utat.  
+4. **Az expedíció befejezése:** Elcano és a megmaradt hajó visszatér; az első körülhajózás befejeződik.
+
+### Mini feladat
+
+**Kérdés:** Melyik megfogalmazás történelmileg pontos?  
+A) Magellán egyedül körülhajózta a Földet.  
+B) Magellán expedíciója hajtotta végre az első körülhajózást, amelyet Elcano fejezett be.  
+C) Magellán Afrika megkerülésével érte el Indiát.  
+D) Magellán 1492-ben jutott el a Karib-tengerhez.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. Az expedíció teljesítménye és Magellán személyes útja nem azonos.” / „Figyelj arra, hogy Magellán az út során meghalt; a visszatérést Elcano vezette.”
+
+### Gyakori hiba
+
+„Magellán körülhajózta a Földet” helyett pontosabb: **Magellán expedíciója hajtotta végre az első Föld körüli utat**.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „Spanyol felfedezők”
+- SRC-04, „Az óra menete” – fő felfedezők és útvonalak
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 12. oldal – További utak és az új tengeri hálózat
+
+**Cél:** C2; a fő útvonalak tágabb rendszerbe helyezése.  
+**Elsődleges H5P:** Accordion.  
+**Tartalék H5P:** Text címmel tagolt kitekintő blokkokkal.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+A portugál és spanyol utak nem álltak meg Dias, Vasco da Gama és Kolumbusz expedícióinál. 1500-ban Pedro Álvares Cabral elérte Brazília partvidékét, majd Afrika megkerülésével India felé folytatta útját. Expedíciója 1501-ben tért vissza Portugáliába. A portugálok az Indiai-óceán térségében kereskedelmi támaszpontokat építettek ki, és eljutottak a fűszertermelő szigetek, Kína és Japán irányába is.
+
+Más európai hajósok az Atlanti-óceán északi térségében kerestek útvonalakat. Ezek a részletek kitekintést jelentenek, de a nagy folyamatot jól mutatják: az európai tengeri vállalkozások egyre több partvidéket és óceáni útvonalat kapcsoltak össze. A felfedezés, a kereskedelem és a gyarmati terjeszkedés fokozatosan egymásba fonódott.
+
+### Accordion
+
+**Cabral és Brazília:** 1500-ban elérte Brazília partvidékét, majd Afrika megkerülésével India felé folytatta útját; expedíciója 1501-ben tért vissza Portugáliába.  
+**Portugál ázsiai hálózat:** kereskedelmi támaszpontok és tengeri útvonal-ellenőrzés.  
+**Észak-atlanti kitekintés:** más európai hatalmak is új útvonalakat kerestek.
+
+### Mini feladat
+
+**Kérdés:** Mi kapcsolta össze a felfedezőutakat a későbbi gyarmati rendszerrel?  
+A) Az utak kizárólag tudományos térképezést szolgáltak.  
+B) Az elért területeken kereskedelmi pontok, politikai igények és hódítások jelentek meg.  
+C) A hajósok minden területről azonnal visszavonultak.  
+D) Az utak megszüntették a tengeri kereskedelmet.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A felfedezés, a kereskedelem és a terjeszkedés sok esetben egymásra épült.” / „Az utak következménye nem pusztán térképi ismeret, hanem tartós jelenlét és uralom is lett.”
+
+### Szintjelölés
+
+Cabral és az északi utak részletei **Kitekintés** címkét kapnak.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149–150. oldal
+- SRC-02, 2–3. oldal
+- SRC-03, 2. oldal, „A nagy földrajzi felfedezések története”
+
+**Szint:**
+
+- kitekintés
+
+**Szakmai státusz:**
+
+- ellenőrzött
+- szakmai vezetői döntéssel lezárva
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 13. oldal – Hódítás és gyarmatosítás
+
+**Cél:** C4; a felfedezéstől a gyarmati uralomig vezető folyamat megértése.  
+**Elsődleges H5P:** Multiple Choice.  
+**Tartalék H5P:** Single Choice Set.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Az amerikai területek elérése után a spanyol hódítók nagy birodalmakat döntöttek meg. Hernán Cortés az Azték Birodalom, Francisco Pizarro az Inka Birodalom meghódításához kapcsolódik. A hódítók katonai eszközei, a helyi ellenfelek közötti ellentétek és az Európából behurcolt betegségek együtt gyengítették az őslakos társadalmakat.
+
+A meghódított területek gyarmatokká váltak: politikailag és gazdaságilag az európai hatalmak érdekeit szolgálták. Nemesfémeket és más erőforrásokat vontak ki, ültetvényeket és bányákat működtettek, miközben a helyi közösségeket kényszermunkával és adóztatással terhelték. A gyarmatosítás ezért nem semleges „találkozás”, hanem egyenlőtlen hatalmi rendszer volt.
+
+### Fogalom
+
+**Gyarmat:** olyan terület, amelyet egy másik állam politikailag ural és gazdaságilag saját érdekei szerint használ.
+
+### Mini feladat
+
+**Kérdés:** Melyik állítás fejezi ki legpontosabban a gyarmat fogalmát ebben a korszakban?  
+A) Két egyenrangú állam önkéntes kereskedelmi társulása.  
+B) Külső hatalom által uralt és gazdaságilag alárendelt terület.  
+C) Kizárólag lakatlan sziget.  
+D) Európai városi céh.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A gyarmati kapcsolat politikai uralmat és gazdasági alárendelést jelentett.” / „A gyarmat nem egyenrangú partner: külső hatalom ellenőrzi és saját céljaira használja.”
+
+### Érettségi tipp
+
+A gyarmatosítás következményeit politikai, gazdasági és társadalmi szempontból is nevezd meg.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149–150. oldal, spanyol hódítók és gyarmatosítás
+- SRC-03, 2. oldal, „Következmények a gyarmatokon”
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 14. oldal – Őslakosság, kényszermunka és rabszolga-kereskedelem
+
+**Cél:** C4; az emberi következmények rendszerezése.  
+**Elsődleges H5P:** Multiple Choice.  
+**Tartalék H5P:** Mark the Words.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Az amerikai őslakosság létszáma a hódítások után súlyosan visszaesett. A háborúk és a kényszermunka mellett döntő szerepet játszottak az Európából behurcolt fertőző betegségek, amelyekkel szemben a helyi népesség nem rendelkezett korábbi védettséggel. A közösségek politikai, gazdasági és kulturális rendszerei is megrendültek.
+
+A munkaerőhiány és a gyarmati termelés igénye hozzájárult az Afrikából Amerikába irányuló rabszolga-kereskedelem növekedéséhez. Embereket erőszakkal hurcoltak el, áruvá tettek és ültetvényeken vagy bányákban dolgoztattak. Az Atlanti-óceán térsége így nemcsak áruk, hanem kényszerrel mozgatott emberek hálózatává is vált.
+
+### Mini feladat
+
+**Kérdés:** Melyik tényezőegyüttes magyarázza az őslakosság súlyos pusztulását?  
+A) Csak a tengeri viharok.  
+B) Háborúk, kényszermunka és behurcolt betegségek együtt.  
+C) Kizárólag önkéntes kivándorlás.  
+D) Az európai kereskedelem teljes megszűnése.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A népességcsökkenés több, egymást erősítő tényező következménye volt.” / „Ne egyetlen okot keress: a hódítás, a munkakényszer és a betegségek együtt hatottak.”
+
+### Gyakori hiba
+
+Kerüld azt a leegyszerűsítést, hogy a hódítók kizárólag katonai fölényük miatt győztek. A helyi szövetségek és a betegségek szerepe is fontos.
+
+### Vizuális elv
+
+Az oldal ne használjon sokkoló vagy méltatlan illusztrációt. Sematikus ok-okozati ábra ajánlott.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149–150. oldal
+- SRC-03, 2. oldal, „Következmények a gyarmatokon”
+- SRC-05, 4. feladat, D forrás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 15. oldal – A kontinensek közötti csere
+
+**Cél:** C4–C5; termékek és élőlények mozgásának, valamint kettős következményének megértése.  
+**Elsődleges H5P:** Single Choice Set két kérdéssel.  
+**Tartalék H5P:** Multiple Choice két külön kérdésben.  
+**Kockázat:** a képernyőolvasós visszajelzés és a válaszlehetőségek fókuszsorrendje ellenőrzendő.  
+**Pont:** 2.
+
+### Tanulói szöveg
+
+A tartós atlanti kapcsolatokkal növények, állatok, élelmiszerek és betegségek kerültek egyik kontinensről a másikra. A projektforrások a gyarmati termékek között többek között kukoricát, burgonyát, paradicsomot és kakaót is felsorolnak. Ezt a sokirányú folyamatot gyakran kolumbuszi cserének nevezik.
+
+A csere következményei nem voltak azonosak. Új élelmiszerek hosszabb távon bővíthették az étrendet és támogathatták a népességnövekedést. Ugyanakkor a behurcolt betegségek pusztítóan hatottak az amerikai őslakosságra, az ültetvényes termelés pedig kényszermunkához és rabszolgasághoz kapcsolódott.
+
+### Single Choice Set
+
+**1. kérdés:** Melyik állítás egyezik a projektforrásokkal?  
+A) A gyarmati termékek között kukorica, burgonya, paradicsom és kakaó is szerepelt.  
+B) A kontinensek közötti kapcsolat kizárólag nemesfémek mozgását jelentette.  
+C) A felfedezések után megszűnt az atlanti kereskedelem.  
+**Helyes:** A.
+
+**2. kérdés:** Melyik állítás foglalja össze helyesen a csere következményeit?  
+A) A növények, állatok, élelmiszerek és betegségek mozgása többirányú volt, társadalmi hatásai pedig nem voltak egyenlők.  
+B) A csere minden társadalmi csoportnak azonos előnyöket biztosított.  
+C) A betegségek és az ültetvényes termelés nem hatottak az őslakosságra.  
+**Helyes:** A.
+
+**Pontozás:** 1 pont helyes válaszonként; maximum 2.  
+**Retry:** igen. **Show Solution:** ellenőrzés után.  
+**Helyes visszajelzés:** „Helyes. A csere mindkét irányban zajlott, de társadalmi hatásai nagyon egyenlőtlenek voltak.”  
+**Hibás visszajelzés:** „Keresd a forrásokban felsorolt gyarmati termékeket, majd különítsd el a csere tényét annak egyenlőtlen társadalmi következményeitől.”
+
+### Akadálymentes alternatíva
+
+Két külön Multiple Choice kérdés ugyanazzal a kérdés- és válaszkészlettel. Az alternatíva pontértéke azonos.
+
+### Érettségi tipp
+
+Ne csak terméklistát adj: említs legalább egy kedvező és egy súlyos társadalmi következményt is.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-03, 2–3. oldal, gyarmati következmények és világkereskedelem
+- SRC-04, „Az óra menete” – következmények, kultúra/életmód
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 16. oldal – Az atlanti kereskedelem felértékelődése
+
+**Cél:** C5; a kereskedelmi súlypontváltozás értelmezése.  
+**Elsődleges H5P:** Single Choice Set.  
+**Tartalék H5P:** Multiple Choice egyetlen helyes válasszal.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+A felfedezőutak előtt az európai távolsági kereskedelem egyik fontos térsége a Földközi-tenger volt. Az Indiába, Amerikába és Afrika partjaihoz vezető óceáni útvonalak kialakulásával azonban az Atlanti-óceán partvidéke felértékelődött. A portugál és spanyol kezdeményezés után holland, angol és francia kereskedők is egyre erősebben kapcsolódtak be az óceáni kereskedelembe.
+
+Az új központok nem egyik napról a másikra váltották fel a régi útvonalakat, de a nagy mennyiségű áru, a gyarmati erőforrások és a tengeri vállalkozások az atlanti kikötők növekedését segítették. A kereskedelem térbeli átrendeződése együtt járt új kereskedőrétegek és új pénzügyi megoldások megerősödésével.
+
+### Mini feladat
+
+**Kérdés:** Mi változott meg a felfedezések hatására az európai távolsági kereskedelemben?  
+A) Minden földközi-tengeri kereskedelem azonnal megszűnt.  
+B) Az atlanti kikötők és útvonalak jelentősége megnőtt.  
+C) Európa megszakította kapcsolatát Ázsiával.  
+D) A tengeri szállítás helyét teljesen átvette a szárazföldi kereskedelem.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A hangsúly fokozatosan az atlanti útvonalak és kikötők felé tolódott.” / „A változás súlyponteltolódás volt, nem a korábbi kereskedelem azonnali megszűnése.”
+
+### Érettségi tipp
+
+Használd a **kereskedelmi súlypont áthelyeződése** kifejezést, és kerüld az „egyik napról a másikra megszűnt” típusú abszolút állítást.
+
+### Vizuális brief
+
+Kétfázisú sematikus térkép: Földközi-tengeri útvonalak és atlanti útvonalak. Placeholder: `INFOGRAFIKA – KERESKEDELMI SÚLYPONTVÁLTÁS – KÉSŐBB CSERÉLENDŐ`.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 150. oldal, „A kereskedelem változásai”
+- SRC-05, 4. feladat, C forrás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 17. oldal – Árforradalom és infláció
+
+**Cél:** C5–C6; az árnövekedés okainak és következményeinek értelmezése.  
+**Elsődleges H5P:** Accordion, utána Multiple Choice.  
+**Tartalék H5P:** Course Presentation.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+Az amerikai gyarmatokból nagy mennyiségű nemesfém, főként ezüst és arany érkezett Európába. A pénzként használt nemesfém mennyiségének növekedése, valamint a népesség és a kereslet emelkedése hozzájárult az árak tartós növekedéséhez. Ezt a 16. századi folyamatot árforradalomnak nevezik.
+
+Az infláció azt jelenti, hogy az árszínvonal tartósan emelkedik, ezért ugyanannyi pénz kevesebb áru megvásárlására elegendő. Az árnövekedés társadalmi csoportonként eltérő hatású volt. A piaci értékesítésből és kereskedelemből hasznot húzók előnybe kerülhettek, míg a rögzített pénzjövedelemből élők és a pénzjáradékot kapó földbirtokosok jövedelmének vásárlóereje csökkenhetett.
+
+### Oksági lépések
+
+1. amerikai nemesfém beáramlása és növekvő kereslet;
+2. a forgalomban lévő pénz mennyiségének növekedése;
+3. tartós áremelkedés;
+4. eltérő hatás a társadalmi csoportokra.
+
+### Fogalom
+
+**Infláció:** az árszínvonal tartós emelkedése, amely csökkenti a pénz vásárlóerejét.
+
+### Mini feladat
+
+**Kérdés:** Melyik okkapcsolat helyes?  
+A) Nemesfém-beáramlás és keresletnövekedés → tartós áremelkedés.  
+B) Áremelkedés → minden társadalmi csoport azonos mértékben gazdagodik.  
+C) Az infláció → a pénz vásárlóerejének növekedése.  
+D) A felfedezések → a pénzforgalom teljes megszűnése.  
+**Helyes:** A.  
+**Helyes visszajelzés:** „Helyes. Az árforradalom hátterében többek között a nemesfém-beáramlás és a növekvő kereslet állt.”  
+**Hibás visszajelzés:** „Az infláció az árszínvonal emelkedését és a pénz vásárlóerejének csökkenését jelenti.”
+
+### Gyakori hiba
+
+Ne állítsd, hogy az árforradalomnak egyetlen oka volt, vagy hogy mindenki ugyanúgy járt vele.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 150. oldal, „Az árforradalom”
+- SRC-03, 3. oldal, európai gazdasági következmények
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 18. oldal – Bank, tőzsde és részvény
+
+**Cél:** C5–C6; a kereskedelmi kockázat és tőkegyűjtés intézményeinek megértése.  
+**Elsődleges H5P:** Dialog Cards, utána Multiple Choice.  
+**Tartalék H5P:** Accordion.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+A távolsági tengeri kereskedelem sok pénzt igényelt és nagy kockázattal járt. Hajót, felszerelést és árut kellett finanszírozni, miközben egy vihar, támadás vagy sikertelen út súlyos veszteséget okozhatott. Ezért megnőtt a pénzügyi közvetítés és a több befektetőt összekapcsoló vállalkozások jelentősége.
+
+A **bank** pénzügyi műveleteket végző intézmény, amely többek között pénzt őriz, hitelez és fizetéseket közvetít. A **tőzsde** szervezett piac, ahol kereskedelmi és pénzügyi ügyleteket kötnek. A **részvény** egy vállalkozás tulajdonrészét megtestesítő értékpapír: tulajdonosa részesedhet a nyereségből, de a kockázatból is. Ezek az intézmények segítették a nagyobb vállalkozásokhoz szükséges tőke összegyűjtését.
+
+### Dialog Cards
+
+- **Bank:** pénzt kezelő, hitelező és fizetést közvetítő intézmény.
+- **Tőzsde:** szervezett piac, ahol árukhoz és pénzügyi eszközökhöz kapcsolódó ügyleteket kötnek.
+- **Részvény:** egy vállalkozás tulajdonrészét megtestesítő értékpapír.
+- **Tőke:** haszonszerzés céljából befektethető pénz, eszköz vagy vagyon.
+
+### Mini feladat
+
+**Kérdés:** Miért volt hasznos a részvényes forma a nagy tengeri vállalkozásoknál?  
+A) Egyetlen emberre terhelte az összes költséget.  
+B) Több befektető tőkéjét kapcsolhatta össze, és megoszthatta a kockázatot.  
+C) Megszüntette a veszteség lehetőségét.  
+D) Feleslegessé tette a kereskedelmet.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. Több befektető nagyobb tőkét mozgósíthatott, miközben a kockázat sem egyetlen szereplőt terhelt.” / „A részvény nem szünteti meg a kockázatot; a tőke bevonását és megosztását segíti.”
+
+### Érettségi tipp
+
+Fogalommagyarázatnál ne csak definíciót adj: mutasd meg, hogyan kapcsolódott az intézmény a távolsági kereskedelemhez.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 150. oldal, „A kereskedelem változásai”
+- SRC-03, 3. oldal, bankok és tőzsde
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 19. oldal – Manufaktúra, bérmunka és kapitalizmus
+
+**Cél:** C5–C6; az új termelési forma és a tőkés kapcsolat értelmezése.  
+**Elsődleges H5P:** Accordion, utána Multiple Choice.  
+**Tartalék H5P:** Course Presentation.  
+**Pont:** 1.
+
+### Tanulói szöveg
+
+A bővülő piacok nagyobb mennyiségű árut igényeltek. A céhes kézművesség korlátozott termelésével szemben a manufaktúra egy helyen sok munkást foglalkoztatott, és a munkafolyamatot részfeladatokra bontotta. A termelés továbbra is főként kézi eszközökkel zajlott, de a munkamegosztás növelte a kibocsátást.
+
+A vállalkozáshoz szükséges épületet, nyersanyagot és eszközöket a tőkés biztosította. A tulajdonnal nem rendelkező dolgozó munkabérért végezte feladatát, ezért bérmunkásnak nevezzük. A **kapitalizmus** olyan gazdasági rendszer, amelyben a termelőeszközök jelentős része magántulajdonban van, a tulajdonos tőkét fektet be, bérmunkát alkalmaz és piaci nyereségre törekszik.
+
+### Accordion
+
+**Manufaktúra:** kézi technikán alapuló, munkamegosztást alkalmazó nagyobb műhely.  
+**Tőkés:** tőkéjét haszonszerzés céljából befektető tulajdonos vagy vállalkozó.  
+**Bérmunkás:** munkáját munkabérért végző dolgozó.  
+**Kapitalizmus:** magántulajdonra, tőkebefektetésre, bérmunkára és piaci nyereségre épülő gazdasági rendszer.
+
+### Mini feladat
+
+**Kérdés:** Mi különbözteti meg a manufaktúrát a hagyományos céhes műhelytől a legjobban?  
+A) Nem használt kézi munkát.  
+B) Sok munkást foglalkoztatott, és részfeladatokra bontotta a termelést.  
+C) Kizárólag mezőgazdasági termékeket állított elő.  
+D) Nem termelt piacra.  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A manufaktúra kulcsa a nagyobb létszám és a munkamegosztás, miközben a technika még alapvetően kézi.” / „A manufaktúra nem gyár modern gépekkel; a munkamegosztás teszi sajátossá.”
+
+### Gyakori hiba
+
+Ne azonosítsd a manufaktúrát a gépesített gyárral. A manufaktúra munkamegosztást alkalmaz, de kézi technikára épül.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 151–152. oldal, „Ipar” és „Manufaktúraipar”
+- SRC-03, 3. oldal, manufaktúra és tőke
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 20. oldal – Nyugat és Kelet eltérő agrárútja
+
+**Cél:** C7; az európai munkamegosztás társadalmi következményeinek összehasonlítása.  
+**Elsődleges H5P:** Accordion két összehasonlító panellel, utána Multiple Choice.  
+**Tartalék H5P:** Course Presentation.  
+**Pont:** 2.
+
+### Tanulói szöveg
+
+A nyugat-európai városok és népesség növekedése fokozta a mezőgazdasági termékek iránti keresletet. Nyugat-Európában a jobbágyi kötöttségek sok helyen tovább lazultak, és terjedt a piacra termelés, valamint a bérleti és bérmunka jellegű kapcsolat. A gazdaság pénz- és piacorientáltabbá vált.
+
+Kelet-Közép- és Kelet-Európa földbirtokosai a nyugati piac gabonaigényét saját nagybirtokaikról igyekeztek kielégíteni. Ennek érdekében növelték a jobbágyokra nehezedő robotot és személyi kötöttséget. Ezt a folyamatot a forráscsomag örökös vagy második jobbágyságként írja le. A két térség így eltérő társadalmi irányba fejlődött, miközben kereskedelmük szorosan összekapcsolódott.
+
+### Összehasonlítás
+
+| Szempont | Nyugat-Európa | Kelet-Közép- és Kelet-Európa |
+|---|---|---|
+| piaci ösztönző | városi és népességi kereslet | nyugati gabonakereslet |
+| munkaerőviszony | kötöttségek lazulása, bérleti/bérmunka kapcsolatok erősödése | robot és személyi függés növekedése |
+| kulcsfogalom | piacosodás | örökös jobbágyság |
+
+### Mini feladat – két állítás
+
+**1. kérdés:** Melyik jelenség kapcsolódik a keleti agrárfejlődéshez?  
+A) A robot és személyi kötöttségek erősödése.  
+B) A jobbágyság azonnali teljes megszűnése.  
+**Helyes:** A. **Pont:** 1.
+
+**2. kérdés:** Mi kapcsolta össze a két térséget?  
+A) A mezőgazdasági termékek iránti nyugati kereslet és a keleti export.  
+B) A kereskedelem teljes hiánya.  
+**Helyes:** A. **Pont:** 1.
+
+**Helyes visszajelzés:** „Helyes. Az eltérő társadalmi fejlődés egy összekapcsolódó európai piac része volt.”  
+**Hibás visszajelzés:** „Ne elszigetelt térségeket láss: a nyugati kereslet ösztönözte a keleti gabonakivitelt és a földesúri terhek növelését.”
+
+### Érettségi tipp
+
+Az összehasonlításban mindig legyen közös szempont: kereslet, munkaerőviszony, termelési cél és társadalmi következmény.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 151–152. oldal, „Mezőgazdaság” és „Ipar”
+- SRC-03, 1. és 3. oldal, kontinentális munkamegosztás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 21. oldal – Interaktív kronológia
+
+**Cél:** C3; a folyamat fő pontjainak időbeli rendszerezése.  
+**Elsődleges H5P:** Timeline.  
+**Tartalék H5P:** Accordion időrendbe rendezett panelekkel.  
+**Kockázat:** mobil- és képernyőolvasó-használat; az azonos tartalmú lineáris lista kötelező.  
+**Pontozás:** nincs.
+
+### Bevezető
+
+A felfedezések nem egyetlen évhez kötődnek. A portugál partkutatás, a spanyol nyugati út és a Föld első körülhajózása egymásra épülő, több évtizedes folyamat volt.
+
+### Események
+
+1. **1415 – Ceuta elfoglalása:** portugál terjeszkedés Észak-Afrikában; a tengeri vállalkozások korai állomása.  
+2. **1487–1488 – Dias Afrika déli térségénél:** az Afrika megkerülésével vezető út lehetőségének igazolása.  
+3. **1492 – Kolumbusz eléri a Karib-tenger térségét:** tartós európai kapcsolat kezdete Amerikával; a követelményekben az újkor kezdete.  
+4. **1494 – Tordesillas:** spanyol és portugál érdekszférák elhatárolása.  
+5. **1497–1498 – Vasco da Gama Indiába jut:** közvetlen tengeri út Afrika megkerülésével.  
+6. **1500–1501 – Cabral expedíciója:** Brazília partvidékének elérése, majd továbbhaladás India felé.  
+7. **1519 – Magellán expedíciójának indulása:** nyugati út és Föld körüli vállalkozás.  
+8. **Az első Föld körüli út befejezése:** Elcano vezetésével a megmaradt hajó visszatér Spanyolországba; a modul nem rögzít külön befejezési évszámot.
+
+### Vizuális és a11y
+
+Eseményenként legfeljebb egy kép. A Timeline alatt ugyanaz a nyolc esemény számozott listában szerepel. A dátumformátum mindenhol azonos.
+
+### Önellenőrző kérdés
+
+**Kérdés:** Melyik három esemény alkot helyes időrendet?  
+A) Kolumbusz útja → Dias útja → Tordesillas  
+B) Dias útja → Kolumbusz útja → Vasco da Gama Indiába jut  
+C) Magellán indulása → Tordesillas → Kolumbusz útja  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes: Dias előkészítő útja megelőzte 1492-t, Vasco da Gama pedig ezután jutott Indiába.”
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149–150. oldal
+- SRC-02, 2–3. oldal
+- SRC-03, 2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag és kitekintő kronológia
+
+**Szakmai státusz:**
+
+- ellenőrzött
+- szakmai vezetői döntéssel lezárva
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 22. oldal – Kulcsszemélyek
+
+**Cél:** C3; személy–út–jelentőség kapcsolatok rögzítése.  
+**Elsődleges H5P:** Dialog Cards.  
+**Tartalék H5P:** Accordion.  
+**Pontozás:** nincs; a kártyák után 1 önellenőrző pont.
+
+### Kártyák
+
+**Bartolomeu Dias**  
+Portugál hajós. 1487–1488-as útján megkerülte Afrika déli térségét, és igazolta az Indiai-óceán felé vezető tengeri átjárás lehetőségét. Gyakori tévesztés: nem ő jutott el először tengeri úton Indiába.
+
+**Vasco da Gama**  
+Portugál hajós. 1497–1498-ban Afrika megkerülésével eljutott Indiába. Jelentősége a közvetlen európai–indiai tengeri kapcsolat létrehozása. Gyakori tévesztés: útja nem nyugat felé, Amerika irányába vezetett.
+
+**Kolumbusz Kristóf**  
+Spanyol támogatással nyugat felé keresett utat Ázsiába. 1492-ben a Karib-tenger térségébe érkezett. Jelentősége a tartós európai–amerikai kapcsolat kezdetében áll. Gyakori tévesztés: nem tudta, hogy új kontinenst ért el.
+
+**Ferdinánd Magellán**  
+Spanyol szolgálatban 1519-ben indított Föld körüli expedíciót. Az út során meghalt; az expedíciót Elcano fejezte be. Gyakori tévesztés: Magellán személyesen nem tért vissza.
+
+**Pedro Álvares Cabral – kitekintés**  
+Pedro Álvares Cabral portugál hajós, aki 1500-ban elérte Brazília partvidékét, majd Afrika megkerülésével India felé folytatta útját. Expedíciója 1501-ben tért vissza Portugáliába.
+
+**Hernán Cortés és Francisco Pizarro – kitekintés**  
+Spanyol hódítók. Cortés az Azték, Pizarro az Inka Birodalom meghódításához kapcsolódik. Nevük a felfedezést követő gyarmati hódítás szakaszát jelzi.
+
+### Önellenőrzés
+
+**Kérdés:** Kihez kapcsolódik a tengeri út Indiába Afrika megkerülésével?  
+A) Kolumbusz  
+B) Vasco da Gama  
+C) Magellán  
+D) Cortés  
+**Helyes:** B. **Pont:** 1.  
+**Visszajelzés:** „Helyes: Vasco da Gama – Afrika megkerülése – India.” / „Kapcsold össze a személyt az út irányával és végpontjával.”
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal
+- SRC-02, 2. oldal
+- SRC-03, 2. oldal
+
+**Szint:**
+
+- középszintű törzsanyag és kitekintés
+
+**Szakmai státusz:**
+
+- ellenőrzött
+- szakmai vezetői döntéssel lezárva
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 23. oldal – Kulcsfogalmak
+
+**Cél:** C6–C7; fogalmi felidézés és kapcsolás.  
+**Elsődleges H5P:** Dialog Cards.  
+**Tartalék H5P:** Accordion.  
+**Pontozás:** nincs.
+
+### Kötelező kártyák
+
+1. **Gyarmat:** külső állam által politikailag uralt és gazdaságilag alárendelt terület.  
+2. **Infláció:** az árszínvonal tartós emelkedése, amely csökkenti a pénz vásárlóerejét.  
+3. **Árforradalom:** a 16. századi tartós európai áremelkedés, amelyhez a nemesfém-beáramlás és a kereslet növekedése is hozzájárult.  
+4. **Manufaktúra:** kézi technikán alapuló, sok munkást és munkamegosztást alkalmazó nagyobb műhely.  
+5. **Tőke:** haszonszerzés céljából befektethető pénz, eszköz vagy vagyon.  
+6. **Tőkés:** tőkéjét vállalkozásba fektető, nyereségre törekvő tulajdonos.  
+7. **Bérmunkás:** munkáját munkabérért végző dolgozó.  
+8. **Kapitalizmus:** magántulajdonra, tőkebefektetésre, bérmunkára és piaci nyereségre épülő gazdasági rendszer.  
+9. **Bank:** pénzügyi műveleteket, például pénzkezelést és hitelezést végző intézmény.  
+10. **Tőzsde:** szervezett piac, ahol kereskedelmi és pénzügyi ügyleteket kötnek.  
+11. **Részvény:** egy vállalkozás tulajdonrészét megtestesítő értékpapír.  
+12. **Örökös jobbágyság:** a keleti agrárfejlődésben megerősödő személyi és gazdasági jobbágyi kötöttség.  
+13. **Karavella:** jól irányítható, hosszabb tengeri utakra alkalmas hajótípus.  
+14. **Kereskedelmi támaszpont:** az útvonal és árucsere ellenőrzését szolgáló kikötői vagy part menti pont.  
+15. **Kolumbuszi csere:** növények, állatok, termékek és betegségek kontinensek közötti áramlása a tartós atlanti kapcsolatok után.
+
+### Használati utasítás
+
+Minden kártya hátoldalán egy rövid példa jelenjen meg. A kártyák nem pontozottak; a 29. oldali záróteszt méri a fogalomalkalmazást.
+
+### Tágabb témaköri jelzés
+
+Az **abszolutizmus** a korszak tágabb kötelező lexikájához tartozik: az uralkodói hatalom erős, központosított formája. Részletes feldolgozása nem ezen az oldalon történik.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 148. és 150–152. oldal
+- SRC-02, 1. és 3–4. oldal
+- SRC-03, 1–3. oldal
+
+**Szint:**
+
+- középszintű törzsanyag; abszolutizmus: tágabb témaköri kapcsolat
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- Asset Registerben később tisztázandó
+
+## 24. oldal – Térkép és topográfia
+
+**Cél:** C2; helyek és útvonalak azonosítása.  
+**Elsődleges H5P:** Image Hotspots, utána két Multiple Choice kérdés.  
+**Tartalék H5P:** Accordion számozott hely- és útvonallistával.  
+**Kockázat:** sűrű térkép mobilon és billentyűzettel; a számozott lista kötelező.  
+**Pont:** 2.
+
+### Kötelező helyek
+
+1. **Spanyolország:** Kolumbusz és Magellán expedíciójának támogató állama.  
+2. **Portugália:** az Afrika megkerülésére építő felfedezőutak kiinduló állama.  
+3. **India:** Vasco da Gama tengeri útjának célterülete.  
+4. **Kína:** a távol-keleti kereskedelem fontos célterülete.  
+5. **Afrika déli térsége:** Dias és Vasco da Gama útvonalának kulcspontja.  
+6. **Karib-tenger térsége:** Kolumbusz 1492-es útjának elért területe.  
+7. **Brazília:** a portugál amerikai érdekszféra fő területe.  
+8. **Atlanti-óceán:** az új nyugati és Afrika menti utak fő tengeri tere.  
+9. **Habsburg Birodalom:** a korszak tágabb politikai topográfiájának kötelező eleme; nem a felfedezőutak végpontja.
+
+### Útvonalrétegek
+
+- portugál: Portugália → Afrika nyugati és déli partjai → India;
+- kolumbuszi: Spanyolország → Atlanti-óceán → Karib-tenger;
+- Magellán expedíciója: Spanyolország → Dél-Amerika déli átjárója → Csendes-óceán → Ázsia → Afrika megkerülése → Spanyolország.
+
+### Q24-1
+
+**Kérdés:** Melyik útvonal végpontja India?  
+A) Vasco da Gama útja  
+B) Kolumbusz 1492-es útja  
+C) Cortés hódítása  
+**Helyes:** A. **Pont:** 1.
+
+### Q24-2
+
+**Kérdés:** Melyik állam támogatta Kolumbusz nyugati útját?  
+A) Portugália  
+B) Spanyolország  
+C) Kína  
+**Helyes:** B. **Pont:** 1.
+
+**Visszajelzés:** „Helyes. A térképi helyet mindig kapcsold a személyhez és az út irányához.” / „Nézd meg újra a kiinduló államot, az irányt és a célterületet.”
+
+### Média placeholder
+
+`INTERAKTÍV VILÁGTÉRKÉP – ÚTVONALAK ÉS KÖTELEZŐ TOPOGRÁFIA – KÉSŐBB CSERÉLENDŐ`.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 148–150. oldal
+- SRC-05, 1–3. térképes feladat
+
+**Szint:**
+
+- középszintű törzsanyag; Habsburg Birodalom: tágabb témaköri kapcsolat
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- placeholder
+
+## 25. oldal – Forráselemzés I.: Tordesillas
+
+**Cél:** C8; jogi szöveg térbeli és hatalmi értelmezése.  
+**Elsődleges H5P:** Quiz (Question Set).  
+**Tartalék H5P:** Course Presentation beágyazott kérdésekkel.  
+**Pont:** 4.
+
+### Forrásleírás
+
+Az 1494-es megállapodás spanyol és portugál megbízottai egy észak–déli irányú választóvonalhoz kötötték a két uralkodó újonnan elért területekre vonatkozó igényeit. A vonaltól nyugatra eső térségek a spanyol, a keletre esők a portugál érdekszférához kerültek. A leírás parafrázis, nem szó szerinti idézet.
+
+### Kérdések
+
+**F25-1 (1 pont):** Melyik két hatalom kötötte a megállapodást?  
+**Helyes:** Spanyolország és Portugália.  
+**Visszajelzés:** „Helyes. A két korai tengeri hatalom igényeit próbálták elhatárolni.”
+
+**F25-2 (1 pont):** Mi alapján választották szét az érdekszférákat?  
+A) Vallási hovatartozás  
+B) Egy meghatározott földrajzi választóvonal  
+C) A lakosság szabad szavazása  
+**Helyes:** B.  
+**Visszajelzés:** „Helyes. A szöveg térbeli vonalhoz rendeli a két érdekszférát.”
+
+**F25-3 (1 pont):** Melyik későbbi területi sajátosságot segít megmagyarázni a megállapodás?  
+A) Brazília portugál gyarmati kötődését  
+B) India spanyol nyelvét  
+C) Kína portugál meghódítását  
+**Helyes:** A.  
+**Visszajelzés:** „Helyes. Brazília térsége a portugál érdekszférához kapcsolódott.”
+
+**F25-4 (1 pont):** Milyen nézőpont hiányzik a megállapodásból?  
+A) Az érintett területeken élő népek önrendelkezése  
+B) A spanyol és portugál uralkodók érdeke  
+C) A választóvonal térbeli logikája  
+**Helyes:** A.  
+**Visszajelzés:** „Helyes. Az európai hatalmak olyan területekről döntöttek, amelyeknek saját társadalmai és politikai közösségei voltak.”
+
+### Értékelés
+
+4 pont: forrás és kontextus biztos értelmezése; 2–3 pont: részben biztos; 0–1 pont: térj vissza a 10. és 24. oldalhoz. Retry engedélyezett; Show Solution csak ellenőrzés után.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 149. oldal, „A tordesillas-i szerződés”
+- SRC-05, 4. feladat, A forrás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- jogállás ellenőrizve – nincs új külső média
+
+## 26. oldal – Forráselemzés II.: A következmények két nézőpontja
+
+**Cél:** C5 és C8; eltérő forrásleírások összekapcsolása.  
+**Elsődleges H5P:** Quiz (Question Set).  
+**Tartalék H5P:** Course Presentation beágyazott kérdésekkel.  
+**Pont:** 4.
+
+### A forrásleírás – Velencei kereskedelem
+
+Egy velencei beszámoló szerint a korábban keletről árukkal megrakodva visszatérő gályák egy időszakban szinte üresen érkeztek haza. A leírás a régi földközi-tengeri közvetítő kereskedelem nehézségeire utal az új óceáni útvonalak erősödése idején. Parafrázis.
+
+### B forrásleírás – Amerikai őslakos tapasztalat
+
+Egy őslakos nézőpontot közvetítő beszámoló azt emeli ki, hogy a hódítók értékeket vittek el, követeléseket támasztottak és erőszakot alkalmaztak. A leírás a hódítás egyenlőtlen és pusztító tapasztalatát mutatja. Parafrázis.
+
+### Kérdések
+
+**F26-1 (1 pont):** Melyik gazdasági változás magyarázza legjobban az A forrást?  
+A) Az atlanti útvonalak felértékelődése  
+B) A tengeri kereskedelem teljes megszűnése  
+C) A manufaktúrák betiltása  
+**Helyes:** A.
+
+**F26-2 (1 pont):** Mit mutat a B forrásleírás?  
+A) Egyenrangú és békés árucsere minden esetben  
+B) A gyarmati hódítás erőszakos és kizsákmányoló oldalát  
+C) Az őslakosság európai politikai jogainak bővülését  
+**Helyes:** B.
+
+**F26-3 (1 pont):** Melyik közös folyamat kapcsolja össze a két forrást?  
+A) A felfedezések után kialakuló új kereskedelmi és gyarmati rendszer  
+B) A középkori céhek változatlan működése  
+C) A szárazföldi utak kizárólagos megerősödése  
+**Helyes:** A.
+
+**F26-4 (1 pont):** Miért fontos több nézőpontot használni?  
+A) Mert ugyanaz a folyamat egyes szereplőknek hasznot, másoknak súlyos veszteséget jelenthetett.  
+B) Mert a források közül mindig csak az egyik lehet igaz.  
+C) Mert a háttértudás soha nem használható.  
+**Helyes:** A.
+
+### Visszajelzés
+
+Helyes válasz esetén: „Helyes. A kereskedelmi átrendeződés és a gyarmati hódítás ugyanannak a globális összekapcsolódásnak eltérő oldalai.”  
+Hibás válasz esetén: „Azonosítsd előbb a forrás nézőpontját, majd keresd meg a közös történelmi folyamatot.”
+
+### Értékelés
+
+4 pont maximum. Retry igen; Show Solution ellenőrzés után. A forrásleírások nem jelenhetnek meg idézőjelben.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 150. oldal, „A kereskedelem változásai”
+- SRC-05, 4. feladat, C és D forrás
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- jogállás ellenőrizve – nincs új külső média
+
+## 27. oldal – Ok–következmény háló
+
+**Cél:** C1, C4–C7; a modul nagy folyamatának szintézise.  
+**Elsődleges H5P:** Drag and Drop.  
+**Tartalék H5P:** Multiple Choice-alapú kategorizálás.  
+**Kockázat:** mobil- és billentyűzetes kezelés; az azonos 4 pontos tartalék feladat kötelező.  
+**Pont:** 4.
+
+### Utasítás
+
+Rendezd a kártyákat a megfelelő folyamatlépéshez. Egy elem egy helyre kerül.
+
+### Kategóriák és elemek
+
+**Okok és feltételek:** ázsiai áruk iránti kereslet; közvetlen tengeri út igénye; hajózási fejlődés; uralkodói támogatás és tőke.  
+**Felfedezések és hódítás:** Afrika megkerülése; 1492-es nyugati út; első Föld körüli expedíció; gyarmati uralom kialakítása.  
+**Gazdasági következmények:** atlanti kereskedelem felértékelődése; nemesfém-beáramlás és árforradalom; bank, tőzsde és részvény szerepének növekedése; manufaktúrák és bérmunka terjedése.  
+**Társadalmi következmények:** őslakosság pusztulása; rabszolga-kereskedelem; eltérő nyugati és keleti agrárfejlődés; új termékek kontinensek közötti áramlása.
+
+### Pontozás
+
+Kategóriánként 1 pont, ha minden elem megfelelő; maximum 4. Retry igen; Show Solution ellenőrzés után.
+
+### Visszajelzés
+
+**4 pont:** „Kiváló. Egyetlen folyamatban látod az ösztönzőket, az utakat és az eltérő következményeket.”  
+**2–3 pont:** „A fő szerkezet jó. Vizsgáld meg újra, mely elemek okok, események, gazdasági vagy társadalmi következmények.”  
+**0–1 pont:** „Térj vissza a 4., 13–20. oldalhoz, majd építsd fel újra a láncot.”
+
+### Mobilalternatíva
+
+Négy külön Multiple Choice kérdés, mindegyik ugyanazt a kategorizációs tudást méri és összesen 4 pontot ér.
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 148–152. oldal
+- SRC-03, 1–3. oldal
+- SRC-04, „Az óra menete” – következmények rendszerezése
+
+**Szint:**
+
+- középszintű törzsanyag
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- jogállás ellenőrizve – nincs új külső média
+
+## 28. oldal – Érettségi fókusz
+
+**Cél:** a modul tartalmának szóbeli és írásbeli feladathoz rendezése.  
+**Elsődleges H5P:** Accordion, alatta nem pontozott önellenőrző lista.  
+**Tartalék H5P:** Course Presentation.  
+**Pontozás:** nincs.
+
+### Ötperces szóbeli felelet váza
+
+1. **Tér és idő:** Nyugat-Európa, Atlanti-óceán, Afrika, Amerika, India; 15. század vége és 16. század.  
+2. **Okok:** kereslet az ázsiai áruk iránt, közvetítők és költségek, közvetlen út igénye, uralkodói támogatás, tőke és hajózási fejlődés.  
+3. **Portugál út:** Dias; Vasco da Gama; Afrika megkerülése; India.  
+4. **Spanyol út:** Kolumbusz, 1492; Tordesillas; Magellán expedíciója.  
+5. **Gyarmatosítás:** hódítás, gyarmat, őslakosság pusztulása, rabszolga-kereskedelem.  
+6. **Gazdasági következmények:** atlanti súlypont, árforradalom, bank, tőzsde, részvény, manufaktúra, kapitalizmus.  
+7. **Európai társadalmi különbség:** nyugati lazuló kötöttségek és keleti örökös jobbágyság.  
+8. **Mérleg:** összekapcsolódó kontinensek, egyenlőtlen hasznok és veszteségek.
+
+### Bevezető mondatminta
+
+„A 15. század végétől a nyugat-európai államok új tengeri útvonalakat kerestek Ázsia felé, és ezzel olyan kontinensközi kapcsolatokat hoztak létre, amelyek gazdasági és társadalmi következményei messze túlmutattak az expedíciókon.”
+
+### Lezáró mondatminta
+
+„A földrajzi felfedezések ezért egyszerre gyorsították az atlanti kereskedelem és a kapitalista gazdaság fejlődését, miközben a meghódított társadalmak számára erőszakot, alárendeltséget és súlyos népességveszteséget hoztak.”
+
+### Nélkülözhetetlen ötösök
+
+**Fogalmak:** gyarmat, infláció, tőke, manufaktúra, kapitalizmus.  
+**Személyek:** Dias, Vasco da Gama, Kolumbusz, Magellán, Elcano.  
+**Évszámok:** 1487–1488, 1492, 1494, 1497–1498, 1519.  
+**Helyek:** Spanyolország, Portugália, India, Kína, Atlanti-óceán.
+
+### Rövid esszégyakorlat
+
+**Feladat:** Mutassa be a nagy földrajzi felfedezések fő okait és gazdasági-társadalmi következményeit!  
+**Tér-idő:** Nyugat-Európa és az atlanti világ, 15. század vége–16. század.  
+**Szerkezet:** okok → fő útvonalak és fordulópontok → gyarmatosítás → kereskedelmi és árhatás → új gazdasági formák → társadalmi különbségek.  
+**Ok-okozati kapcsolatok:** kereslet → új út; nemesfém → árnövekedés; óceáni kereskedelem → atlanti központok; bővülő piac → manufaktúra; nyugati gabonakereslet → keleti kötöttségek erősödése.
+
+### Önellenőrző lista
+
+- [ ] Megneveztem legalább három okot.
+- [ ] Elkülönítettem a portugál és spanyol útirányt.
+- [ ] Használtam 1492-t és legalább két további időpontot.
+- [ ] Bemutattam az őslakosságra gyakorolt hatást.
+- [ ] Összekapcsoltam az árforradalmat és a gazdasági átalakulást.
+- [ ] Nem kevertem a manufaktúrát a gépesített gyárral.
+- [ ] Következtetéssel zártam, nem új tényt vezettem be.
+
+### Tipikus visszakérdezések
+
+1. Miért kerestek közvetlen utat Indiába?  
+2. Miben különbözött Kolumbusz és Vasco da Gama útja?  
+3. Mit szabályozott Tordesillas?  
+4. Mit jelent az árforradalom?  
+5. Miért alakult másként a jobbágyság helyzete Nyugaton és Keleten?
+
+### Oldalszintű forrás- és státuszmetaadat
+
+**Forrás:**
+
+- SRC-01, PDF 148–152. oldal
+- SRC-03, 1–3. oldal
+
+**Szint:**
+
+- középszintű érettségi fókusz
+
+**Szakmai státusz:**
+
+- ellenőrzött
+
+**Média státusza:**
+
+- jogállás ellenőrizve – nincs új külső média
+
+## 29. oldal – Záróteszt, 20 pont
+
+**Cél:** C1–C8 összegző értékelése.  
+**Elsődleges H5P:** Quiz (Question Set).  
+**Tartalék H5P:** Course Presentation beágyazott kérdésekkel.  
+**Pont:** 20.  
+**Retry:** igen. **Show Solution:** csak az első teljes ellenőrzés után.  
+**Megjegyzés:** a diagnosztikus kérdések pontjai nem számítanak ide.
+
+### Z1 – Okok (2 pont)
+
+**Kérdés:** Jelöld a két helyes állítást!  
+A) Nőtt az ázsiai áruk iránti kereslet.  
+B) Közvetlenebb és jövedelmezőbb útvonalakat kerestek.  
+C) Európa teljesen megszüntette a kereskedelmet.  
+D) A hajózási tapasztalat fölöslegessé vált.  
+**Helyes:** A, B. **Pont:** 2, elemenként 1.  
+**Visszajelzés:** „A kereslet és a közvetlen út reménye fontos gazdasági ösztönző volt.”
+
+### Z2 – Személy és út (2 pont)
+
+**Párosítás:**  
+Vasco da Gama → Afrika megkerülésével India  
+Kolumbusz → nyugat felé a Karib-tenger térsége  
+**Pont:** 2.  
+**Visszajelzés:** „A személyt mindig az út irányával és céljával együtt idézd fel.”
+
+### Z3 – 1492 és Magellán expedíciója (1 pont)
+
+**Kérdés:** Melyik állításpár történelmileg helyes?  
+A) 1492-ben Kolumbusz elérte a Karib-tenger térségét; Magellán expedíciójának Föld körüli útját Elcano fejezte be.  
+B) 1492-ben Vasco da Gama elérte Indiát; Magellán személyesen visszatért a Föld körüli útról.  
+C) 1492-ben Dias elérte Brazíliát; Magellán expedíciója Afrika nyugati partjainál megállt.  
+**Helyes:** A. **Pont:** 1.  
+**Helyes visszajelzés:** „Helyes. 1492 Kolumbusz nyugati útjához kapcsolódik, Magellán expedícióját pedig Elcano fejezte be.”  
+**Hibás visszajelzés:** „Ellenőrizd külön 1492 eseményét és azt, ki vezette vissza Magellán expedíciójának megmaradt hajóját.”
+
+### Z4 – Időrend (2 pont)
+
+**Rendezd:** Dias útja – Kolumbusz útja – Tordesillas – Vasco da Gama Indiába jutása.  
+**Helyes:** Dias → Kolumbusz → Tordesillas → Vasco da Gama. **Pont:** 2.  
+**Visszajelzés:** „A portugál előkészítő út megelőzte 1492-t; az indiai út ezután teljesedett ki.”
+
+### Z5 – Tordesillas (1 pont)
+
+**Kérdés:** Mi volt a megállapodás célja?  
+A) Spanyol és portugál érdekszférák elhatárolása.  
+B) Az őslakosság jogainak biztosítása.  
+C) Az infláció megszüntetése.  
+**Helyes:** A. **Pont:** 1.
+
+### Z6 – Gyarmatosítás (2 pont)
+
+**Kérdés:** Jelöld a két helyes következményt!  
+A) Őslakos társadalmak pusztulása.  
+B) Rabszolga-kereskedelem növekedése.  
+C) Minden gyarmat politikai egyenlőséget kapott.  
+D) A betegségeknek nem volt hatásuk.  
+**Helyes:** A, B. **Pont:** 2.
+
+### Z7 – Csere (2 pont)
+
+**Multiple Choice, két helyes állítás:**  
+A) A projektforrások a gyarmati termékek között kukoricát, burgonyát, paradicsomot és kakaót is felsorolnak.  
+B) A kontinensek közötti csere társadalmi hatásai nem voltak egyenlők.  
+C) A csere kizárólag nemesfémek mozgását jelentette.  
+D) A behurcolt betegségek nem hatottak az őslakosságra.  
+**Helyes:** A, B.  
+**Pont:** 1 pont helyes opciónként; maximum 2; hibás opció jelölésekor az adott részpont nem jár, negatív pont nincs.  
 **Visszajelzés:** „A kontinensek közötti csere többféle terméket és élőlényt érintett, társadalmi hatásai pedig nem voltak egyenlők.”
 
 ### Z8 – Árforradalom (2 pont)
@@ -689,4 +2048,3 @@ Az őslakosság pusztulása, a kényszermunka és a rabszolgaság tárgyalása t
 ---
 
 **A dokumentum vége – H5P buildet ez a sprint nem készít.**
-
