@@ -17,7 +17,8 @@ test('a könyvtár era és level mélylinkjei működnek', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Athéni demokrácia' })).toBeHidden();
   await expect(page.getByRole('button', { name: 'Kora újkor' })).toHaveAttribute('aria-pressed', 'true');
   await expect(page.getByRole('button', { name: 'Középszint' })).toHaveAttribute('aria-pressed', 'true');
-  await page.getByRole('button', { name: 'Szűrők törlése' }).click();
+  await page.getByRole('button', { name: 'Összes korszak' }).click();
+  await page.getByRole('button', { name: 'Minden szint' }).click();
   await expect(page).toHaveURL(/library\.html$/);
   await expect(page.getByRole('heading', { name: 'Athéni demokrácia' })).toBeVisible();
 });
@@ -59,3 +60,4 @@ test('a platform desktop, tablet és mobil nézetben nem csordul túl', async ({
     expect(overflow, path).toBe(false);
   }
 });
+
