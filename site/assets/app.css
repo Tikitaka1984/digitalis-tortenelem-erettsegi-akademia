@@ -207,12 +207,16 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .section-heading.centered { justify-content: center; text-align: center; }
 .section-heading.centered h2 { max-width: 17ch; margin-inline: auto; }
 .section-heading.centered p:not(.eyebrow) { margin-inline: auto; }
+.featured-courses-grid { display: grid; gap: 2rem; }
 .featured-course { overflow: hidden; display: grid; grid-template-columns: .9fr 1.1fr; min-height: 450px; border: 1px solid var(--line); border-radius: var(--radius-xl); background: var(--surface); box-shadow: var(--shadow-sm); }
 .course-art { position: relative; overflow: hidden; min-height: 360px; padding: 2rem; display: flex; flex-direction: column; justify-content: space-between; color: #f3f3e9; background: #203f32; }
 .course-art::after { content: ""; position: absolute; right: -15%; bottom: -35%; width: 80%; aspect-ratio: 1; border: 1px solid rgba(213,255,101,.3); border-radius: 50%; box-shadow: 0 0 0 35px rgba(213,255,101,.05), 0 0 0 70px rgba(213,255,101,.04); }
 .course-era { position: relative; z-index: 2; font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }
 .course-art strong { position: relative; z-index: 2; font-family: Georgia, serif; font-size: clamp(4rem, 10vw, 7rem); letter-spacing: -.04em; }
 .greek-grid { position: absolute; inset: 0; opacity: .14; background-image: linear-gradient(rgba(255,255,255,.2) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.2) 1px, transparent 1px); background-size: 42px 42px; transform: rotate(-8deg) scale(1.2); }
+.course-art-discoveries { background: linear-gradient(145deg, #173f55, #8a4f2a); }
+.route-lines { position: absolute; inset: 12% -10%; opacity: .4; background: radial-gradient(circle at 15% 55%, #d5ff65 0 4px, transparent 5px), radial-gradient(circle at 72% 38%, #d5ff65 0 4px, transparent 5px); }
+.route-lines::after { content: ""; position: absolute; left: 15%; top: 40%; width: 58%; height: 28%; border-top: 2px dashed rgba(213,255,101,.8); border-radius: 50%; transform: rotate(-12deg); }
 .course-body { padding: clamp(2rem, 6vw, 4.5rem); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
 .card-meta { display: flex; flex-wrap: wrap; align-items: center; gap: .65rem; color: var(--muted); font-size: .72rem; }
 .card-meta span + span::before { content: "·"; margin-right: .65rem; }
@@ -290,7 +294,7 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
 .lesson-art .badge, .lesson-art strong, .lesson-art small { position: relative; z-index: 2; align-self: flex-start; }
 .lesson-art strong { font-family: Georgia, serif; font-size: 3.2rem; }
 .lesson-art small { color: rgba(255,255,255,.72); }
-.lesson-art-athens { background: #294c3d; }.lesson-art-rome { background: #65413b; }.lesson-art-hungary { background: #34495f; }
+.lesson-art-athens { background: #294c3d; }.lesson-art-discoveries { background: linear-gradient(145deg, #173f55, #8a4f2a); }.lesson-art-rome { background: #65413b; }.lesson-art-hungary { background: #34495f; }
 .lesson-card-body { padding: 1.4rem; }
 .lesson-card-body h3 { margin: 1rem 0 .5rem; font-size: 1.35rem; }
 .lesson-card-body p { min-height: 3rem; color: var(--muted); font-size: .85rem; }

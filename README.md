@@ -2,7 +2,7 @@
 
 Statikus, GitHub Pages-kompatibilis webes futtatókörnyezet a **Digitális Történelem Érettségi Akadémia** H5P Interactive Book moduljaihoz.
 
-Az első publikált modul: **Athéni demokrácia**.
+Publikált modulok: **Athéni demokrácia** és **Földrajzi felfedezések**.
 
 ## UI/UX Design System v1.0
 
@@ -19,15 +19,16 @@ A felület három törésponttal optimalizált asztali, tablet- és mobilhaszná
 
 ## Működési elv
 
-A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatározott szerkezetű ZIP-csomag, amely tartalmi JSON-t, médiafájlokat és H5P-könyvtárakat tartalmaz. A repository ezért a változatlan `.h5p` forráscsomagot tárolja, a GitHub Actions pedig minden buildnél:
+A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatározott szerkezetű ZIP-csomag, amely tartalmi JSON-t, médiafájlokat és H5P-könyvtárakat tartalmaz. A repository az Athéni demokrácia változatlan forráscsomagját és a Földrajzi felfedezések reprodukálható generátorát tárolja. A GitHub Actions minden buildnél:
 
-1. SHA-256 ellenőrzéssel igazolja, hogy a forráscsomag nem változott;
-2. biztonságosan kibontja a csomagot a generált `_site` könyvtárba;
-3. ellenőrzi a H5P manifestet, a 30 oldalt és a deklarált könyvtárakat;
-4. melléteszi a Lumi alkalmazásszintű tárából származó, ellenőrzőösszeggel rögzített dinamikus média-könyvtárakat (`H5P.Audio-1.5`, `H5P.Video-1.6`);
-5. bemásolja a rögzített `h5p-standalone@3.8.2` runtime-ot;
-6. statikus és böngészős teszteket futtat;
-7. a kész `_site` könyvtárat GitHub Pages-re telepíti.
+1. a jóváhagyott Master Scriptből előállítja a Földrajzi felfedezések H5P-csomagját;
+2. SHA-256 ellenőrzéssel igazolja, hogy egyik forráscsomag sem változott;
+3. biztonságosan kibontja a csomagokat a generált `_site` könyvtárba;
+4. ellenőrzi a H5P manifesteket, a 30–30 oldalt és a deklarált könyvtárakat;
+5. melléteszi a Lumi alkalmazásszintű tárából származó, ellenőrzőösszeggel rögzített dinamikus média-könyvtárakat (`H5P.Audio-1.5`, `H5P.Video-1.6`);
+6. bemásolja a rögzített `h5p-standalone@3.8.2` runtime-ot;
+7. statikus és böngészős teszteket futtat;
+8. a kész `_site` könyvtárat GitHub Pages-re telepíti.
 
 A H5P tananyag tartalmát a build **nem módosítja**. A kibontott fájlok kizárólag a webes telepítési artifact részei.
 
@@ -36,13 +37,16 @@ A webes artifacton egy ellenőrzőösszeggel védett, szűken célzott kompatibi
 ## Architektúra
 
 ```text
-content/*.h5p
+Athéni .h5p + jóváhagyott Master Script + reprodukálható generátor
+       │
+       ▼
+Földrajzi felfedezések .h5p (CI build artifact)
        │
        ▼
 scripts/build_site.py
        │  integritás-ellenőrzés + biztonságos kibontás
        ▼
-_site/h5p/atheni-demokracia
+_site/h5p/{atheni-demokracia,foldrajzi-felfedezesek}
        │
        ├── h5p.json
        ├── content/content.json + média
@@ -54,7 +58,22 @@ site/ + h5p-standalone/dist
 _site/ → GitHub Pages artifact
 ```
 
-Az `learn.html` a standalone lejátszót relatív útvonalakkal inicializálja, ezért a webhely a GitHub Pages repository-alútvonalán is működik.
+Az `learn.html` a `module` URL-paraméter alapján választ a rögzített modulkonfigurációk közül, és relatív útvonalakkal inicializálja a standalone lejátszót. Így ugyanaz a lejátszókeret szolgálja ki mindkét könyvet a GitHub Pages repository-alútvonalán is.
+
+```text
+learn.html?module=atheni-demokracia
+learn.html?module=foldrajzi-felfedezesek
+```
+
+## A Földrajzi felfedezések csomag újraépítése
+
+A második könyv reprodukálhatóan készül a jóváhagyott `Master Script v1.0.2` dokumentumból. Az Athéni csomag csak a már ellenőrzött H5P library-k hordozója; annak történelmi tartalma és médiája nem kerül át.
+
+```bash
+python scripts/build_discoveries_h5p.py
+```
+
+A script pontosan 30 oldalt állít elő, az engedélyezett Lumi-kompatibilis komponensekkel. A hiányzó végleges térképek és illusztrációk egységes, jól látható placeholderként jelennek meg. A Build Guide v1.0.2 mezőszintű végrehajtási specifikáció helyett jóváhagyott váz; emiatt a megvalósítás a benne felsorolt elsődleges típusokra és engedélyezett alternatívákra korlátozódik.
 
 ## Fájlszerkezet
 
@@ -62,10 +81,12 @@ Az `learn.html` a standalone lejátszót relatív útvonalakkal inicializálja, 
 .
 ├── .github/workflows/pages.yml
 ├── content/
-│   └── digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p
+│   ├── digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p
+│   └── digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p  # generált, gitignore
 ├── runtime-libraries/
 │   └── lumi-media-libraries.zip
 ├── scripts/
+│   ├── build_discoveries_h5p.py
 │   ├── build_site.py
 │   └── verify-build.mjs
 ├── site/
@@ -195,4 +216,3 @@ Ha a runtime vagy valamely szükséges tartalmi fájl nem tölthető be, a lejá
 ## Licencelés
 
 A webes runtime függősége, a `h5p-standalone`, MIT licencű. A H5P csomag belső tartalmainak és médiáinak jogi státuszát a tananyag saját Rights of Use és forrásadatai határozzák meg.
-
