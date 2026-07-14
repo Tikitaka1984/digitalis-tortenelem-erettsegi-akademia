@@ -4,7 +4,7 @@ Statikus, GitHub Pages-kompatibilis webes futtatókörnyezet a **Digitális Tör
 
 Publikált modulok: **Athéni demokrácia** és **Földrajzi felfedezések**.
 
-## UI/UX Design System v1.0
+## DTEA Design System v1.0
 
 A platformfelület a tananyag tartalmától különálló, újrafelhasználható design systemre épül. A H5P-csomag, annak kérdései, pontozása, metaadatai és belső struktúrája változatlan marad.
 
@@ -13,7 +13,7 @@ A platformfelület a tananyag tartalmától különálló, újrafelhasználható
 - `site/learn.html` – tanulási keret oldalsávval, haladásjelzővel és fókusz móddal;
 - `site/assets/app.css` – szemantikus design tokenek, komponensek, reszponzív és sötét téma;
 - `site/assets/app.js` – témaváltás, mobilmenü, könyvtárszűrés és fókusz mód;
-- `docs/DESIGN_SYSTEM.md` – színek, tipográfia, térközök, komponensek és akadálymentességi szabályok.
+- `docs/DTEA_DESIGN_SYSTEM.md` – színek, tipográfia, H5P-szabályok és release checklist.
 
 A felület három törésponttal optimalizált asztali, tablet- és mobilhasználatra. A billentyűzetfókusz, a szemantikus régiók, az ARIA-címkék, a csökkentett mozgás és a kontrasztos sötét mód a platformréteg része.
 
@@ -24,13 +24,13 @@ A böngésző nem tud közvetlenül `.h5p` fájlt futtatni, mert az egy meghatá
 1. a jóváhagyott Master Scriptből előállítja a Földrajzi felfedezések H5P-csomagját;
 2. SHA-256 ellenőrzéssel igazolja, hogy egyik forráscsomag sem változott;
 3. biztonságosan kibontja a csomagokat a generált `_site` könyvtárba;
-4. ellenőrzi a H5P manifesteket, a 30–30 oldalt és a deklarált könyvtárakat;
+4. ellenőrzi a H5P manifesteket, a 30–30 oldalt, a licencmetaadatokat és a deklarált könyvtárakat;
 5. melléteszi a Lumi alkalmazásszintű tárából származó, ellenőrzőösszeggel rögzített dinamikus média-könyvtárakat (`H5P.Audio-1.5`, `H5P.Video-1.6`);
 6. bemásolja a rögzített `h5p-standalone@3.8.2` runtime-ot;
-7. statikus és böngészős teszteket futtat;
+7. minden modulra Student Auditot, valamint desktop-, tablet- és mobilteszteket futtat;
 8. a kész `_site` könyvtárat GitHub Pages-re telepíti.
 
-A H5P tananyag tartalmát a build **nem módosítja**. A kibontott fájlok kizárólag a webes telepítési artifact részei.
+A build a történelmi `content.json` tartalmat **nem módosítja**. A publikált H5P-manifesztumba a központi konfigurációból egységes licenc-, szerző- és verziómetaadat kerül.
 
 A webes artifacton egy ellenőrzőösszeggel védett, szűken célzott kompatibilitási javítás fut a `H5P.SortParagraphs-0.11` könyvtáron. Ez kizárólag a standalone lejátszó korai inicializálásakor jelentkező két null-hivatkozást védi ki; a feladat szövegét, válaszait, pontozását, metaadatait és a forrás `.h5p` csomagot nem érinti.
 
@@ -73,7 +73,7 @@ A második könyv reprodukálhatóan készül a jóváhagyott `Master Script v1.
 python scripts/build_discoveries_h5p.py
 ```
 
-A script pontosan 30 oldalt állít elő, az engedélyezett Lumi-kompatibilis komponensekkel. A hiányzó végleges térképek és illusztrációk egységes, jól látható placeholderként jelennek meg. A Build Guide v1.0.2 mezőszintű végrehajtási specifikáció helyett jóváhagyott váz; emiatt a megvalósítás a benne felsorolt elsődleges típusokra és engedélyezett alternatívákra korlátozódik.
+A script pontosan 30 oldalt állít elő, az engedélyezett Lumi-kompatibilis komponensekkel és ellenőrzött vizuális elemekkel. Placeholder vagy fejlesztői metaadat nem kerülhet a tanulói buildbe. A Build Guide v1.0.2 mezőszintű végrehajtási specifikáció helyett jóváhagyott váz; emiatt a megvalósítás a benne felsorolt elsődleges típusokra és engedélyezett alternatívákra korlátozódik.
 
 ## Fájlszerkezet
 
@@ -216,3 +216,15 @@ Ha a runtime vagy valamely szükséges tartalmi fájl nem tölthető be, a lejá
 ## Licencelés
 
 A webes runtime függősége, a `h5p-standalone`, MIT licencű. A H5P csomag belső tartalmainak és médiáinak jogi státuszát a tananyag saját Rights of Use és forrásadatai határozzák meg.
+
+
+## Platform v1.1.0 – Sprint 5
+
+A platform a modulok és taxonómia központi konfigurációját használja. A könyvtár támogatja az `era` és `level` mélylinkeket, a tananyagoldal fejezetszintű H5P-haladást jelez, a runtime hiba után ténylegesen újratölthető, és a CI minden publikált modulon automatikus tanulói tartalomauditot futtat.
+
+Dokumentáció:
+
+- [DTEA Design System v1.0](docs/DTEA_DESIGN_SYSTEM.md)
+- [Architektúra](docs/ARCHITECTURE.md)
+- [Release Notes](docs/RELEASE_NOTES.md)
+- [Verziótörténet](docs/VERSION_HISTORY.md)
