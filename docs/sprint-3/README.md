@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1.2 seconds
-Output:
 # Sprint 3 – DTEA Standard és „Földrajzi felfedezések”
 
 ## Cél
