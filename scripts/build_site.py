@@ -16,20 +16,23 @@ SITE_SOURCE = ROOT / "site"
 PLAYER_SOURCE = ROOT / "node_modules" / "h5p-standalone" / "dist"
 OUTPUT = ROOT / "_site"
 EXPECTED_LIBRARIES_SHA256 = "fc72aa0b6abb4e7aac3f396182725a26b135d3f24942091517d82a8c2c382a75"
-MODULES = (
-    {
-        "slug": "atheni-demokracia",
-        "source": ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p",
-        "sha256": "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4adc7f",
-        "pages": 30,
-    },
-    {
-        "slug": "foldrajzi-felfedezesek",
-        "source": ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p",
-        "generated": True,
-        "pages": 30,
-    },
-)
+CONFIG_PATH = SITE_SOURCE / "data" / "modules.json"
+
+def load_modules() -> list[dict]:
+    config = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
+    modules = []
+    for item in config.get("modules", []):
+        if item.get("status") != "available":
+            continue
+        module = dict(item)
+        module["source"] = ROOT / item["build"]["source"]
+        module["sha256"] = item["build"].get("sha256")
+        module["generated"] = item["build"].get("generated", False)
+        modules.append(module)
+    if not modules:
+        fail("A központi konfiguráció nem tartalmaz publikálható modult.")
+    return modules
+
 SORT_PARAGRAPHS_SOURCE_SHA256 = "d80ca762ab322cd199dbae363a6bd13a613b77511c881124799373eeadf46bf3"
 SORT_PARAGRAPHS_PATCHED_SHA256 = "c685200e429a3832014b38e654ece7894171ecc90c7b9ad5bdff8b28ab78fa21"
 
