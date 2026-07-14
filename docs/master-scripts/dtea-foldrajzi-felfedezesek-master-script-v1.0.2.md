@@ -1,7 +1,3 @@
-Exit code: 0
-Wall time: 1.1 seconds
-Total output lines: 2051
-Output:
 # Digitális Történelem Érettségi Akadémia
 
 ## Földrajzi felfedezések – H5P Master Script v1.0.2
