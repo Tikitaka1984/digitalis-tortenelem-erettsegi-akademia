@@ -5,7 +5,7 @@
 - Kimenet: `content/digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p`
 - Formátum: H5P Interactive Book 1.11
 - Oldalszám: 30
-- SHA-256: `082a6f3eb2a43f6c9a433fbeca94d5fb43605bd57f10e110fbd0c9cdb8f74d3a`
+- Helyi Windows build SHA-256: `e218361978b0d061928b51347b19d0592f1d9c1e49a51e4d642525630c1665c3`
 - A generátor determinisztikus: két egymást követő build azonos SHA-256 értéket ad.
 - A CI a generált csomagot külön statikus audittal ellenőrzi: 30 oldal, sorrend, egyedi azonosítók, library-k, placeholder-ek és a 20 pontos záróteszt. Az eredeti Athéni csomagnál megmarad a teljes fájl SHA-256 ellenőrzése.
 - Forrás: Master Script v1.0.2, Source Register v1.0.2 és Build Guide váz v1.0.2

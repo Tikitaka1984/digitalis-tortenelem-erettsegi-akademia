@@ -505,7 +505,8 @@ def main() -> None:
             raise SystemExit(f"Hiányzó sablonlibrary: {sorted(missing)}")
 
         content = {
-            "showCoverPage": True,
+            "showCoverPage": False,
+            "cover": None,
             "chapters": [build_page(templates, number, title, body) for number, title, body in pages],
             "behaviour": copy.deepcopy(athens_content.get("behaviour", {})),
         }
