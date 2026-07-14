@@ -26,7 +26,7 @@ MODULES = (
     {
         "slug": "foldrajzi-felfedezesek",
         "source": ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p",
-        "semantic_sha256": "2d0c88f73f32f098a90e0904ee5b7d476e660bf1d69cea09afac813fb55818db",
+        "generated": True,
         "pages": 30,
     },
 )
@@ -43,23 +43,6 @@ def sha256(path: Path) -> str:
     with path.open("rb") as stream:
         for chunk in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(chunk)
-    return digest.hexdigest()
-
-
-def zip_semantic_sha256(path: Path) -> str:
-    """Hash normalized member names and uncompressed bytes, independent of ZIP codec."""
-    digest = hashlib.sha256()
-    with zipfile.ZipFile(path) as archive:
-        members = sorted(
-            (member.filename.replace("\\", "/"), member)
-            for member in archive.infolist()
-            if not member.is_dir()
-        )
-        for name, member in members:
-            digest.update(name.encode("utf-8"))
-            digest.update(b"\0")
-            digest.update(archive.read(member))
-            digest.update(b"\0")
     return digest.hexdigest()
 
 
@@ -146,8 +129,6 @@ def main() -> None:
             fail(f"Nem található a forráscsomag: {source.relative_to(ROOT)}")
         if module.get("sha256") and sha256(source) != module["sha256"]:
             fail(f"A(z) {module['slug']} H5P SHA-256 ellenőrzőösszege eltér; a tananyag megváltozott.")
-        if module.get("semantic_sha256") and zip_semantic_sha256(source) != module["semantic_sha256"]:
-            fail(f"A(z) {module['slug']} H5P tartalmi ellenőrzőösszege eltér; a tananyag megváltozott.")
     if not SUPPLEMENTAL_LIBRARIES.is_file() or sha256(SUPPLEMENTAL_LIBRARIES) != EXPECTED_LIBRARIES_SHA256:
         fail("A kiegészítő Lumi médiakönyvtárak hiányoznak vagy megváltoztak.")
     if not PLAYER_SOURCE.is_dir():
@@ -181,7 +162,7 @@ def main() -> None:
             "slug": module["slug"],
             "content": module["source"].name,
             "sha256": sha256(module["source"]),
-            "semantic_sha256": module.get("semantic_sha256"),
+            "generated": module.get("generated", False),
             "pages": module["pages"],
         })
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
