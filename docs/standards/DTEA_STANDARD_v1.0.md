@@ -1,3 +1,7 @@
+Exit code: 0
+Wall time: 0.9 seconds
+Total output lines: 1863
+Output:
 # Digitális Történelem Érettségi Akadémia
 
 ## DTEA STANDARD v1.0
