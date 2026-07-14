@@ -30,8 +30,15 @@ EXCLUDED_SECTIONS = {
 }
 
 
+UID_NAMESPACE = uuid.UUID("fa73b259-19cb-4fef-b625-540fa7d6ea45")
+_uid_counter = 0
+
+
 def uid() -> str:
-    return str(uuid.uuid4())
+    """Return deterministic H5P sub-content ids for reproducible CI builds."""
+    global _uid_counter
+    _uid_counter += 1
+    return str(uuid.uuid5(UID_NAMESPACE, f"dtea-foldrajzi-felfedezesek-{_uid_counter}"))
 
 
 def normalize_quotes(value: str) -> str:
@@ -497,7 +504,11 @@ def main() -> None:
             with zipfile.ZipFile(OUTPUT, "w", zipfile.ZIP_DEFLATED) as target:
                 for path in sorted(temp.rglob("*")):
                     if path.is_file():
-                        target.write(path, path.relative_to(temp).as_posix())
+                        name = path.relative_to(temp).as_posix()
+                        info = zipfile.ZipInfo(name, date_time=(2026, 1, 1, 0, 0, 0))
+                        info.compress_type = zipfile.ZIP_DEFLATED
+                        info.external_attr = 0o100644 << 16
+                        target.writestr(info, path.read_bytes())
 
     print(f"Elkészült: {OUTPUT}")
     print(f"Oldalak: {len(pages)}")

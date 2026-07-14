@@ -26,7 +26,7 @@ MODULES = (
     {
         "slug": "foldrajzi-felfedezesek",
         "source": ROOT / "content" / "digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p",
-        "sha256": "9848f986c28056466413aadc7def694c4a631adf987a0e5a438e6a93d554c564",
+        "sha256": "082a6f3eb2a43f6c9a433fbeca94d5fb43605bd57f10e110fbd0c9cdb8f74d3a",
         "pages": 30,
     },
 )

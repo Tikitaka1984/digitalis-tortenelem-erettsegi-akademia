@@ -5,7 +5,8 @@
 - Kimenet: `content/digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p`
 - Formátum: H5P Interactive Book 1.11
 - Oldalszám: 30
-- SHA-256: `9848f986c28056466413aadc7def694c4a631adf987a0e5a438e6a93d554c564`
+- SHA-256: `082a6f3eb2a43f6c9a433fbeca94d5fb43605bd57f10e110fbd0c9cdb8f74d3a`
+- A generátor determinisztikus: két egymást követő build azonos SHA-256 értéket ad.
 - Forrás: Master Script v1.0.2, Source Register v1.0.2 és Build Guide váz v1.0.2
 - Az Athéni demokrácia csomag tartalma nem módosult.
 - A Földrajzi felfedezések csomagot a CI reprodukálhatóan előállítja, majd 30 napos letölthető workflow artifactként is feltölti.
