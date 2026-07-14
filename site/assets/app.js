@@ -44,12 +44,35 @@
   const escapeHtml = (value) => String(value).replace(/[&<>'"]/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[character]);
   const labelFor = (items, id) => items.find((item) => item.id === id)?.label || id;
 
+  let configPromise;
+  const getConfig = () => {
+    if (!configPromise) {
+      configPromise = fetch('./data/modules.json', { cache: 'no-store' }).then((response) => {
+        if (!response.ok) throw new Error('A tananyagjegyzék nem tölthető be.');
+        return response.json();
+      });
+    }
+    return configPromise;
+  };
+
+  const renderFeaturedModules = async () => {
+    const host = document.querySelector('[data-featured-modules]');
+    if (!host) return;
+    const config = await getConfig();
+    const available = config.modules.filter((module) => module.status === 'available');
+    host.innerHTML = available.map((module) => {
+      const era = labelFor(config.taxonomy, module.era);
+      const levels = module.levels.map((id) => labelFor(config.levels, id)).join(' + ');
+      const decoration = module.slug === 'atheni-demokracia' ? '<div class="greek-grid"></div>' : '<div class="route-lines"></div>';
+      const discoveryClass = module.slug === 'foldrajzi-felfedezesek' ? 'course-art-discoveries' : '';
+      return `<article class="featured-course reveal"><div class="course-art ${discoveryClass}" aria-hidden="true"><span class="course-era">${escapeHtml(module.period)}</span>${decoration}<strong>${escapeHtml(module.artLabel)}</strong></div><div class="course-body"><div class="card-meta"><span class="badge badge-live">Elérhető</span><span>${escapeHtml(era)}</span><span>${escapeHtml(levels)}</span></div><h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.description)}</p><div class="course-facts"><span><b>${module.pages}</b> oldal</span><span><b>${escapeHtml(module.duration)}</b></span></div><a class="button button-primary" href="./learn.html?module=${escapeHtml(module.slug)}">Tananyag indítása <span aria-hidden="true">→</span></a></div></article>`;
+    }).join('');
+  };
+
   const renderLibrary = async () => {
     const grid = document.querySelector('[data-library-grid]');
     if (!grid) return;
-    const response = await fetch('./data/modules.json', { cache: 'no-store' });
-    if (!response.ok) throw new Error('A tananyagjegyzék nem tölthető be.');
-    const config = await response.json();
+    const config = await getConfig();
     grid.innerHTML = config.modules.map((module) => {
       const available = module.status === 'available';
       const era = labelFor(config.taxonomy, module.era);
@@ -143,6 +166,7 @@
       emptyState.querySelector('p').textContent = 'Frissítsd az oldalt, majd próbáld újra.';
     }
   });
+  renderFeaturedModules().catch((reason) => console.error(reason));
 
   document.querySelector('[data-focus-toggle]')?.addEventListener('click', (event) => {
     const active = document.body.classList.toggle('is-focus-mode');
