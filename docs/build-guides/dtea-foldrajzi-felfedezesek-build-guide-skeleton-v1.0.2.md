@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1.2 seconds
-Output:
 # Földrajzi felfedezések – H5P Build Guide váz v1.0.2
 
 **Kapcsolódó dokumentum:** `dtea-foldrajzi-felfedezesek-master-script-v1.0.2.md`  
