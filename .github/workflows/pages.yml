@@ -42,6 +42,9 @@ jobs:
       - name: Verify build and H5P assets
         run: npm run verify
 
+      - name: Audit every student-facing module
+        run: python3 scripts/audit_student_build.py
+
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
 
