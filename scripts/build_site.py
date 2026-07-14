@@ -92,6 +92,22 @@ def validate_h5p_tree(path: Path, expected_pages: int) -> None:
             missing.append(folder)
     if missing:
         fail("Hiányzó H5P-könyvtárak: " + ", ".join(missing))
+    for key in ("license", "authors", "version"):
+        if not manifest.get(key):
+            fail(f"A H5P-manifesztumból hiányzik a(z) {key} metaadat.")
+
+
+def apply_manifest_metadata(path: Path, module: dict) -> None:
+    manifest_path = path / "h5p.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    manifest.update({
+        "title": module["title"],
+        "language": "hu",
+        "license": module["license"],
+        "authors": [{"name": module["author"], "role": "Author"}],
+        "version": module["version"],
+    })
+    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
 def apply_runtime_compatibility(path: Path) -> None:
@@ -123,7 +139,8 @@ def apply_runtime_compatibility(path: Path) -> None:
 
 
 def main() -> None:
-    for module in MODULES:
+    modules = load_modules()
+    for module in modules:
         source = module["source"]
         if not source.is_file():
             fail(f"Nem található a forráscsomag: {source.relative_to(ROOT)}")
@@ -139,7 +156,7 @@ def main() -> None:
     shutil.copytree(SITE_SOURCE, OUTPUT)
     shutil.copytree(PLAYER_SOURCE, OUTPUT / "player")
     build_info = []
-    for module in MODULES:
+    for module in modules:
         h5p_output = OUTPUT / "h5p" / module["slug"]
         h5p_output.mkdir(parents=True)
         with zipfile.ZipFile(module["source"]) as archive:
@@ -157,6 +174,7 @@ def main() -> None:
             safe_extract(archive, h5p_output)
 
         apply_runtime_compatibility(h5p_output)
+        apply_manifest_metadata(h5p_output, module)
         validate_h5p_tree(h5p_output, module["pages"])
         build_info.append({
             "slug": module["slug"],
@@ -164,6 +182,11 @@ def main() -> None:
             "sha256": sha256(module["source"]),
             "generated": module.get("generated", False),
             "pages": module["pages"],
+            "era": module["era"],
+            "levels": module["levels"],
+            "license": module["license"],
+            "author": module["author"],
+            "version": module["version"],
         })
     (OUTPUT / ".nojekyll").write_text("", encoding="utf-8")
     (OUTPUT / "build-info.json").write_text(
@@ -177,7 +200,7 @@ def main() -> None:
         ),
         encoding="utf-8",
     )
-    print(f"Built {OUTPUT} ({len(MODULES)} modules, SHA-256 verified).")
+    print(f"Built {OUTPUT} ({len(modules)} modules, SHA-256 verified).")
 
 
 if __name__ == "__main__":
