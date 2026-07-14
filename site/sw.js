@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dtea-shell-v3-design-system';
+const CACHE_NAME = 'dtea-shell-v4-two-modules';
 const SHELL = [
   './', './index.html', './library.html', './learn.html', './404.html',
   './assets/app.css', './assets/app.js', './assets/logo-mark.svg',
@@ -33,4 +33,3 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-
