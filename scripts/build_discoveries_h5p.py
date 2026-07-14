@@ -879,8 +879,9 @@ def main() -> None:
         manifest.update({
             "title": "Földrajzi felfedezések",
             "language": "hu",
-            "authors": [],
-            "license": "U",
+            "authors": [{"name": "Digitális Történelem Érettségi Akadémia", "role": "Author"}],
+            "license": "CC BY-NC-SA",
+            "version": "1.1.0",
         })
 
         with tempfile.TemporaryDirectory() as temp_dir:
