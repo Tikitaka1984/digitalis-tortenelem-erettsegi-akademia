@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1.6 seconds
-Output:
 #!/usr/bin/env python3
 """Fail CI when authoring notes leak into any published H5P learner view."""
 
