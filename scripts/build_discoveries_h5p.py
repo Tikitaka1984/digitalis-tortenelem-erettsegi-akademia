@@ -41,6 +41,29 @@ def uid() -> str:
     return str(uuid.uuid5(UID_NAMESPACE, f"dtea-foldrajzi-felfedezesek-{_uid_counter}"))
 
 
+def zip_read_normalized(archive: zipfile.ZipFile, name: str) -> bytes:
+    """Read ZIP members portably when Lumi used Windows separators."""
+    for member in archive.infolist():
+        if member.filename.replace("\\", "/") == name:
+            return archive.read(member)
+    raise KeyError(f"Hiányzó ZIP-bejegyzés: {name}")
+
+
+def extract_normalized(archive: zipfile.ZipFile, destination: pathlib.Path) -> None:
+    """Extract Lumi packages with POSIX paths on every build platform."""
+    for member in archive.infolist():
+        normalized = member.filename.replace("\\", "/")
+        parts = pathlib.PurePosixPath(normalized).parts
+        if not parts or normalized.startswith("/") or ".." in parts:
+            raise SystemExit(f"Tiltott ZIP-útvonal: {member.filename}")
+        target = destination.joinpath(*parts)
+        if member.is_dir() or normalized.endswith("/"):
+            target.mkdir(parents=True, exist_ok=True)
+            continue
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(archive.read(member))
+
+
 def normalize_quotes(value: str) -> str:
     return value.replace("„", '"').replace("”", '"').strip()
 
@@ -460,8 +483,8 @@ def main() -> None:
         raise SystemExit("A Master Script oldaltérképe nem pontosan 1–30.")
 
     with zipfile.ZipFile(ATHENS) as source:
-        manifest = json.loads(source.read("h5p.json"))
-        athens_content = json.loads(source.read("content/content.json"))
+        manifest = json.loads(zip_read_normalized(source, "h5p.json"))
+        athens_content = json.loads(zip_read_normalized(source, "content/content.json"))
         templates: dict[str, dict] = {}
 
         def collect(value) -> None:
@@ -495,7 +518,7 @@ def main() -> None:
 
         with tempfile.TemporaryDirectory() as temp_dir:
             temp = pathlib.Path(temp_dir)
-            source.extractall(temp)
+            extract_normalized(source, temp)
             shutil.rmtree(temp / "content", ignore_errors=True)
             (temp / "content").mkdir()
             (temp / "content/content.json").write_text(json.dumps(content, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
