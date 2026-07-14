@@ -1,6 +1,3 @@
-Exit code: 0
-Wall time: 1.2 seconds
-Output:
 # DTEA – Földrajzi felfedezések – Source Register v1.0.2
 
 **Státusz:** v1.0.2 – szakmai review alatt álló forráscsomag  
