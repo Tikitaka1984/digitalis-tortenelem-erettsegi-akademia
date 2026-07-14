@@ -19,7 +19,7 @@
       <div class="learning-header-actions"><button class="icon-button" type="button" data-focus-toggle aria-pressed="false" aria-label="Fókusz mód bekapcsolása"><span aria-hidden="true">◫</span></button><button class="icon-button theme-toggle" type="button" data-theme-toggle aria-label="Sötét mód bekapcsolása"><span class="theme-icon" aria-hidden="true">◐</span></button><a class="button button-small button-ghost" href="./library.html">Kilépés</a></div>
     </header>
 
-    <div class="learning-progress" aria-label="Tananyag állapota"><div class="progress-track"><span data-course-progress style="width: 0%"></span></div><small data-progress-label>Tananyag megnyitva</small></div>
+    <div class="learning-progress" aria-label="Tananyag állapota"><div class="progress-track" role="progressbar" aria-label="Tananyag haladása" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span data-course-progress style="width: 0%"></span></div><small data-progress-label>1 / 30 oldal</small></div>
 
     <main class="learning-layout" id="main">
       <aside class="course-sidebar" aria-label="Tananyag információk">
@@ -33,7 +33,7 @@
       <section class="learning-stage" aria-label="Interaktív tananyag">
         <div class="stage-toolbar"><div><span class="status-dot"></span><span>Interaktív tananyag</span></div><button class="text-button" type="button" data-scroll-top>Vissza az elejére ↑</button></div>
         <div id="loading-state" class="system-state" role="status" aria-live="polite"><span class="spinner" aria-hidden="true"></span><div><strong>A tananyag előkészítése</strong><p data-module-loading>A 30 oldalas interaktív könyv betöltése folyamatban…</p></div></div>
-        <div id="error-state" class="system-state error-state" role="alert" hidden><div class="feature-icon">!</div><h2>A tananyag most nem tölthető be</h2><p>Az oldal vagy valamelyik szükséges fájl nem érhető el. Ellenőrizd az internetkapcsolatot, majd próbáld újra.</p><button id="retry-load" class="button button-primary" type="button">Újrapróbálás</button></div>
+        <div id="error-state" class="system-state error-state" role="alert" hidden><div class="feature-icon">!</div><h2>A tananyag most nem tölthető be</h2><p>Az oldal vagy valamelyik szükséges fájl nem érhető el. Először újratöltjük a H5P futtatókörnyezetet; ha ez sem segít, teljes oldalfrissítést ajánlunk fel.</p><button id="retry-load" class="button button-primary" type="button">Runtime újratöltése</button></div>
         <div id="h5p-container" class="h5p-host" tabindex="-1" aria-label="Athéni demokrácia interaktív tananyag" data-module-container></div>
       </section>
     </main>

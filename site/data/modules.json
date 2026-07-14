@@ -1,0 +1,125 @@
+{
+  "platformVersion": "1.1.0",
+  "taxonomy": [
+    { "id": "okor", "label": "Ókor" },
+    { "id": "kozepkor", "label": "Középkor" },
+    { "id": "kora-ujkor", "label": "Kora újkor" },
+    { "id": "ujkor", "label": "Újkor" },
+    { "id": "huszadik-szazad", "label": "XX. század" },
+    { "id": "jelenkor", "label": "Jelenkor" }
+  ],
+  "levels": [
+    { "id": "kozep", "label": "Középszint" },
+    { "id": "emelt", "label": "Emelt szint" }
+  ],
+  "modules": [
+    {
+      "id": "atheni-demokracia-v2",
+      "slug": "atheni-demokracia",
+      "title": "Athéni demokrácia",
+      "contentProbe": "Ki döntött Athénban – és ki maradt kívül?",
+      "era": "okor",
+      "sequence": 1,
+      "period": "Kr. e. 5. század",
+      "artLabel": "ΔΗΜΟΣ",
+      "artClass": "lesson-art-athens",
+      "description": "Az athéni államszervezet és működése a demokrácia virágkorában",
+      "shortDescription": "A reformok, az államszervezet és a polgárjog korlátai.",
+      "searchTerms": "athéni demokrácia periklész kleiszthenész polisz",
+      "duration": "35–45 perc",
+      "difficulty": "Közepes",
+      "levels": ["kozep", "emelt"],
+      "pages": 30,
+      "status": "available",
+      "path": "./h5p/atheni-demokracia",
+      "progressKey": "academy-athens-progress-v2",
+      "objectives": [
+        "A demokrácia kialakulásának áttekintése",
+        "A reformerek szerepének elkülönítése",
+        "Az államszervezet működésének megértése",
+        "Érettségi feladatok gyakorlása"
+      ],
+      "next": "foldrajzi-felfedezesek",
+      "license": "CC BY-NC-SA",
+      "author": "Digitális Történelem Érettségi Akadémia",
+      "version": "2.0.0",
+      "build": {
+        "source": "content/digitalis-tortenelem-erettsegi-akademia-atheni-demokracia-v2.0-complete.h5p",
+        "sha256": "86e932d8545cfdde8a8963dedf6c5afc1cf2820c0e61f6ba6e6029675a4adc7f",
+        "generated": false
+      }
+    },
+    {
+      "id": "foldrajzi-felfedezesek-v1",
+      "slug": "foldrajzi-felfedezesek",
+      "title": "Földrajzi felfedezések",
+      "contentProbe": "Földrajzi felfedezések",
+      "era": "kora-ujkor",
+      "sequence": 2,
+      "period": "15–16. század",
+      "artLabel": "1492",
+      "artClass": "lesson-art-discoveries",
+      "description": "Új tengeri utak, gyarmatosítás és a korai kapitalizmus kialakulása",
+      "shortDescription": "Új útvonalak, gyarmatosítás és a korai kapitalizmus összefüggései.",
+      "searchTerms": "földrajzi felfedezések kolumbusz vasco da gama magellán gyarmatosítás kapitalizmus",
+      "duration": "82–117 perc",
+      "difficulty": "Közepes",
+      "levels": ["kozep"],
+      "pages": 30,
+      "status": "available",
+      "path": "./h5p/foldrajzi-felfedezesek",
+      "progressKey": "academy-discoveries-progress-v2",
+      "objectives": [
+        "A felfedezőutak okainak és feltételeinek megértése",
+        "A fő útvonalak és személyek elkülönítése",
+        "A gyarmatosítás következményeinek elemzése",
+        "A gazdasági átalakulás összefüggéseinek felismerése"
+      ],
+      "next": "atheni-demokracia",
+      "license": "CC BY-NC-SA",
+      "author": "Digitális Történelem Érettségi Akadémia",
+      "version": "1.1.0",
+      "build": {
+        "source": "content/digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p",
+        "generated": true
+      }
+    },
+    {
+      "id": "romai-koztarsasag-planned",
+      "slug": "romai-koztarsasag",
+      "title": "A római köztársaság",
+      "era": "okor",
+      "sequence": 3,
+      "period": "Római köztársaság",
+      "artLabel": "SPQR",
+      "artClass": "lesson-art-rome",
+      "description": "Társadalom, intézmények és a köztársaság válsága.",
+      "shortDescription": "Társadalom, intézmények és a köztársaság válsága.",
+      "searchTerms": "római köztársaság róma ókor",
+      "duration": "Tervezés alatt",
+      "difficulty": "Közepes",
+      "levels": ["kozep"],
+      "pages": 0,
+      "status": "planned"
+    },
+    {
+      "id": "allamalapitas-planned",
+      "slug": "allamalapitas",
+      "title": "Az államalapítás",
+      "era": "kozepkor",
+      "tags": ["magyar"],
+      "sequence": 4,
+      "period": "Magyar államalapítás",
+      "artLabel": "1000",
+      "artClass": "lesson-art-hungary",
+      "description": "Géza fejedelem, Szent István és a keresztény királyság.",
+      "shortDescription": "Géza fejedelem, Szent István és a keresztény királyság.",
+      "searchTerms": "magyar államalapítás középkor szent istván géza",
+      "duration": "Tervezés alatt",
+      "difficulty": "Közepes",
+      "levels": ["kozep"],
+      "pages": 0,
+      "status": "planned"
+    }
+  ]
+}

@@ -39,8 +39,14 @@ jobs:
       - name: Build static site
         run: npm run build
 
+      - name: Sanitize published learner artifacts
+        run: python3 scripts/sanitize_student_build.py
+
       - name: Verify build and H5P assets
         run: npm run verify
+
+      - name: Audit every student-facing module
+        run: python3 scripts/audit_student_build.py
 
       - name: Install Chromium
         run: npx playwright install --with-deps chromium

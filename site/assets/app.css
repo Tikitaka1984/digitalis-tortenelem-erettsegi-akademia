@@ -467,3 +467,12 @@ h3 { font-size: 1.25rem; line-height: 1.25; }
   .button, .icon-button, .chip, .lesson-card, .feature-card, .step-card { border: 1px solid ButtonText; }
   .status-dot, .eyebrow-dot, .progress-track span { forced-color-adjust: none; }
 }
+
+
+/* Sprint 5: URL-addressable taxonomy filters */
+.filter-stack { display: grid; gap: .75rem; }
+.filter-group { display: grid; grid-template-columns: 5.5rem 1fr; align-items: center; gap: .75rem; }
+.filter-label { color: var(--muted); font-size: .72rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+@media (max-width: 800px) {
+  .filter-group { grid-template-columns: 1fr; gap: .4rem; }
+}

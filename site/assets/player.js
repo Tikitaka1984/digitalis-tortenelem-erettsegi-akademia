@@ -1,65 +1,120 @@
-(function () {
+(async function () {
   'use strict';
 
-  const modules = {
-    'atheni-demokracia': {
-      id: 'atheni-demokracia-v2', title: 'Athéni demokrácia', era: 'Ókor · 01',
-      description: 'Az athéni államszervezet és működése a demokrácia virágkorában',
-      duration: '35–45 perc', difficulty: 'Közepes', level: 'Közép + emelt', pages: 30,
-      path: './h5p/atheni-demokracia', progressKey: 'academy-athens-progress', position: '01 / 50+',
-      status: 'Első pilot modul',
-      objectives: ['A demokrácia kialakulásának áttekintése', 'A reformerek szerepének elkülönítése', 'Az államszervezet működésének megértése', 'Érettségi feladatok gyakorlása'],
-      next: { slug: 'foldrajzi-felfedezesek', title: 'Földrajzi felfedezések' }
-    },
-    'foldrajzi-felfedezesek': {
-      id: 'foldrajzi-felfedezesek-v1', title: 'Földrajzi felfedezések', era: 'Kora újkor · 02',
-      description: 'Új tengeri utak, gyarmatosítás és a korai kapitalizmus kialakulása',
-      duration: '82–117 perc', difficulty: 'Közepes', level: 'Középszint', pages: 30,
-      path: './h5p/foldrajzi-felfedezesek', progressKey: 'academy-discoveries-progress', position: '02 / 50+',
-      status: 'Második interaktív modul',
-      objectives: ['A felfedezőutak okainak és feltételeinek megértése', 'A fő útvonalak és személyek elkülönítése', 'A gyarmatosítás következményeinek elemzése', 'A gazdasági átalakulás összefüggéseinek felismerése'],
-      next: { slug: 'atheni-demokracia', title: 'Athéni demokrácia' }
-    }
-  };
-
-  const requested = new URLSearchParams(window.location.search).get('module') || 'atheni-demokracia';
-  const course = modules[requested] || modules['atheni-demokracia'];
   const container = document.getElementById('h5p-container');
   const loading = document.getElementById('loading-state');
   const error = document.getElementById('error-state');
   const retry = document.getElementById('retry-load');
   const progress = document.querySelector('[data-course-progress]');
   const progressLabel = document.querySelector('[data-progress-label]');
+  let course;
+  let retryCount = 0;
+  let frameObserver;
+  let syncTimer;
 
   const setText = (selector, value) => document.querySelectorAll(selector).forEach((node) => { node.textContent = value; });
-  const configureFrame = () => {
+  const loadConfig = async () => {
+    const response = await fetch('./data/modules.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error(`A modulkonfiguráció nem tölthető be (${response.status}).`);
+    return response.json();
+  };
+
+  const readStoredProgress = () => {
+    try {
+      const value = JSON.parse(localStorage.getItem(course.progressKey) || '{}');
+      return Number.isInteger(value.chapter) ? value : { chapter: 1, completed: false };
+    } catch {
+      return { chapter: 1, completed: false };
+    }
+  };
+
+  const setChapterProgress = (chapter, completed = false) => {
+    const safeChapter = Math.max(1, Math.min(course.pages, Number(chapter) || 1));
+    const percent = completed ? 100 : Math.round((safeChapter / course.pages) * 1000) / 10;
+    if (progress) {
+      progress.style.width = `${percent}%`;
+      progress.parentElement?.setAttribute('aria-valuenow', String(Math.round(percent)));
+    }
+    if (progressLabel) progressLabel.textContent = completed ? 'Tananyag teljesítve' : `${safeChapter} / ${course.pages} oldal`;
+    localStorage.setItem(course.progressKey, JSON.stringify({ chapter: safeChapter, completed, updatedAt: new Date().toISOString() }));
+  };
+
+  const configureFrame = (config) => {
+    const era = config.taxonomy.find((item) => item.id === course.era)?.label || course.era;
+    const level = course.levels.map((id) => config.levels.find((item) => item.id === id)?.label || id).join(' + ');
+    const available = config.modules.filter((item) => item.status === 'available');
+    const position = available.findIndex((item) => item.slug === course.slug) + 1;
+    const nextCourse = config.modules.find((item) => item.slug === course.next);
     document.title = `${course.title} · Digitális Történelem Érettségi Akadémia`;
     document.querySelector('meta[name="description"]')?.setAttribute('content', `${course.title} interaktív H5P-tananyaga.`);
     setText('[data-module-title]', course.title);
-    setText('[data-module-era]', course.era);
+    setText('[data-module-era]', `${era} · ${String(course.sequence).padStart(2, '0')}`);
     setText('[data-module-description]', course.description);
     setText('[data-module-duration]', course.duration);
     setText('[data-module-difficulty]', course.difficulty);
-    setText('[data-module-level]', course.level);
+    setText('[data-module-level]', level);
     setText('[data-module-pages]', `${course.pages} oldal`);
     setText('[data-module-loading]', `A ${course.pages} oldalas interaktív könyv betöltése folyamatban…`);
-    setText('[data-module-position]', course.position);
-    setText('[data-module-status]', course.status);
+    setText('[data-module-position]', `${String(position).padStart(2, '0')} / ${available.length}`);
+    setText('[data-module-status]', 'Elérhető modul');
     const objectiveList = document.querySelector('[data-module-objectives]');
     if (objectiveList) objectiveList.replaceChildren(...course.objectives.map((item) => Object.assign(document.createElement('li'), { textContent: item })));
     container.setAttribute('aria-label', `${course.title} interaktív tananyag`);
     const next = document.querySelector('[data-next-module]');
-    if (next) {
-      next.href = `./learn.html?module=${course.next.slug}`;
-      next.querySelector('strong').textContent = course.next.title;
+    if (next && nextCourse) {
+      next.href = `./learn.html?module=${nextCourse.slug}`;
+      next.querySelector('strong').textContent = nextCourse.title;
     }
+    setChapterProgress(readStoredProgress().chapter, readStoredProgress().completed);
   };
 
-  const setProgress = (value, label) => {
-    const safeValue = Math.max(0, Math.min(100, Number(value) || 0));
-    if (progress) progress.style.width = `${safeValue}%`;
-    if (progressLabel) progressLabel.textContent = label || `${safeValue}% teljesítve`;
-    localStorage.setItem(course.progressKey, String(safeValue));
+  const chapterFromFrame = (frameDocument) => {
+    const current = frameDocument.querySelector('[aria-current="page"], .h5p-interactive-book-navigation-current');
+    const candidates = [current?.textContent, frameDocument.body?.innerText];
+    for (const value of candidates) {
+      const match = String(value || '').match(new RegExp(`(?:^|\\s)(\\d{1,3})\\s*\\/\\s*${course.pages}(?:\\s|$)`));
+      if (match) return Number(match[1]);
+    }
+    return null;
+  };
+
+  const syncProgressFromFrame = (frameDocument) => {
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(() => {
+      const chapter = chapterFromFrame(frameDocument);
+      if (chapter) setChapterProgress(chapter);
+    }, 80);
+  };
+
+  const handleStatement = (statement, frameDocument) => {
+    const verb = statement?.verb?.id || statement?.verb || '';
+    if (typeof verb === 'string' && (verb.includes('completed') || verb.includes('passed'))) {
+      setChapterProgress(course.pages, true);
+      return;
+    }
+    if (frameDocument) syncProgressFromFrame(frameDocument);
+  };
+
+  const attachProgressTracking = async () => {
+    const iframe = container.querySelector('iframe.h5p-iframe, iframe');
+    if (!iframe) return;
+    const attach = () => {
+      try {
+        const frameWindow = iframe.contentWindow;
+        const frameDocument = iframe.contentDocument;
+        if (!frameDocument?.body) return;
+        frameObserver?.disconnect();
+        frameObserver = new MutationObserver(() => syncProgressFromFrame(frameDocument));
+        frameObserver.observe(frameDocument.body, { subtree: true, childList: true, attributes: true, characterData: true });
+        frameDocument.addEventListener('click', () => syncProgressFromFrame(frameDocument), true);
+        frameWindow?.H5P?.externalDispatcher?.on?.('xAPI', (event) => handleStatement(event?.data?.statement || event?.data, frameDocument));
+        syncProgressFromFrame(frameDocument);
+      } catch (reason) {
+        console.warn('A fejezetszintű haladásfigyelés nem csatlakozott:', reason);
+      }
+    };
+    iframe.addEventListener('load', attach, { once: true });
+    attach();
   };
 
   const showError = (reason) => {
@@ -68,7 +123,17 @@
     container.replaceChildren();
     error.hidden = false;
     container.dataset.state = 'error';
+    retry.textContent = retryCount ? 'Oldal teljes újratöltése' : 'Runtime újratöltése';
   };
+
+  const reloadRuntime = () => new Promise((resolve, reject) => {
+    const script = document.createElement('script');
+    script.src = `./player/main.bundle.js?retry=${Date.now()}`;
+    script.charset = 'UTF-8';
+    script.onload = resolve;
+    script.onerror = () => reject(new Error('A H5P runtime ismételt letöltése sikertelen.'));
+    document.head.append(script);
+  });
 
   const loadContent = async () => {
     loading.hidden = false;
@@ -92,26 +157,44 @@
       loading.hidden = true;
       container.dataset.state = 'ready';
       container.focus({ preventScroll: true });
-      const storedProgress = Number(localStorage.getItem(course.progressKey));
-      setProgress(storedProgress > 0 ? storedProgress : 3, storedProgress > 0 ? `${storedProgress}% teljesítve` : 'Tananyag megnyitva');
+      await attachProgressTracking();
     } catch (reason) {
       showError(reason);
     }
   };
 
-  retry.addEventListener('click', loadContent);
-  window.addEventListener('message', (event) => {
-    if (!event.data || typeof event.data !== 'object') return;
-    const statement = event.data.statement || event.data;
-    const verb = statement?.verb?.id || statement?.verb || '';
-    if (typeof verb !== 'string') return;
-    if (verb.includes('completed') || verb.includes('passed')) setProgress(100, 'Tananyag teljesítve');
-    else if (verb.includes('answered') || verb.includes('progressed')) {
-      const current = Number(localStorage.getItem(course.progressKey)) || 3;
-      setProgress(Math.min(95, current + 3));
+  retry.addEventListener('click', async () => {
+    if (retryCount > 0) {
+      window.location.reload();
+      return;
+    }
+    retryCount += 1;
+    retry.disabled = true;
+    retry.textContent = 'Runtime újratöltése…';
+    try {
+      await reloadRuntime();
+      await loadContent();
+    } catch (reason) {
+      showError(reason);
+    } finally {
+      retry.disabled = false;
     }
   });
 
-  configureFrame();
-  loadContent();
+  window.addEventListener('message', (event) => {
+    if (!event.data || typeof event.data !== 'object') return;
+    const iframe = container.querySelector('iframe.h5p-iframe, iframe');
+    handleStatement(event.data.statement || event.data, iframe?.contentDocument);
+  });
+
+  try {
+    const config = await loadConfig();
+    const requested = new URLSearchParams(window.location.search).get('module') || 'atheni-demokracia';
+    course = config.modules.find((item) => item.slug === requested && item.status === 'available')
+      || config.modules.find((item) => item.slug === 'atheni-demokracia');
+    configureFrame(config);
+    await loadContent();
+  } catch (reason) {
+    showError(reason);
+  }
 })();
