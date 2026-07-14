@@ -423,13 +423,7 @@ D) A térképek miatt nem volt többé szükség hajózási tapasztalatra.
 
 ### Tanulói szöveg
 
-Portugália az Atlanti-óceán partján feküdt, ezért kedvező helyzetből indíthatott tengeri vállalkozás…14799 tokens truncated…etése.  
-**Helyes:** A. **Pont:** 1.
-
-### Z6 – Gyarmatosítás (2 pont)
-
-**Kérdés:** Jelöld a két helyes következményt!  
-A) Őslakos társadalmak pusztulása.  
+Portugália az Atlanti-óceán partján feküdt, ezért kedvező helyzetből indíthatott tengeri vállalkozás…14835 tokens truncated…ársadalmak pusztulása.  
 B) Rabszolga-kereskedelem növekedése.  
 C) Minden gyarmat politikai egyenlőséget kapott.  
 D) A betegségeknek nem volt hatásuk.  
@@ -694,7 +688,7 @@ Az őslakosság pusztulása, a kényszermunka és a rabszolgaság tárgyalása t
 
 - **Oldalszintű forrásjelölések:** mind a 30 oldal végére egységes Forrás, Szint, Szakmai státusz és Média státusza blokk került pontos oldal- vagy szakaszhivatkozással.
 - **Source Register pontosítása:** a hivatkozások oldaltartományt, fejezetet, szerepet, állításcsoportot és idézési korlátozást kaptak; az SRC-01 elsődlegessége egyértelmű.
-- **Forrás nélküli állítások kezelése:** a Kolumbusz-oldal nem igazolható „első emberi kapcsolat” állítását eltávolítottuk; az őslakos társadalmakra vonatkozó mondat a projektforrások által biztosan alátámasztott formára szűkült.
+- **Forrás nélküli állítások kezelése:** a Kolumbusz-oldal nem igazolható „első emberi kapcsolat” állítását eltávolítottuk; az őslakos társadalmakra vonatkozó mondat a projektforrások által biztosan alátámasztott formára szűkült; a 15. oldal és a Z7 feladat nem kellően alátámasztott konkrét termékirány-párosítása forrásalapú felismerési feladatra változott.
 - **Cabral-forráskonfliktus:** a tanulói szövegből, a kronológiából és a személylapból kikerült a lezárt tényként kezelt évszám; a konfliktus a 12., 21. és 22. oldalon, valamint a Source Registerben nyitott szakmai vezetői döntésként szerepel.
 - **Modulhatár:** a metaadat egyértelművé teszi, hogy ez a „A portugál és spanyol földrajzi felfedezések, a gyarmatosítás és a korai kapitalizmus kialakulása” részmodul. V. Károly, XIV. Lajos és az abszolutizmus részletes feldolgozása más modulhoz tartozik.
 - **Időkeret és magútvonal:** oldalanként számított időbudget alapján a kötelező magútvonal 82 perc, a teljes út 117 perc, az ismétlő út 13 perc; a korábbi 40–50 perces becslés megszűnt.
