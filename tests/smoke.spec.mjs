@@ -20,7 +20,8 @@ test('a prémium nyitóoldal, navigáció és CTA működik', async ({ page, isM
     await page.getByRole('button', { name: 'Menü megnyitása' }).click();
   }
   await expect(page.getByRole('navigation', { name: 'Fő navigáció' })).toBeVisible();
-  await expect(page.getByRole('heading', { name: 'Innen érdemes kezdened' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Válassz tanulási útvonalat' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Földrajzi felfedezések' })).toBeVisible();
   await expectNoHorizontalOverflow(page);
   expect(errors).toEqual([]);
 });
@@ -39,6 +40,7 @@ test('a digitális könyvtár keresése és szűrése működik', async ({ page 
   await page.goto('./library.html');
   await expect(page.getByRole('heading', { name: 'Építs biztos történelmi tudást.' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Athéni demokrácia' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Földrajzi felfedezések' })).toBeVisible();
   await page.getByPlaceholder('Keress témakörre vagy korszakra…').fill('nincs ilyen');
   await expect(page.getByRole('heading', { name: 'Nincs ilyen tananyag' })).toBeVisible();
   await page.getByRole('button', { name: 'Szűrők törlése' }).click();
@@ -64,6 +66,22 @@ test('a H5P Interactive Book betöltődik és 30 oldalas', async ({ page }) => {
   expect(errors).toEqual([]);
 });
 
+test('a Földrajzi felfedezések H5P könyv betöltődik és 30 oldalas', async ({ page }) => {
+  const errors = collectPageErrors(page);
+  await page.goto('./learn.html?module=foldrajzi-felfedezesek');
+  await expect(page.getByRole('heading', { name: 'Földrajzi felfedezések' }).first()).toBeVisible();
+  await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
+  await expect(page.locator('#error-state')).toBeHidden();
+  await expect(page.locator('iframe.h5p-iframe').first()).toBeVisible();
+  const contentResponse = await page.request.get('./h5p/foldrajzi-felfedezesek/content/content.json');
+  expect(contentResponse.ok()).toBe(true);
+  const content = await contentResponse.json();
+  expect(content.chapters).toHaveLength(30);
+  expect(JSON.stringify(content)).toContain('Egy felfedezés kinek jelentett lehetőséget');
+  await page.waitForTimeout(500);
+  expect(errors).toEqual([]);
+});
+
 test('a tananyag fókusz módja működik', async ({ page }) => {
   await page.goto('./learn.html');
   const toggle = page.locator('[data-focus-toggle]');
@@ -85,7 +103,7 @@ test('az alapvető akadálymentességi szerkezet érvényes', async ({ page }) =
 
 test('a mobilnézetek nem okoznak vízszintes túlcsordulást', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'Csak a mobilprojektben fut.');
-  for (const path of ['./', './library.html', './learn.html']) {
+  for (const path of ['./', './library.html', './learn.html', './learn.html?module=foldrajzi-felfedezesek']) {
     await page.goto(path);
     if (path.endsWith('learn.html')) {
       await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
@@ -94,4 +112,3 @@ test('a mobilnézetek nem okoznak vízszintes túlcsordulást', async ({ page, i
     await expectNoHorizontalOverflow(page);
   }
 });
-
