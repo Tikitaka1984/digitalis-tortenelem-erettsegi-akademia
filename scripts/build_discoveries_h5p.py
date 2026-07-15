@@ -48,12 +48,21 @@ SECTION_TITLES = {
 VISUALS = {
     1: ("cover-atlantic-routes.webp", "Stilizált atlanti térkép tengeri útvonalakkal és egy 15. századi karavellával."),
     5: ("navigation-tools.svg", "A karavella, az iránytű, az asztrolábium, valamint a térkép és a hajózási tudás sematikus ábrája."),
-    7: ("dias-route.svg", "Bartolomeu Dias útja Portugáliától Afrika déli térségéig."),
-    8: ("da-gama-route.svg", "Vasco da Gama útja Afrika megkerülésével Indiáig."),
-    9: ("columbus-route.svg", "Kolumbusz 1492-es nyugati útja Spanyolországtól a Karib-tenger térségéig."),
-    10: ("tordesillas.svg", "A tordesillasi választóvonal, a spanyol és portugál érdekszféra, valamint Brazília térségének sematikus ábrája."),
-    11: ("magellan-route.svg", "A Magellán által indított és Elcano által befejezett első Föld körüli expedíció sematikus útvonala."),
-    24: ("route-overview.svg", "Dias, Vasco da Gama, Kolumbusz és a Magellán-expedíció fő útvonalainak összehasonlító térképe."),
+    7: ("martellus-world-map-1489.jpg", "Henricus Martellus 1489 körül készült világtérképe; Afrika déli partvidéke és a Jóreménység foka térsége."),
+    8: ("cantino-planisphere-1502.jpg", "Az 1502-es Cantino-planiszféra; az Afrika megkerülésével Indiába vezető portugál tengeri tér ismerete."),
+    9: ("juan-de-la-cosa-map-1500.jpg", "Juan de la Cosa 1500-ban készült világtérképe, amely az európai térképezésben korán ábrázolja Amerikát."),
+    10: ("ribero-world-map-1529.jpg", "Diego Ribero 1529-es világtérképe, amely a tordesillasi megállapodás szerinti spanyol és portugál érdekszférákra utal."),
+    11: ("agnese-world-map-1544.jpg", "Battista Agnese 1544-es világtérképe, rajta a Magellán–Elcano-expedíció Föld körüli útvonalával."),
+    24: ("ribero-world-map-1529.jpg", "Diego Ribero 1529-es világtérképe a nagy földrajzi felfedezések korának új földrajzi ismereteivel."),
+}
+
+VISUAL_CREDITS = {
+    7: ("Henricus Martellus világtérképe, kb. 1489", "Yale University Library / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:Henricus_Martellus_-_Map_of_the_world_-_1489_-_Yale_archive.jpg"),
+    8: ("Cantino-planiszféra, 1502", "Biblioteca Estense, Modena / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:Cantino_planisphere_(1502).jpg"),
+    9: ("Juan de la Cosa világtérképe, 1500", "Museo Naval de Madrid / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:1500_map_by_Juan_de_la_Cosa_rotated.jpg"),
+    10: ("Diego Ribero: Carta Universal, 1529", "National Library of Australia / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:Map_Diego_Ribero_1529.jpg"),
+    11: ("Battista Agnese világtérképe, 1544", "Library of Congress / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:1544_Battista_Agnese_Worldmap.jpg"),
+    24: ("Diego Ribero: Carta Universal, 1529", "National Library of Australia / Wikimedia Commons", "Közkincs", "https://commons.wikimedia.org/wiki/File:Map_Diego_Ribero_1529.jpg"),
 }
 
 TECHNICAL_LINE = re.compile(
@@ -205,7 +214,16 @@ def text_component(title: str, body: str, *, raw_html: bool = False) -> dict:
 
 def visual_component(filename: str, alt_text: str) -> dict:
     """Embed a portable H5P.Image component with Hungarian controls and alt text."""
-    mime = "image/webp" if filename.lower().endswith(".webp") else "image/svg+xml"
+    suffix = pathlib.Path(filename).suffix.lower()
+    mime = {
+        ".webp": "image/webp",
+        ".svg": "image/svg+xml",
+        ".jpg": "image/jpeg",
+        ".jpeg": "image/jpeg",
+        ".png": "image/png",
+    }.get(suffix)
+    if mime is None:
+        raise ValueError(f"Nem támogatott képformátum: {filename}")
     return {
         "library": "H5P.Image 1.1",
         "params": {
@@ -220,6 +238,18 @@ def visual_component(filename: str, alt_text: str) -> dict:
         "metadata": metadata("Tanulást segítő ábra", "Kép"),
         "subContentId": uid(),
     }
+
+
+def visual_credit_component(page_number: int) -> dict:
+    """Render the authentic map's source and rights statement below the image."""
+    title, collection, license_name, source_url = VISUAL_CREDITS[page_number]
+    body = (
+        '<p class="dtea-map-credit"><small>'
+        f'Forrás: <a href="{html.escape(source_url, quote=True)}" target="_blank" rel="noopener noreferrer">'
+        f'{html.escape(title)}</a> — {html.escape(collection)}. {html.escape(license_name)}.'
+        '</small></p>'
+    )
+    return text_component("Térkép forrása és licence", body, raw_html=True)
 
 
 def clean_student_body(body: str) -> str:
@@ -727,6 +757,8 @@ def build_page(templates: dict[str, dict], number: int, title: str, body: str) -
     if number in VISUALS and number != 1:
         filename, alt_text = VISUALS[number]
         column.append({"content": visual_component(filename, alt_text), "useSeparator": "never"})
+        if number in VISUAL_CREDITS:
+            column.append({"content": visual_credit_component(number), "useSeparator": "never"})
 
     dialog_pages = {18, 22, 23}
     interaction_sections: list[tuple[str, str]] = []

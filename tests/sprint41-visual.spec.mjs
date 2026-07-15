@@ -41,7 +41,7 @@ test('@visual-desktop Sprint 4.1 asztali vizuális bizonyítékok és feladatál
   await page.screenshot({ path: `${screenshotDir}/04-task-after-check.png`, fullPage: true });
 
   await openChapter(book, 'A tordesillasi megállapodás');
-  await expect(book.getByRole('img', { name: /tordesillasi választóvonal/i })).toBeVisible();
+  await expect(book.getByRole('img', { name: /Diego Ribero 1529-es világtérképe/i })).toBeVisible();
   await page.screenshot({ path: `${screenshotDir}/05-tordesillas-page.png`, fullPage: true });
 
   await openChapter(book, 'Borító és motiváció');

@@ -777,13 +777,21 @@ Végleges kiadásban „később cserélendő” kép vagy üres médiahely mara
 
 A H5P elkészül, majd dokumentációként visszaírják a döntéseket. Így a Guide nem specifikáció és nem védi a tartalmat. A helyes sorrend: jóváhagyott Script → Guide → build.
 
+### 69.9 „AI-generált történelmi forráskép”
+
+Történelmi térkép, portré, dokumentum, címer vagy történelmi zászló AI-generált utánzata tanulói tartalomként nem használható. A kötelező mérnöki szabály:
+
+> Historical maps, portraits and historical documents must use authentic historical sources whenever available. AI-generated replacements are prohibited except when no suitable public-domain or Creative Commons resource exists.
+
+Elsődleges választás a hiteles, megfelelő felbontású közkincs vagy Creative Commons forrás, dokumentált lelőhellyel és licenccel. AI-kép csak borítóillusztrációként, hangulati vagy dekoratív grafikaként használható, és nem állíthatja magáról, hogy történeti forrás. Ha nincs megfelelő szabad licencű forrás, a kivételt szakmai és jogi indoklással az Asset Registerben kell rögzíteni; a kivétel nem engedélyezi történelmi földrajz AI-val történő újrarajzolását.
+
 ## 70. Gyors döntési fák
 
 ### 70.1 Kell-e kép?
 
 1. A kép hordoz tanulási információt? Ha nem, csak akkor használható, ha nem növeli a terhelést.  
 2. A szövegnél gyorsabban mutat térbeli, vizuális vagy szerkezeti kapcsolatot? Ha igen, indokolt.  
-3. Van jogtiszta és hiteles forrás? Ha nincs, sematikus saját ábra vagy placeholder fejlesztői buildben.  
+3. Van jogtiszta és hiteles forrás? Történelmi térképhez, portréhoz és dokumentumhoz ezt kell használni; AI-generált helyettesítő nem készíthető. Ha nincs, csak fejlesztői buildben maradhat dokumentált médiahiány.
 4. Van alt/szöveges alternatíva? Ha nincs, még nem kész.
 
 ### 70.2 Kell-e interakció?

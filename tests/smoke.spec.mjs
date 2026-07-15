@@ -85,10 +85,12 @@ test('a Földrajzi felfedezések H5P könyv betöltődik és 30 oldalas', async 
     .filter((item) => item.content.library === 'H5P.AdvancedText 1.1')
     .map((item) => item.content.params.text)));
   expect(studentFacing).not.toMatch(/Tanulói szöveg|Megjelenő szöveg|Akadálymentes alternatíva|VIZUÁLIS ELEM|KÉSŐBB CSERÉLENDŐ|PLACEHOLDER|Pontozás:|Helyes válasz:|Helyes visszajelzés:|Hibás visszajelzés:/i);
-  for (const asset of ['cover-atlantic-routes.webp', 'navigation-tools.svg', 'dias-route.svg', 'da-gama-route.svg', 'columbus-route.svg', 'tordesillas.svg', 'magellan-route.svg', 'route-overview.svg']) {
+  for (const asset of ['cover-atlantic-routes.webp', 'navigation-tools.svg', 'martellus-world-map-1489.jpg', 'cantino-planisphere-1502.jpg', 'juan-de-la-cosa-map-1500.jpg', 'ribero-world-map-1529.jpg', 'agnese-world-map-1544.jpg']) {
     const assetResponse = await page.request.get(`./h5p/foldrajzi-felfedezesek/content/images/${asset}`);
     expect(assetResponse.ok(), asset).toBe(true);
   }
+  expect(JSON.stringify(content)).not.toMatch(/dias-route\.svg|da-gama-route\.svg|columbus-route\.svg|tordesillas\.svg|magellan-route\.svg|route-overview\.svg/i);
+  expect(JSON.stringify(content)).toContain('Térkép forrása és licence');
   await page.waitForTimeout(500);
   expect(errors).toEqual([]);
 });

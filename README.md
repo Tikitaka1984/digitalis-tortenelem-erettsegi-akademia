@@ -75,6 +75,8 @@ python scripts/build_discoveries_h5p.py
 
 A script pontosan 30 oldalt állít elő, az engedélyezett Lumi-kompatibilis komponensekkel és ellenőrzött vizuális elemekkel. Placeholder vagy fejlesztői metaadat nem kerülhet a tanulói buildbe. A Build Guide v1.0.2 mezőszintű végrehajtási specifikáció helyett jóváhagyott váz; emiatt a megvalósítás a benne felsorolt elsődleges típusokra és engedélyezett alternatívákra korlátozódik.
 
+A modul történelmi térképei hiteles, közkincs gyűjteményi forrásokból származnak. A pontos forrás-, licenc- és képernyőképjegyzék: [Sprint 4.2 történelmi térkép Asset Register](docs/assets/FOLDRAJZI_FELFEDEZESEK_HISTORICAL_MAPS.md).
+
 ## Fájlszerkezet
 
 ```text

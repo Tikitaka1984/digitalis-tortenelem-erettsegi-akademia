@@ -74,6 +74,14 @@ A szín nem lehet az egyetlen állapotjelző. Szöveg, ikon vagy forma egészít
 - Emoji csak tanulói tartalmi kiemelésben használható, navigációs ikonként nem.
 - Az ikonok minimum érintési területe 44×44 px.
 
+### Hiteles történelmi vizuális források
+
+- Történelmi térképhez, expedíciós útvonalhoz, politikai térképhez, történelmi személy portréjához, dokumentumhoz, címerhez és történelmi zászlóhoz elsődlegesen hiteles közkincs vagy Creative Commons forrást kell használni.
+- Kötelező mérnöki szabály: „Historical maps, portraits and historical documents must use authentic historical sources whenever available. AI-generated replacements are prohibited except when no suitable public-domain or Creative Commons resource exists.”
+- AI-generált kép kizárólag borítóillusztrációként, dekoratív vagy hangulati grafikaként használható; történeti forrásként nem jelenhet meg.
+- A forrás URL-je, gyűjteménye, licence, fájlneve és az elvégzett technikai módosítás az Asset Register kötelező mezője.
+- A hiteles térképet teljes nézetben kell megőrizni; a mobilos olvashatóságot nagyítható kép és megfelelő alt szöveg biztosítja.
+
 ## 7. H5P-típusok használata
 
 | Típus | Ajánlott | Kerülendő |
