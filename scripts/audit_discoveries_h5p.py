@@ -16,6 +16,14 @@ MASTER = ROOT / "docs/master-scripts/dtea-foldrajzi-felfedezesek-master-script-v
 REQUIRED_ASSETS = {
     "content/images/cover-atlantic-routes.webp",
     "content/images/navigation-tools.svg",
+    "content/images/martellus-world-map-1489.jpg",
+    "content/images/cantino-planisphere-1502.jpg",
+    "content/images/juan-de-la-cosa-map-1500.jpg",
+    "content/images/ribero-world-map-1529.jpg",
+    "content/images/agnese-world-map-1544.jpg",
+}
+
+BANNED_SYNTHETIC_MAPS = {
     "content/images/dias-route.svg",
     "content/images/da-gama-route.svg",
     "content/images/columbus-route.svg",
@@ -110,6 +118,17 @@ def main() -> None:
         raise SystemExit("A technikai borító vagy az automatikus összegző oldal 31. oldalt hozna létre.")
     if not REQUIRED_ASSETS.issubset(names):
         raise SystemExit("Hiányzó tanulói vizuális assetek: " + ", ".join(sorted(REQUIRED_ASSETS - names)))
+    synthetic_maps = BANNED_SYNTHETIC_MAPS.intersection(names)
+    if synthetic_maps:
+        raise SystemExit("Tiltott generált expedíciós térképek maradtak a csomagban: " + ", ".join(sorted(synthetic_maps)))
+
+    image_references = [
+        node.get("params", {}).get("file", {}).get("path", "")
+        for node in walk(content)
+        if isinstance(node, dict) and node.get("library") == "H5P.Image 1.1"
+    ]
+    if any(path.endswith(tuple(pathlib.Path(name).name for name in BANNED_SYNTHETIC_MAPS)) for path in image_references):
+        raise SystemExit("A content.json még tiltott generált térképre hivatkozik.")
 
     missing_dependencies = []
     for dependency in manifest.get("preloadedDependencies", []):
