@@ -1,5 +1,19 @@
 # Release Notes
 
+## Platform v1.2.0 – GSI-02
+
+### Újdonságok
+
+- Géza fejedelem és I. (Szent) István 30 oldalas H5P Interactive Book modulja.
+- Huszonkilenc formatív interakció és tíz kérdéses, 20 pontos záróteszt.
+- Helyben csomagolt, licencelt történelmi térképek, ábrázolás és dokumentumok.
+- Középkori modulkártya és közvetlen webes tananyagútvonal.
+- Modul-specifikus H5P-, Playwright-, Lighthouse- és regressziós QA.
+
+### Változatlan tartalom
+
+Az Athéni demokrácia és a Földrajzi felfedezések H5P-csomagja és tanulási útvonala nem változott.
+
 ## Platform v1.1.0 – Sprint 5
 
 ### Újdonságok
