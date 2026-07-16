@@ -36,6 +36,12 @@ jobs:
       - name: Audit generated H5P package
         run: python3 scripts/audit_discoveries_h5p.py
 
+      - name: Build Géza and István H5P package
+        run: python3 scripts/build_geza_istvan_h5p.py
+
+      - name: Audit Géza and István H5P package
+        run: python3 scripts/audit_geza_istvan_h5p.py
+
       - name: Build static site
         run: npm run build
 
@@ -87,6 +93,13 @@ jobs:
         with:
           name: foldrajzi-felfedezesek-h5p
           path: content/digitalis-tortenelem-erettsegi-akademia-foldrajzi-felfedezesek-v1.0.h5p
+          retention-days: 30
+
+      - name: Upload Géza and István H5P package
+        uses: actions/upload-artifact@v4
+        with:
+          name: geza-fejedelem-szent-istvan-h5p
+          path: content/digitalis-tortenelem-erettsegi-akademia-geza-fejedelem-szent-istvan-v1.0.h5p
           retention-days: 30
 
       - name: Configure Pages

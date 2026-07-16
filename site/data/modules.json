@@ -1,5 +1,5 @@
 {
-  "platformVersion": "1.1.0",
+  "platformVersion": "1.2.0",
   "taxonomy": [
     { "id": "okor", "label": "Ókor" },
     { "id": "kozepkor", "label": "Középkor" },
@@ -103,23 +103,43 @@
       "status": "planned"
     },
     {
-      "id": "allamalapitas-planned",
-      "slug": "allamalapitas",
-      "title": "Az államalapítás",
+      "id": "geza-fejedelem-szent-istvan-v1",
+      "slug": "geza-fejedelem-szent-istvan",
+      "title": "Géza fejedelem és I. (Szent) István",
+      "contentProbe": "hogyan lett a fejedelmi hatalomból területileg szervezett, keresztény királyság?",
       "era": "kozepkor",
       "tags": ["magyar"],
       "sequence": 4,
-      "period": "Magyar államalapítás",
+      "period": "955–1083",
       "artLabel": "1000",
       "artClass": "lesson-art-hungary",
-      "description": "Géza fejedelem, Szent István és a keresztény királyság.",
-      "shortDescription": "Géza fejedelem, Szent István és a keresztény királyság.",
-      "searchTerms": "magyar államalapítás középkor szent istván géza",
-      "duration": "Tervezés alatt",
+      "coverImage": "./h5p/geza-fejedelem-szent-istvan/content/images/stephen-coronation-pall.jpg",
+      "coverAlt": "I. István ábrázolása az 1031-ben készült koronázási paláston.",
+      "description": "Géza fejedelem irányváltása, István hatalmi küzdelmei és a keresztény királyság intézményei.",
+      "shortDescription": "Irányváltás, hatalmi küzdelmek és a keresztény királyság intézményei.",
+      "searchTerms": "magyar államalapítás középkor szent istván géza koppány vármegye egyházszervezet",
+      "duration": "55–90 perc",
       "difficulty": "Közepes",
-      "levels": ["kozep"],
-      "pages": 0,
-      "status": "planned"
+      "levels": ["kozep", "emelt"],
+      "pages": 30,
+      "status": "available",
+      "path": "./h5p/geza-fejedelem-szent-istvan",
+      "progressKey": "academy-geza-istvan-progress-v1",
+      "objectives": [
+        "Géza politikai irányváltásának értelmezése",
+        "István hatalmi és legitimációs eszközeinek elkülönítése",
+        "Az egyházi és világi államszervezet működésének megértése",
+        "Forráskritikai és érettségi feladatok gyakorlása"
+      ],
+      "next": "atheni-demokracia",
+      "license": "CC BY-NC-SA",
+      "author": "Digitális Történelem Érettségi Akadémia",
+      "version": "1.0.0",
+      "build": {
+        "source": "content/digitalis-tortenelem-erettsegi-akademia-geza-fejedelem-szent-istvan-v1.0.h5p",
+        "sha256": "849ff3a2259ba941966f5a5f1d1b827b1def2733361dff7d27c0aa31b502c61b",
+        "generated": true
+      }
     }
   ]
 }

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dtea-shell-v5-platform-1.1.0';
+const CACHE_NAME = 'dtea-shell-v6-platform-1.2.0';
 const SHELL = [
   './', './index.html', './library.html', './learn.html', './404.html',
   './assets/app.css', './assets/app.js', './assets/logo-mark.svg',

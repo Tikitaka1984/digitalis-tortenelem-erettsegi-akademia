@@ -63,9 +63,12 @@
     host.innerHTML = available.map((module) => {
       const era = labelFor(config.taxonomy, module.era);
       const levels = module.levels.map((id) => labelFor(config.levels, id)).join(' + ');
-      const decoration = module.slug === 'atheni-demokracia' ? '<div class="greek-grid"></div>' : '<div class="route-lines"></div>';
-      const discoveryClass = module.slug === 'foldrajzi-felfedezesek' ? 'course-art-discoveries' : '';
-      return `<article class="featured-course reveal"><div class="course-art ${discoveryClass}" aria-hidden="true"><span class="course-era">${escapeHtml(module.period)}</span>${decoration}<strong>${escapeHtml(module.artLabel)}</strong></div><div class="course-body"><div class="card-meta"><span class="badge badge-live">Elérhető</span><span>${escapeHtml(era)}</span><span>${escapeHtml(levels)}</span></div><h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.description)}</p><div class="course-facts"><span><b>${module.pages}</b> oldal</span><span><b>${escapeHtml(module.duration)}</b></span></div><a class="button button-primary" href="./learn.html?module=${escapeHtml(module.slug)}">Tananyag indítása <span aria-hidden="true">→</span></a></div></article>`;
+      const hasCover = Boolean(module.coverImage);
+      const decoration = hasCover
+        ? `<img src="${escapeHtml(module.coverImage)}" alt="${escapeHtml(module.coverAlt || module.title)}">`
+        : module.slug === 'atheni-demokracia' ? '<div class="greek-grid"></div>' : '<div class="route-lines"></div>';
+      const artClass = module.slug === 'foldrajzi-felfedezesek' ? 'course-art-discoveries' : module.artClass || '';
+      return `<article class="featured-course reveal"><div class="course-art ${escapeHtml(artClass)} ${hasCover ? 'has-cover' : ''}" ${hasCover ? '' : 'aria-hidden="true"'}><span class="course-era">${escapeHtml(module.period)}</span>${decoration}<strong>${escapeHtml(module.artLabel)}</strong></div><div class="course-body"><div class="card-meta"><span class="badge badge-live">Elérhető</span><span>${escapeHtml(era)}</span><span>${escapeHtml(levels)}</span></div><h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.description)}</p><div class="course-facts"><span><b>${module.pages}</b> oldal</span><span><b>${escapeHtml(module.duration)}</b></span></div><a class="button button-primary" href="./learn.html?module=${escapeHtml(module.slug)}">Tananyag indítása <span aria-hidden="true">→</span></a></div></article>`;
     }).join('');
   };
 
@@ -82,7 +85,8 @@
       const stats = available
         ? `<span>${module.pages} oldal</span><span>${escapeHtml(module.duration)}</span><span>${escapeHtml(levels)}</span>`
         : '<span>Tervezés alatt</span>';
-      return `<article class="lesson-card ${available ? 'lesson-card-live' : 'is-coming'}" data-library-item data-era="${escapeHtml(tags)}" data-level="${escapeHtml(module.levels.join(' '))}" data-search="${escapeHtml(`${module.title} ${era} ${module.searchTerms}`)}">${link}<div class="lesson-art ${escapeHtml(module.artClass)}"><span class="badge ${available ? 'badge-live' : ''}">${available ? 'Elérhető' : 'Hamarosan'}</span><strong>${escapeHtml(module.artLabel)}</strong><small>${escapeHtml(module.period)}</small></div><div class="lesson-card-body"><div class="card-meta"><span>${escapeHtml(era)}</span><span>${String(module.sequence).padStart(2, '0')}</span></div><h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.shortDescription)}</p><div class="lesson-stats">${stats}</div>${available ? '<div class="lesson-card-action">Tananyag indítása <span aria-hidden="true">→</span></div>' : ''}</div></article>`;
+      const cover = module.coverImage ? `<img src="${escapeHtml(module.coverImage)}" alt="${escapeHtml(module.coverAlt || module.title)}">` : '';
+      return `<article class="lesson-card ${available ? 'lesson-card-live' : 'is-coming'}" data-library-item data-era="${escapeHtml(tags)}" data-level="${escapeHtml(module.levels.join(' '))}" data-search="${escapeHtml(`${module.title} ${era} ${module.searchTerms}`)}">${link}<div class="lesson-art ${escapeHtml(module.artClass)} ${cover ? 'has-cover' : ''}">${cover}<span class="badge ${available ? 'badge-live' : ''}">${available ? 'Elérhető' : 'Hamarosan'}</span><strong>${escapeHtml(module.artLabel)}</strong><small>${escapeHtml(module.period)}</small></div><div class="lesson-card-body"><div class="card-meta"><span>${escapeHtml(era)}</span><span>${String(module.sequence).padStart(2, '0')}</span></div><h3>${escapeHtml(module.title)}</h3><p>${escapeHtml(module.shortDescription)}</p><div class="lesson-stats">${stats}</div>${available ? '<div class="lesson-card-action">Tananyag indítása <span aria-hidden="true">→</span></div>' : ''}</div></article>`;
     }).join('');
 
     const availableCount = config.modules.filter((module) => module.status === 'available').length;
