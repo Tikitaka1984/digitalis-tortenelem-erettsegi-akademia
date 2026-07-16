@@ -220,9 +220,9 @@ Ha a runtime vagy valamely szükséges tartalmi fájl nem tölthető be, a lejá
 A webes runtime függősége, a `h5p-standalone`, MIT licencű. A H5P csomag belső tartalmainak és médiáinak jogi státuszát a tananyag saját Rights of Use és forrásadatai határozzák meg.
 
 
-## Platform v1.1.0 – Sprint 5
+## Platform v1.2.0 – GSI-02
 
-A platform a modulok és taxonómia központi konfigurációját használja. A könyvtár támogatja az `era` és `level` mélylinkeket, a tananyagoldal fejezetszintű H5P-haladást jelez, a runtime hiba után ténylegesen újratölthető, és a CI minden publikált modulon automatikus tanulói tartalomauditot futtat.
+A platform harmadik teljes tananyaga Géza fejedelem és I. (Szent) István államszervező munkáját dolgozza fel 30 oldalas H5P Interactive Bookban. A könyvtár továbbra is központi modulkonfigurációt, mélylinkeket, fejezetszintű haladást és minden publikált modulra kiterjedő automatikus tartalomauditot használ.
 
 Dokumentáció:
 

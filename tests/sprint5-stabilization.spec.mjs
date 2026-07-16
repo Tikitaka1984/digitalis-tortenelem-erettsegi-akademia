@@ -4,11 +4,11 @@ test('a központi modulkonfiguráció teljes és verziózott', async ({ request 
   const response = await request.get('./data/modules.json');
   expect(response.ok()).toBe(true);
   const config = await response.json();
-  expect(config.platformVersion).toBe('1.1.0');
+  expect(config.platformVersion).toBe('1.2.0');
   expect(config.taxonomy.map((item) => item.id)).toEqual([
     'okor', 'kozepkor', 'kora-ujkor', 'ujkor', 'huszadik-szazad', 'jelenkor'
   ]);
-  expect(config.modules.filter((item) => item.status === 'available')).toHaveLength(2);
+  expect(config.modules.filter((item) => item.status === 'available')).toHaveLength(3);
 });
 
 test('a könyvtár era és level mélylinkjei működnek', async ({ page }) => {
@@ -35,7 +35,7 @@ test('a haladásjelző a H5P aktuális fejezetét követi', async ({ page }, tes
 });
 
 test('a publikált H5P-manifesztumok licencet, szerzőt és verziót tartalmaznak', async ({ request }) => {
-  for (const slug of ['atheni-demokracia', 'foldrajzi-felfedezesek']) {
+  for (const slug of ['atheni-demokracia', 'foldrajzi-felfedezesek', 'geza-fejedelem-szent-istvan']) {
     const response = await request.get(`./h5p/${slug}/h5p.json`);
     expect(response.ok(), slug).toBe(true);
     const manifest = await response.json();
@@ -53,7 +53,7 @@ test('a kezdőlap nem mutat jelöletlen demóadatot', async ({ page }) => {
 });
 
 test('a platform desktop, tablet és mobil nézetben nem csordul túl', async ({ page }) => {
-  for (const path of ['./', './library.html?era=okor&level=kozep', './learn.html?module=atheni-demokracia', './learn.html?module=foldrajzi-felfedezesek']) {
+  for (const path of ['./', './library.html?era=okor&level=kozep', './learn.html?module=atheni-demokracia', './learn.html?module=foldrajzi-felfedezesek', './learn.html?module=geza-fejedelem-szent-istvan']) {
     await page.goto(path);
     if (path.includes('learn.html')) await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth > document.documentElement.clientWidth + 1);

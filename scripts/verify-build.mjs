@@ -61,7 +61,7 @@ for (const module of modules) {
   }
 }
 
-if (config.platformVersion !== '1.1.0') failures.push('A platformverzió nem 1.1.0.');
+if (config.platformVersion !== '1.2.0') failures.push('A platformverzió nem 1.2.0.');
 if (failures.length) {
   console.error(failures.map((failure) => `- ${failure}`).join('\n'));
   process.exit(1);

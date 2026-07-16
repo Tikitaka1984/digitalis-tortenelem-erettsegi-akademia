@@ -23,6 +23,7 @@ test('a prémium nyitóoldal, navigáció és CTA működik', async ({ page, isM
   await expect(page.getByRole('navigation', { name: 'Fő navigáció' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Válassz tanulási útvonalat' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Földrajzi felfedezések' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Géza fejedelem és I. (Szent) István' })).toBeVisible();
   await expectNoHorizontalOverflow(page);
   expect(errors).toEqual([]);
 });
@@ -42,6 +43,7 @@ test('a digitális könyvtár keresése és szűrése működik', async ({ page 
   await expect(page.getByRole('heading', { name: 'Építs biztos történelmi tudást.' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Athéni demokrácia' })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Földrajzi felfedezések' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Géza fejedelem és I. (Szent) István' })).toBeVisible();
   await page.getByPlaceholder('Keress témakörre vagy korszakra…').fill('nincs ilyen');
   await expect(page.getByRole('heading', { name: 'Nincs ilyen tananyag' })).toBeVisible();
   await page.getByRole('button', { name: 'Szűrők törlése' }).click();
@@ -127,7 +129,7 @@ test('az alapvető akadálymentességi szerkezet érvényes', async ({ page }) =
 
 test('a mobilnézetek nem okoznak vízszintes túlcsordulást', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'Csak a mobilprojektben fut.');
-  for (const path of ['./', './library.html', './learn.html', './learn.html?module=foldrajzi-felfedezesek']) {
+  for (const path of ['./', './library.html', './learn.html', './learn.html?module=foldrajzi-felfedezesek', './learn.html?module=geza-fejedelem-szent-istvan']) {
     await page.goto(path);
     if (path.endsWith('learn.html')) {
       await expect(page.locator('#h5p-container')).toHaveAttribute('data-state', 'ready', { timeout: 45_000 });

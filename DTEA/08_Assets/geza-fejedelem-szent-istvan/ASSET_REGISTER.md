@@ -1,8 +1,8 @@
 # Asset Register – Géza fejedelem és I. (Szent) István
 
 **Modulazonosító:** `geza-fejedelem-szent-istvan`  
-**Dokumentumverzió:** `v0.1.0`  
-**Státusz:** assetterv; fájlok még nem kerülnek a repositoryba  
+**Dokumentumverzió:** `v1.0.0`  
+**Státusz:** GSI-02 buildhez bevételezve és ellenőrizve  
 **Hivatkozott vizuális források:** [Source Register](../../05_Source_Library/modules/geza-fejedelem-szent-istvan/SOURCE_REGISTER.md)
 
 ## Státuszok
@@ -11,7 +11,7 @@
 - `DESIGN_SPECIFIED`: saját készítésű, forrásadatokra épülő diagram terve rögzítve.
 - `PROFESSIONAL_REVIEW_REQUIRED`: történeti tartalma szakértői döntés nélkül nem építhető.
 - `RIGHTS_REVIEW_REQUIRED`: megbízható jelölt ismert, de a pontos reprodukciós jogot még jóvá kell hagyni.
-- `APPROVED_FOR_BUILD`: csak jogi, szakmai és technikai review után adható; jelen verzióban nincs ilyen asset.
+- `APPROVED_FOR_BUILD`: csak jogi, szakmai és technikai review után adható; a v1.0.0 buildbe bevételezett öt helyi asset ezt a státuszt viseli.
 
 ## Assetrekordok
 
@@ -56,4 +56,18 @@ Tényleges letöltéskor minden assethez rögzítendő: eredeti fájlnév, ponto
 ## AI-szabály
 
 AI-generált bitmap csak külön jóváhagyott borítóhoz, hangulatképhez, dekoratív textúrához vagy absztrakt háttérhez használható. A modul jelen terve nem igényel AI-assetet. Történelmi térkép, portré, korona, pecsét, oklevél, törvénykönyv, rekonstrukció, címer, zászló és bizonyító erejű tárgykép AI-val nem készíthető.
+
+## GSI-02 implementációs bevételezés
+
+A build a sematikus diagramokat akadálymentes, reszponzív HTML-szerkezetként valósítja meg. Ezek nem bitmap képek, tartalmuk az oldalszövegben lineárisan is elérhető. A buildben nincs AI-generált asset, hotlink vagy távoli futásidejű képhivatkozás.
+
+| Helyi fájl | Kapcsolódó asset | Oldal | Leíró forrás és alkotó | Licenc | Módosítás | SHA-256 | Buildstátusz |
+|---|---|---:|---|---|---|---|---|
+| `assets/h5p/geza-istvan/kingdom-hungary-1000.svg` | `ast-map-001` | 11 | [Kingdom of Hungary 1000](https://commons.wikimedia.org/wiki/File:Kingdom_of_Hungary_1000.svg), Alphathon | CC BY-SA 4.0 | eredeti helyi másolat | `86c2ddcb919c2a5b04decfffbf2ea3fbac344b369b2ac3a861da434aa4da6d37` | `APPROVED_FOR_BUILD` |
+| `assets/h5p/geza-istvan/hungary-11th-century.png` | `ast-map-002` | 28 | [Hungary 11th cent hu](https://commons.wikimedia.org/wiki/File:Hungary_11th_cent_hu.png), Wikimedia Commons | CC0 1.0 | eredeti helyi másolat | `4f1f320172c61768f57a495d0d48ca9dafe04855a7d88a250fd15b2c1bac5166` | `APPROVED_FOR_BUILD` |
+| `assets/h5p/geza-istvan/stephen-coronation-pall.jpg` | `ast-img-001` | 10 és webes modulkártya | [Portrayal of Stephen I on the coronation pall](https://commons.wikimedia.org/wiki/File:Portrayal_of_Stephen_I,_King_of_Hungary_on_the_coronation_pall.jpg), 1031-es koronázási palást | Public Domain | eredeti helyi másolat | `f9be5e344faf3680e96948e51a0c6622768f4a179a6d33ff60451d564e491796` | `APPROVED_FOR_BUILD` |
+| `assets/h5p/geza-istvan/pannonhalma-charter.jpg` | `ast-doc-001` | 15 | [Pannonhalmi alapítólevél](https://commons.wikimedia.org/wiki/File:Pannonhalmi_alapítólevél.jpg), középkori dokumentum | Public Domain | eredeti helyi másolat | `3e6940f7332f759385905519e6555381b237591c3615ad32c9146083eab07cf3` | `APPROVED_FOR_BUILD` |
+| `assets/h5p/geza-istvan/stephen-monogram.svg` | `ast-doc-002` | 22 | [King Saint Stephen signature](https://commons.wikimedia.org/wiki/File:King_Saint_Stephen_signature.svg), vektoros másolat | Public Domain | eredeti helyi másolat | `4eecea6d6b13da6646bfff1a34589acc3db306dbe57d4680deb229585ff37a5d` | `APPROVED_FOR_BUILD` |
+
+**Bevételezés dátuma:** 2026-07-16. Minden kép nem dekoratív H5P-képként, magyar alt szöveggel, helyi fájlból töltődik be. A még `SOURCE_VERIFIED` vagy review-köteles, de a fenti táblában nem szereplő jelöltek nem részei a v1.0.0 buildnek.
 
