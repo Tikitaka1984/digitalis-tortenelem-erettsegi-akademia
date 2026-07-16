@@ -394,7 +394,7 @@ def patch_book_score_to_final_chapter(temp: pathlib.Path) -> None:
         raise ValueError("Az Interactive Book pontozási illesztési pontja megváltozott.")
     source = source.replace(old_score, new_score).replace(old_max, new_max)
     source += "\n/* DTEA GSI-02: book score is the final chapter QuestionSet only. */\n"
-    path.write_text(source, encoding="utf-8")
+    path.write_text(source, encoding="utf-8", newline="\n")
 
 
 def main() -> None:
@@ -466,8 +466,16 @@ def main() -> None:
                     raise SystemExit(f"Hiányzó tanulói vizuális asset: {source_asset}")
                 shutil.copy2(source_asset, temp / "content/images" / filename)
             patch_book_score_to_final_chapter(temp)
-            (temp / "content/content.json").write_text(json.dumps(content, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-            (temp / "h5p.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+            (temp / "content/content.json").write_text(
+                json.dumps(content, ensure_ascii=False, separators=(",", ":")),
+                encoding="utf-8",
+                newline="\n",
+            )
+            (temp / "h5p.json").write_text(
+                json.dumps(manifest, ensure_ascii=False, indent=2),
+                encoding="utf-8",
+                newline="\n",
+            )
             OUTPUT.parent.mkdir(parents=True, exist_ok=True)
             with zipfile.ZipFile(OUTPUT, "w", zipfile.ZIP_DEFLATED) as target:
                 for path in sorted(temp.rglob("*")):

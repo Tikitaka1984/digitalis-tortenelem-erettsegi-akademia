@@ -137,7 +137,6 @@
       "version": "1.0.0",
       "build": {
         "source": "content/digitalis-tortenelem-erettsegi-akademia-geza-fejedelem-szent-istvan-v1.0.h5p",
-        "sha256": "849ff3a2259ba941966f5a5f1d1b827b1def2733361dff7d27c0aa31b502c61b",
         "generated": true
       }
     }
